@@ -1,10 +1,10 @@
 rpms:
     acl:
         provides:
-            - acl = 2.3.1-3.el9
-            - acl(x86-64) = 2.3.1-3.el9
+            - acl
+            - acl(x86-64)
         requires:
-            - libacl(x86-64) = 2.3.1-3.el9
+            - libacl(x86-64)
             - libacl.so.1()(64bit)
             - libacl.so.1(ACL_1.0)(64bit)
             - libc.so.6()(64bit)
@@ -47,8 +47,8 @@ rpms:
             - /usr/share/man/man5/acl.5.gz
     alternatives:
         provides:
-            - alternatives = 1.20-2.el9
-            - alternatives(x86-64) = 1.20-2.el9
+            - alternatives
+            - alternatives(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -78,13 +78,13 @@ rpms:
             - /var/lib/alternatives
     audit-libs:
         provides:
-            - audit-libs = 3.0.7-103.el9
-            - audit-libs(x86-64) = 3.0.7-103.el9
-            - config(audit-libs) = 3.0.7-103.el9
+            - audit-libs
+            - audit-libs(x86-64)
+            - config(audit-libs)
             - libaudit.so.1()(64bit)
             - libauparse.so.0()(64bit)
         requires:
-            - config(audit-libs) = 3.0.7-103.el9
+            - config(audit-libs)
             - libaudit.so.1()(64bit)
             - libauparse.so.0()(64bit)
             - libc.so.6()(64bit)
@@ -120,7 +120,7 @@ rpms:
             - /usr/share/man/man5/libaudit.conf.5.gz
     basesystem:
         provides:
-            - basesystem = 11-13.el9
+            - basesystem
         requires:
             - filesystem
             - rpmlib(CompressedFileNames) <= 3.0.4-1
@@ -134,12 +134,12 @@ rpms:
         provides:
             - /bin/bash
             - /bin/sh
-            - bash = 5.1.8-6.el9_1
-            - bash(x86-64) = 5.1.8-6.el9_1
-            - config(bash) = 5.1.8-6.el9_1
+            - bash
+            - bash(x86-64)
+            - config(bash)
         requires:
             - /usr/bin/sh
-            - config(bash) = 5.1.8-6.el9_1
+            - config(bash)
             - filesystem >= 3
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.11)(64bit)
@@ -295,8 +295,8 @@ rpms:
             - /usr/share/man/man1/wait.1.gz
     bzip2-libs:
         provides:
-            - bzip2-libs = 1.0.8-8.el9
-            - bzip2-libs(x86-64) = 1.0.8-8.el9
+            - bzip2-libs
+            - bzip2-libs(x86-64)
             - libbz2.so.1()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -319,8 +319,8 @@ rpms:
             - /usr/share/licenses/bzip2-libs/LICENSE
     ca-certificates:
         provides:
-            - ca-certificates = 2022.2.54-90.2.el9_0
-            - config(ca-certificates) = 2022.2.54-90.2.el9_0
+            - ca-certificates
+            - config(ca-certificates)
         requires:
             - /bin/sh
             - /bin/sh
@@ -328,7 +328,7 @@ rpms:
             - /usr/bin/sh
             - bash
             - bash
-            - config(ca-certificates) = 2022.2.54-90.2.el9_0
+            - config(ca-certificates)
             - coreutils
             - grep
             - grep
@@ -400,10 +400,10 @@ rpms:
             - /bin/rm
             - /bin/touch
             - bundled(gnulib)
-            - coreutils = 8.32-34.el9
-            - coreutils(x86-64) = 8.32-34.el9
-            - coreutils-single = 8.32-34.el9
-            - coreutils-single(x86-64) = 8.32-34.el9
+            - coreutils
+            - coreutils(x86-64)
+            - coreutils-single
+            - coreutils-single(x86-64)
             - libstdbuf.so.single()(64bit)
         requires:
             - libacl.so.1()(64bit)
@@ -553,8 +553,8 @@ rpms:
             - /usr/share/licenses/coreutils-single/COPYING
     cracklib:
         provides:
-            - cracklib = 2.9.6-27.el9
-            - cracklib(x86-64) = 2.9.6-27.el9
+            - cracklib
+            - cracklib(x86-64)
             - libcrack.so.2()(64bit)
         requires:
             - /usr/bin/sh
@@ -651,10 +651,10 @@ rpms:
             - /usr/share/man/man8/update-cracklib.8.gz
     cracklib-dicts:
         provides:
-            - cracklib-dicts = 2.9.6-27.el9
-            - cracklib-dicts(x86-64) = 2.9.6-27.el9
+            - cracklib-dicts
+            - cracklib-dicts(x86-64)
         requires:
-            - cracklib = 2.9.6-27.el9
+            - cracklib
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -673,10 +673,10 @@ rpms:
             - /usr/share/cracklib/pw_dict.pwi
     crypto-policies:
         provides:
-            - config(crypto-policies) = 20221215-1.git9a18988.el9
-            - crypto-policies = 20221215-1.git9a18988.el9
+            - config(crypto-policies)
+            - crypto-policies
         requires:
-            - config(crypto-policies) = 20221215-1.git9a18988.el9
+            - config(crypto-policies)
             - rpmlib(BuiltinLuaScripts) <= 4.2.2-1
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -831,14 +831,14 @@ rpms:
             - /usr/share/man/man7/crypto-policies.7.gz
     crypto-policies-scripts:
         provides:
-            - crypto-policies-scripts = 20221215-1.git9a18988.el9
-            - fips-mode-setup = 20221215-1.git9a18988.el9
+            - crypto-policies-scripts
+            - fips-mode-setup
         requires:
             - /bin/sh
             - /usr/bin/bash
             - /usr/bin/python3
             - /usr/bin/sh
-            - crypto-policies = 20221215-1.git9a18988.el9
+            - crypto-policies
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -925,9 +925,9 @@ rpms:
             - /usr/share/man/man8/update-crypto-policies.8.gz
     curl-minimal:
         provides:
-            - curl = 7.76.1-23.el9_2.2
-            - curl-minimal = 7.76.1-23.el9_2.2
-            - curl-minimal(x86-64) = 7.76.1-23.el9_2.2
+            - curl
+            - curl-minimal
+            - curl-minimal(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -954,8 +954,8 @@ rpms:
             - /usr/share/man/man1/curl.1.gz
     cyrus-sasl-lib:
         provides:
-            - cyrus-sasl-lib = 2.1.27-21.el9
-            - cyrus-sasl-lib(x86-64) = 2.1.27-21.el9
+            - cyrus-sasl-lib
+            - cyrus-sasl-lib(x86-64)
             - libanonymous.so.3()(64bit)
             - libsasl2.so.3()(64bit)
             - libsasldb.so.3()(64bit)
@@ -1030,8 +1030,8 @@ rpms:
             - /usr/share/licenses/cyrus-sasl-lib/COPYING
     dbus:
         provides:
-            - dbus = 1:1.12.20-7.el9_1
-            - dbus(x86-64) = 1:1.12.20-7.el9_1
+            - dbus
+            - dbus(x86-64)
         requires:
             - dbus-broker >= 16-4
             - rpmlib(CompressedFileNames) <= 3.0.4-1
@@ -1042,8 +1042,8 @@ rpms:
             - (contains no files)
     dbus-broker:
         provides:
-            - dbus-broker = 28-7.el9
-            - dbus-broker(x86-64) = 28-7.el9
+            - dbus-broker
+            - dbus-broker(x86-64)
         requires:
             - /bin/sh
             - /bin/sh
@@ -1110,8 +1110,8 @@ rpms:
             - /usr/share/man/man1/dbus-broker.1.gz
     dbus-common:
         provides:
-            - config(dbus-common) = 1:1.12.20-7.el9_1
-            - dbus-common = 1:1.12.20-7.el9_1
+            - config(dbus-common)
+            - dbus-common
             - group(dbus)
             - user(dbus)
         requires:
@@ -1120,7 +1120,7 @@ rpms:
             - /bin/sh
             - /bin/sh
             - /usr/bin/systemctl
-            - config(dbus-common) = 1:1.12.20-7.el9_1
+            - config(dbus-common)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -1147,8 +1147,8 @@ rpms:
             - /usr/share/dbus-1/system.d
     dbus-libs:
         provides:
-            - dbus-libs = 1:1.12.20-7.el9_1
-            - dbus-libs(x86-64) = 1:1.12.20-7.el9_1
+            - dbus-libs
+            - dbus-libs(x86-64)
             - libdbus-1.so.3()(64bit)
             - libdbus-1.so.3(LIBDBUS_1_3)(64bit)
             - libdbus-1.so.3(LIBDBUS_PRIVATE_1.12.20)(64bit)
@@ -1180,15 +1180,15 @@ rpms:
             - /usr/share/licenses/dbus-libs/COPYING
     dejavu-sans-fonts:
         provides:
-            - config(dejavu-sans-fonts) = 2.37-18.el9
-            - dejavu-sans-fonts = 2.37-18.el9
+            - config(dejavu-sans-fonts)
+            - dejavu-sans-fonts
             - font(dejavusans)
             - font(dejavusanscondensed)
             - font(dejavusanslight)
             - metainfo()
             - metainfo(org.fedoraproject.dejavu-sans-fonts.metainfo.xml)
         requires:
-            - config(dejavu-sans-fonts) = 2.37-18.el9
+            - config(dejavu-sans-fonts)
             - fontpackages-filesystem
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -1219,8 +1219,8 @@ rpms:
             - /usr/share/metainfo/org.fedoraproject.dejavu-sans-fonts.metainfo.xml
     dmidecode:
         provides:
-            - dmidecode = 1:3.3-7.el9
-            - dmidecode(x86-64) = 1:3.3-7.el9
+            - dmidecode
+            - dmidecode(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -1260,7 +1260,7 @@ rpms:
             - /usr/share/man/man8/vpddecode.8.gz
     dnf:
         provides:
-            - dnf = 4.14.0-5.el9_2
+            - dnf
             - dnf-command(alias)
             - dnf-command(autoremove)
             - dnf-command(check-update)
@@ -1288,7 +1288,7 @@ rpms:
             - /bin/sh
             - /bin/sh
             - /bin/sh
-            - python3-dnf = 4.14.0-5.el9_2
+            - python3-dnf
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -1364,11 +1364,11 @@ rpms:
             - /var/cache/dnf
     dnf-data:
         provides:
-            - config(dnf-data) = 4.14.0-5.el9_2
-            - dnf-conf = 4.14.0-5.el9_2
-            - dnf-data = 4.14.0-5.el9_2
+            - config(dnf-data)
+            - dnf-conf
+            - dnf-data
         requires:
-            - config(dnf-data) = 4.14.0-5.el9_2
+            - config(dnf-data)
             - libreport-filesystem
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -1406,7 +1406,7 @@ rpms:
     elfutils-default-yama-scope:
         provides:
             - default-yama-scope
-            - elfutils-default-yama-scope = 0.188-3.el9
+            - elfutils-default-yama-scope
         requires:
             - /bin/sh
             - rpmlib(CompressedFileNames) <= 3.0.4-1
@@ -1417,8 +1417,8 @@ rpms:
             - /usr/lib/sysctl.d/10-default-yama-scope.conf
     elfutils-libelf:
         provides:
-            - elfutils-libelf = 0.188-3.el9
-            - elfutils-libelf(x86-64) = 0.188-3.el9
+            - elfutils-libelf
+            - elfutils-libelf(x86-64)
             - libelf.so.1()(64bit)
             - libelf.so.1(ELFUTILS_1.0)(64bit)
             - libelf.so.1(ELFUTILS_1.1)(64bit)
@@ -1462,8 +1462,8 @@ rpms:
             - /usr/share/locale/uk/LC_MESSAGES/elfutils.mo
     elfutils-libs:
         provides:
-            - elfutils-libs = 0.188-3.el9
-            - elfutils-libs(x86-64) = 0.188-3.el9
+            - elfutils-libs
+            - elfutils-libs(x86-64)
             - libasm.so.1()(64bit)
             - libasm.so.1(ELFUTILS_1.0)(64bit)
             - libdw.so.1()(64bit)
@@ -1497,7 +1497,7 @@ rpms:
             - libdw.so.1(ELFUTILS_0.188)(64bit)
         requires:
             - default-yama-scope
-            - elfutils-libelf(x86-64) = 0.188-3.el9
+            - elfutils-libelf(x86-64)
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
             - libbz2.so.1()(64bit)
@@ -1547,8 +1547,8 @@ rpms:
             - /usr/share/licenses/elfutils-libs/COPYING-LGPLV3
     expat:
         provides:
-            - expat = 2.5.0-1.el9
-            - expat(x86-64) = 2.5.0-1.el9
+            - expat
+            - expat(x86-64)
             - libexpat.so.1()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -1583,8 +1583,8 @@ rpms:
             - /usr/share/man/man1/xmlwf.1.gz
     file-libs:
         provides:
-            - file-libs = 5.39-12.1.el9_2
-            - file-libs(x86-64) = 5.39-12.1.el9_2
+            - file-libs
+            - file-libs(x86-64)
             - libmagic.so.1()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -1625,9 +1625,9 @@ rpms:
             - /usr/share/misc/magic.mgc
     filesystem:
         provides:
-            - filesystem = 3.16-2.el9
-            - filesystem(x86-64) = 3.16-2.el9
-            - filesystem-afs = 3.16-2.el9
+            - filesystem
+            - filesystem(x86-64)
+            - filesystem-afs
         requires:
             - /bin/sh
             - rpmlib(BuiltinLuaScripts) <= 4.2.2-1
@@ -18903,8 +18903,8 @@ rpms:
         provides:
             - /bin/find
             - bundled(gnulib)
-            - findutils = 1:4.8.0-5.el9
-            - findutils(x86-64) = 1:4.8.0-5.el9
+            - findutils
+            - findutils(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -18986,8 +18986,8 @@ rpms:
             - /usr/share/man/man1/xargs.1.gz
     fonts-filesystem:
         provides:
-            - fontpackages-filesystem = 1:2.0.5-7.el9.1
-            - fonts-filesystem = 1:2.0.5-7.el9.1
+            - fontpackages-filesystem
+            - fonts-filesystem
         requires:
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -19003,9 +19003,9 @@ rpms:
         provides:
             - /bin/awk
             - /bin/gawk
-            - gawk = 5.1.0-6.el9
-            - gawk(abi) = 3.0
-            - gawk(x86-64) = 5.1.0-6.el9
+            - gawk
+            - gawk(abi)
+            - gawk(x86-64)
         requires:
             - filesystem >= 3
             - libc.so.6()(64bit)
@@ -19141,8 +19141,8 @@ rpms:
             - /usr/share/man/man3/time.3am.gz
     gdb-gdbserver:
         provides:
-            - gdb-gdbserver = 10.2-10.el9
-            - gdb-gdbserver(x86-64) = 10.2-10.el9
+            - gdb-gdbserver
+            - gdb-gdbserver(x86-64)
             - libinproctrace.so()(64bit)
         requires:
             - ld-linux-x86-64.so.2()(64bit)
@@ -19188,8 +19188,8 @@ rpms:
             - /usr/share/man/man1/gdbserver.1.gz
     gdbm-libs:
         provides:
-            - gdbm-libs = 1:1.19-4.el9
-            - gdbm-libs(x86-64) = 1:1.19-4.el9
+            - gdbm-libs
+            - gdbm-libs(x86-64)
             - libgdbm.so.6()(64bit)
             - libgdbm_compat.so.4()(64bit)
         requires:
@@ -19226,8 +19226,8 @@ rpms:
             - bundled(gvdb)
             - bundled(libcharset)
             - bundled(xdgmime)
-            - glib2 = 2.68.4-6.el9
-            - glib2(x86-64) = 2.68.4-6.el9
+            - glib2
+            - glib2(x86-64)
             - libgio-2.0.so.0()(64bit)
             - libglib-2.0.so.0()(64bit)
             - libgmodule-2.0.so.0()(64bit)
@@ -19441,9 +19441,9 @@ rpms:
     glibc:
         provides:
             - bundled(gnulib)
-            - config(glibc) = 2.34-60.el9
-            - glibc = 2.34-60.el9
-            - glibc(x86-64) = 2.34-60.el9
+            - config(glibc)
+            - glibc
+            - glibc(x86-64)
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.2.5)(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
@@ -19547,12 +19547,12 @@ rpms:
             - libutil.so.1(GLIBC_2.2.5)(64bit)
             - rtld(GNU_HASH)
         requires:
-            - (glibc-gconv-extra(x86-64) = 2.34-60.el9 if redhat-rpm-config)
+            - (glibc-gconv-extra(x86-64)
             - basesystem
             - basesystem
-            - config(glibc) = 2.34-60.el9
-            - glibc-common = 2.34-60.el9
-            - glibc-langpack = 2.34-60.el9
+            - config(glibc)
+            - glibc-common
+            - glibc-langpack
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.2.5)(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
@@ -19697,13 +19697,13 @@ rpms:
             - /var/cache/ldconfig/aux-cache
     glibc-common:
         provides:
-            - glibc-common = 2.34-60.el9
-            - glibc-common(x86-64) = 2.34-60.el9
+            - glibc-common
+            - glibc-common(x86-64)
         requires:
             - /bin/sh
             - /usr/bin/bash
             - /usr/bin/sh
-            - glibc = 2.34-60.el9
+            - glibc
             - ld-linux-x86-64.so.2()(64bit)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.10)(64bit)
@@ -19775,12 +19775,12 @@ rpms:
             - /usr/share/locale/locale.alias
     glibc-minimal-langpack:
         provides:
-            - glibc-langpack = 2.34-60.el9
-            - glibc-minimal-langpack = 2.34-60.el9
-            - glibc-minimal-langpack(x86-64) = 2.34-60.el9
+            - glibc-langpack
+            - glibc-minimal-langpack
+            - glibc-minimal-langpack(x86-64)
         requires:
-            - glibc = 2.34-60.el9
-            - glibc-common = 2.34-60.el9
+            - glibc
+            - glibc-common
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -19789,8 +19789,8 @@ rpms:
             - (contains no files)
     gmp:
         provides:
-            - gmp = 1:6.2.0-10.el9
-            - gmp(x86-64) = 1:6.2.0-10.el9
+            - gmp
+            - gmp(x86-64)
             - libgmp.so.10()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -19825,15 +19825,15 @@ rpms:
             - /usr/share/licenses/gmp/COPYINGv3
     gnupg2:
         provides:
-            - config(gnupg2) = 2.3.3-2.el9_0
-            - dirmngr = 2.3.3-2.el9_0
-            - gnupg = 2.3.3-2.el9_0
-            - gnupg2 = 2.3.3-2.el9_0
-            - gnupg2(x86-64) = 2.3.3-2.el9_0
-            - gpg = 2.3.3-2.el9_0
+            - config(gnupg2)
+            - dirmngr
+            - gnupg
+            - gnupg2
+            - gnupg2(x86-64)
+            - gpg
         requires:
             - /usr/bin/sh
-            - config(gnupg2) = 2.3.3-2.el9_0
+            - config(gnupg2)
             - libassuan.so.0()(64bit)
             - libassuan.so.0(LIBASSUAN_1.0)(64bit)
             - libbz2.so.1()(64bit)
@@ -20072,9 +20072,9 @@ rpms:
             - /usr/share/man/man8/dirmngr.8.gz
     gnutls:
         provides:
-            - bundled(gnulib) = 20130424
-            - gnutls = 3.7.6-20.el9_2
-            - gnutls(x86-64) = 3.7.6-20.el9_2
+            - bundled(gnulib)
+            - gnutls
+            - gnutls(x86-64)
             - libgnutls.so.30()(64bit)
             - libgnutls.so.30(GNUTLS_3_4)(64bit)
             - libgnutls.so.30(GNUTLS_3_6_0)(64bit)
@@ -20167,8 +20167,8 @@ rpms:
             - /usr/share/locale/zh_CN/LC_MESSAGES/gnutls.mo
     gobject-introspection:
         provides:
-            - gobject-introspection = 1.68.0-11.el9
-            - gobject-introspection(x86-64) = 1.68.0-11.el9
+            - gobject-introspection
+            - gobject-introspection(x86-64)
             - libgirepository-1.0.so.1()(64bit)
         requires:
             - glib2(x86-64) >= 2.58.0
@@ -20223,20 +20223,20 @@ rpms:
             - /usr/share/licenses/gobject-introspection/COPYING.LGPL
     gpg-pubkey:
         provides:
-            - gpg(Red Hat, Inc. (release key 2) <security@redhat.com>) = 4:199e2f91fd431d51-4ae0493b
-            - gpg(fd431d51) = 4:199e2f91fd431d51-4ae0493b
-            - gpg(199e2f91fd431d51) = 4:199e2f91fd431d51-4ae0493b
-            - gpg(Red Hat, Inc. (auxiliary key 3) <security@redhat.com>) = 4:5054e4a45a6340b3-6229229e
-            - gpg(5a6340b3) = 4:5054e4a45a6340b3-6229229e
-            - gpg(5054e4a45a6340b3) = 4:5054e4a45a6340b3-6229229e
+            - gpg(Red Hat, Inc. (release key 2) <security@redhat.com>)
+            - gpg(fd431d51)
+            - gpg(199e2f91fd431d51)
+            - gpg(Red Hat, Inc. (auxiliary key 3) <security@redhat.com>)
+            - gpg(5a6340b3)
+            - gpg(5054e4a45a6340b3)
         requires: []
         files:
             - (contains no files)
             - (contains no files)
     gpgme:
         provides:
-            - gpgme = 1.15.1-6.el9
-            - gpgme(x86-64) = 1.15.1-6.el9
+            - gpgme
+            - gpgme(x86-64)
             - libgpgme.so.11()(64bit)
             - libgpgme.so.11(GPGME_1.0)(64bit)
             - libgpgme.so.11(GPGME_1.1)(64bit)
@@ -20290,12 +20290,12 @@ rpms:
             - /bin/fgrep
             - /bin/grep
             - bundled(gnulib)
-            - config(grep) = 3.6-5.el9
-            - grep = 3.6-5.el9
-            - grep(x86-64) = 3.6-5.el9
+            - config(grep)
+            - grep
+            - grep(x86-64)
         requires:
             - /usr/bin/sh
-            - config(grep) = 3.6-5.el9
+            - config(grep)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
@@ -20384,8 +20384,8 @@ rpms:
             - /bin/gzip
             - /bin/zcat
             - bundled(gnulib)
-            - gzip = 1.12-1.el9
-            - gzip(x86-64) = 1.12-1.el9
+            - gzip
+            - gzip(x86-64)
         requires:
             - /usr/bin/sh
             - coreutils
@@ -20447,8 +20447,8 @@ rpms:
             - /usr/share/man/man1/znew.1.gz
     ima-evm-utils:
         provides:
-            - ima-evm-utils = 1.4-4.el9
-            - ima-evm-utils(x86-64) = 1.4-4.el9
+            - ima-evm-utils
+            - ima-evm-utils(x86-64)
             - libimaevm.so.3()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -20491,8 +20491,8 @@ rpms:
             - /usr/share/man/man1/evmctl.1.gz
     json-c:
         provides:
-            - json-c = 0.14-11.el9
-            - json-c(x86-64) = 0.14-11.el9
+            - json-c
+            - json-c(x86-64)
             - libjson-c.so.5()(64bit)
             - libjson-c.so.5(JSONC_0.14)(64bit)
             - libjson-c.so.5(JSONC_0.15)(64bit)
@@ -20523,8 +20523,8 @@ rpms:
             - /usr/share/licenses/json-c/COPYING
     json-glib:
         provides:
-            - json-glib = 1.6.6-1.el9
-            - json-glib(x86-64) = 1.6.6-1.el9
+            - json-glib
+            - json-glib(x86-64)
             - libjson-glib-1.0.so.0()(64bit)
             - libjson-glib-1.0.so.0(libjson-glib-1.0.so.0)(64bit)
         requires:
@@ -20610,8 +20610,8 @@ rpms:
             - /usr/share/locale/zh_TW/LC_MESSAGES/json-glib-1.0.mo
     keyutils-libs:
         provides:
-            - keyutils-libs = 1.6.3-1.el9
-            - keyutils-libs(x86-64) = 1.6.3-1.el9
+            - keyutils-libs
+            - keyutils-libs(x86-64)
             - libkeyutils.so.1()(64bit)
             - libkeyutils.so.1(KEYUTILS_0.3)(64bit)
             - libkeyutils.so.1(KEYUTILS_1.0)(64bit)
@@ -20646,8 +20646,8 @@ rpms:
             - /usr/share/man/man7/keyutils.7.gz
     kmod-libs:
         provides:
-            - kmod-libs = 28-7.el9
-            - kmod-libs(x86-64) = 28-7.el9
+            - kmod-libs
+            - kmod-libs(x86-64)
             - libkmod.so.2()(64bit)
             - libkmod.so.2(LIBKMOD_22)(64bit)
             - libkmod.so.2(LIBKMOD_5)(64bit)
@@ -20686,9 +20686,9 @@ rpms:
             - /usr/share/licenses/kmod-libs/COPYING
     krb5-libs:
         provides:
-            - config(krb5-libs) = 1.20.1-9.el9_2
-            - krb5-libs = 1.20.1-9.el9_2
-            - krb5-libs(x86-64) = 1.20.1-9.el9_2
+            - config(krb5-libs)
+            - krb5-libs
+            - krb5-libs(x86-64)
             - libgssapi_krb5.so.2()(64bit)
             - libgssapi_krb5.so.2(HIDDEN)(64bit)
             - libgssapi_krb5.so.2(gssapi_krb5_2_MIT)(64bit)
@@ -20713,7 +20713,7 @@ rpms:
         requires:
             - /bin/sh
             - /etc/crypto-policies/back-ends/krb5.config
-            - config(krb5-libs) = 1.20.1-9.el9_2
+            - config(krb5-libs)
             - coreutils
             - gawk
             - grep
@@ -20832,7 +20832,7 @@ rpms:
             - /var/kerberos/krb5/user
     langpacks-core-en:
         provides:
-            - langpacks-core-en = 3.0-16.el9
+            - langpacks-core-en
             - metainfo()
             - metainfo(org.fedoraproject.LangPack-Core-en.metainfo.xml)
         requires:
@@ -20846,7 +20846,7 @@ rpms:
     langpacks-core-font-en:
         provides:
             - font(:lang=en)
-            - langpacks-core-font-en = 3.0-16.el9
+            - langpacks-core-font-en
             - metainfo()
             - metainfo(org.fedoraproject.LangPack-Core-Font-en.metainfo.xml)
         requires:
@@ -20859,7 +20859,7 @@ rpms:
             - /usr/share/metainfo/org.fedoraproject.LangPack-Core-Font-en.metainfo.xml
     langpacks-en:
         provides:
-            - langpacks-en = 3.0-16.el9
+            - langpacks-en
             - metainfo()
             - metainfo(org.fedoraproject.LangPack-en.metainfo.xml)
         requires:
@@ -20872,8 +20872,8 @@ rpms:
             - /usr/share/metainfo/org.fedoraproject.LangPack-en.metainfo.xml
     libacl:
         provides:
-            - libacl = 2.3.1-3.el9
-            - libacl(x86-64) = 2.3.1-3.el9
+            - libacl
+            - libacl(x86-64)
             - libacl.so.1()(64bit)
             - libacl.so.1(ACL_1.0)(64bit)
             - libacl.so.1(ACL_1.1)(64bit)
@@ -20899,8 +20899,8 @@ rpms:
             - /usr/lib64/libacl.so.1.1.2301
     libarchive:
         provides:
-            - libarchive = 3.5.3-4.el9
-            - libarchive(x86-64) = 3.5.3-4.el9
+            - libarchive
+            - libarchive(x86-64)
             - libarchive.so.13()(64bit)
         requires:
             - libacl.so.1()(64bit)
@@ -20953,8 +20953,8 @@ rpms:
             - /usr/share/man/man5/tar.5.gz
     libassuan:
         provides:
-            - libassuan = 2.5.5-3.el9
-            - libassuan(x86-64) = 2.5.5-3.el9
+            - libassuan
+            - libassuan(x86-64)
             - libassuan.so.0()(64bit)
             - libassuan.so.0(LIBASSUAN_1.0)(64bit)
         requires:
@@ -20988,16 +20988,16 @@ rpms:
             - /usr/share/licenses/libassuan/COPYING.LIB
     libattr:
         provides:
-            - config(libattr) = 2.5.1-3.el9
-            - libattr = 2.5.1-3.el9
-            - libattr(x86-64) = 2.5.1-3.el9
+            - config(libattr)
+            - libattr
+            - libattr(x86-64)
             - libattr.so.1()(64bit)
             - libattr.so.1(ATTR_1.0)(64bit)
             - libattr.so.1(ATTR_1.1)(64bit)
             - libattr.so.1(ATTR_1.2)(64bit)
             - libattr.so.1(ATTR_1.3)(64bit)
         requires:
-            - config(libattr) = 2.5.1-3.el9
+            - config(libattr)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.3)(64bit)
@@ -21016,8 +21016,8 @@ rpms:
             - /usr/lib64/libattr.so.1.1.2501
     libblkid:
         provides:
-            - libblkid = 2.37.4-11.el9_2
-            - libblkid(x86-64) = 2.37.4-11.el9_2
+            - libblkid
+            - libblkid(x86-64)
             - libblkid.so.1()(64bit)
             - libblkid.so.1(BLKID_1.0)(64bit)
             - libblkid.so.1(BLKID_2.15)(64bit)
@@ -21045,7 +21045,7 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
-            - libuuid = 2.37.4-11.el9_2
+            - libuuid
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -21060,8 +21060,8 @@ rpms:
             - /usr/share/doc/libblkid/COPYING
     libcap:
         provides:
-            - libcap = 2.48-8.el9
-            - libcap(x86-64) = 2.48-8.el9
+            - libcap
+            - libcap(x86-64)
             - libcap.so.2()(64bit)
             - libpsx.so.2()(64bit)
         requires:
@@ -21122,8 +21122,8 @@ rpms:
             - /usr/share/man/man8/setcap.8.gz
     libcap-ng:
         provides:
-            - libcap-ng = 0.8.2-7.el9
-            - libcap-ng(x86-64) = 0.8.2-7.el9
+            - libcap-ng
+            - libcap-ng(x86-64)
             - libcap-ng.so.0()(64bit)
             - libdrop_ambient.so.0()(64bit)
         requires:
@@ -21158,8 +21158,8 @@ rpms:
             - /usr/share/man/man7/libdrop_ambient.7.gz
     libcom_err:
         provides:
-            - libcom_err = 1.46.5-3.el9
-            - libcom_err(x86-64) = 1.46.5-3.el9
+            - libcom_err
+            - libcom_err(x86-64)
             - libcom_err.so.2()(64bit)
         requires:
             - ld-linux-x86-64.so.2()(64bit)
@@ -21184,8 +21184,8 @@ rpms:
             - /usr/share/licenses/libcom_err/NOTICE
     libcomps:
         provides:
-            - libcomps = 0.1.18-1.el9
-            - libcomps(x86-64) = 0.1.18-1.el9
+            - libcomps
+            - libcomps(x86-64)
             - libcomps.so.0()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -21220,10 +21220,10 @@ rpms:
             - /usr/share/licenses/libcomps/COPYING
     libcurl-minimal:
         provides:
-            - libcurl = 7.76.1-23.el9_2.2
-            - libcurl(x86-64) = 7.76.1-23.el9_2.2
-            - libcurl-minimal = 7.76.1-23.el9_2.2
-            - libcurl-minimal(x86-64) = 7.76.1-23.el9_2.2
+            - libcurl
+            - libcurl(x86-64)
+            - libcurl-minimal
+            - libcurl-minimal(x86-64)
             - libcurl.so.4()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -21264,8 +21264,8 @@ rpms:
             - /usr/share/licenses/libcurl-minimal/COPYING
     libdb:
         provides:
-            - libdb = 5.3.28-53.el9
-            - libdb(x86-64) = 5.3.28-53.el9
+            - libdb
+            - libdb(x86-64)
             - libdb-5.3.so()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -21298,8 +21298,8 @@ rpms:
             - /usr/share/licenses/libdb/lgpl-2.1.txt
     libdnf:
         provides:
-            - libdnf = 0.69.0-3.el9_2
-            - libdnf(x86-64) = 0.69.0-3.el9_2
+            - libdnf
+            - libdnf(x86-64)
             - libdnf.so.2()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -21427,8 +21427,8 @@ rpms:
             - /usr/share/locale/zh_TW/LC_MESSAGES/libdnf.mo
     libdnf-plugin-subscription-manager:
         provides:
-            - libdnf-plugin-subscription-manager = 1.29.33.1-1.el9_2
-            - libdnf-plugin-subscription-manager(x86-64) = 1.29.33.1-1.el9_2
+            - libdnf-plugin-subscription-manager
+            - libdnf-plugin-subscription-manager(x86-64)
         requires:
             - dnf >= 1.0.0
             - json-c
@@ -21459,8 +21459,8 @@ rpms:
             - /usr/lib64/libdnf/plugins/product-id.so
     libeconf:
         provides:
-            - libeconf = 0.4.1-3.el9_2
-            - libeconf(x86-64) = 0.4.1-3.el9_2
+            - libeconf
+            - libeconf(x86-64)
             - libeconf.so.0()(64bit)
             - libeconf.so.0(LIBECONF_0.2)(64bit)
             - libeconf.so.0(LIBECONF_0.3)(64bit)
@@ -21493,8 +21493,8 @@ rpms:
             - /usr/share/licenses/libeconf/LICENSE
     libevent:
         provides:
-            - libevent = 2.1.12-6.el9
-            - libevent(x86-64) = 2.1.12-6.el9
+            - libevent
+            - libevent(x86-64)
             - libevent-2.1.so.7()(64bit)
             - libevent_core-2.1.so.7()(64bit)
             - libevent_extra-2.1.so.7()(64bit)
@@ -21554,8 +21554,8 @@ rpms:
             - /usr/share/licenses/libevent/LICENSE
     libfdisk:
         provides:
-            - libfdisk = 2.37.4-11.el9_2
-            - libfdisk(x86-64) = 2.37.4-11.el9_2
+            - libfdisk
+            - libfdisk(x86-64)
             - libfdisk.so.1()(64bit)
             - libfdisk.so.1(FDISK_2.26)(64bit)
             - libfdisk.so.1(FDISK_2.27)(64bit)
@@ -21570,7 +21570,7 @@ rpms:
         requires:
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
-            - libblkid = 2.37.4-11.el9_2
+            - libblkid
             - libblkid.so.1()(64bit)
             - libblkid.so.1(BLKID_2.15)(64bit)
             - libblkid.so.1(BLKID_2.17)(64bit)
@@ -21586,7 +21586,7 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
-            - libuuid = 2.37.4-11.el9_2
+            - libuuid
             - libuuid.so.1()(64bit)
             - libuuid.so.1(UUID_1.0)(64bit)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
@@ -21605,8 +21605,8 @@ rpms:
             - /usr/share/licenses/libfdisk/COPYING.LGPL-2.1-or-later
     libffi:
         provides:
-            - libffi = 3.4.2-7.el9
-            - libffi(x86-64) = 3.4.2-7.el9
+            - libffi
+            - libffi(x86-64)
             - libffi.so.8()(64bit)
             - libffi.so.8(LIBFFI_BASE_8.0)(64bit)
             - libffi.so.8(LIBFFI_CLOSURE_8.0)(64bit)
@@ -21636,8 +21636,8 @@ rpms:
             - /usr/share/licenses/libffi/LICENSE
     libgcc:
         provides:
-            - libgcc = 11.3.1-4.3.el9
-            - libgcc(x86-64) = 11.3.1-4.3.el9
+            - libgcc
+            - libgcc(x86-64)
             - libgcc_s.so.1()(64bit)
             - libgcc_s.so.1(GCC_3.0)(64bit)
             - libgcc_s.so.1(GCC_3.3)(64bit)
@@ -21671,8 +21671,8 @@ rpms:
             - /usr/share/licenses/libgcc/COPYING3.LIB
     libgcrypt:
         provides:
-            - libgcrypt = 1.10.0-10.el9_2
-            - libgcrypt(x86-64) = 1.10.0-10.el9_2
+            - libgcrypt
+            - libgcrypt(x86-64)
             - libgcrypt.so.20()(64bit)
             - libgcrypt.so.20(GCRYPT_1.6)(64bit)
         requires:
@@ -21707,8 +21707,8 @@ rpms:
             - /usr/share/licenses/libgcrypt/COPYING.LIB
     libgomp:
         provides:
-            - libgomp = 11.3.1-4.3.el9
-            - libgomp(x86-64) = 11.3.1-4.3.el9
+            - libgomp
+            - libgomp(x86-64)
             - libgomp.so.1()(64bit)
             - libgomp.so.1(GOACC_2.0)(64bit)
             - libgomp.so.1(GOACC_2.0.1)(64bit)
@@ -21765,8 +21765,8 @@ rpms:
             - /usr/share/info/libgomp.info.gz
     libgpg-error:
         provides:
-            - libgpg-error = 1.42-5.el9
-            - libgpg-error(x86-64) = 1.42-5.el9
+            - libgpg-error
+            - libgpg-error(x86-64)
             - libgpg-error.so.0()(64bit)
             - libgpg-error.so.0(GPG_ERROR_1.0)(64bit)
         requires:
@@ -21825,8 +21825,8 @@ rpms:
     libidn2:
         provides:
             - bundled(gnulib)
-            - libidn2 = 2.3.0-7.el9
-            - libidn2(x86-64) = 2.3.0-7.el9
+            - libidn2
+            - libidn2(x86-64)
             - libidn2.so.0()(64bit)
             - libidn2.so.0(IDN2_0.0.0)(64bit)
             - libidn2.so.0(IDN2_2.1.0)(64bit)
@@ -21882,8 +21882,8 @@ rpms:
             - /usr/share/locale/zh_CN/LC_MESSAGES/libidn2.mo
     libksba:
         provides:
-            - libksba = 1.5.1-6.el9_1
-            - libksba(x86-64) = 1.5.1-6.el9_1
+            - libksba
+            - libksba(x86-64)
             - libksba.so.8()(64bit)
             - libksba.so.8(KSBA_0.9)(64bit)
             - libksba.so.8(KSBA_PRIVATE_TESTS)(64bit)
@@ -21921,8 +21921,8 @@ rpms:
             - /usr/share/licenses/libksba/COPYING.LGPLv3
     libmodulemd:
         provides:
-            - libmodulemd = 2.13.0-2.el9
-            - libmodulemd(x86-64) = 2.13.0-2.el9
+            - libmodulemd
+            - libmodulemd(x86-64)
             - libmodulemd.so.2()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -21965,8 +21965,8 @@ rpms:
             - /usr/share/man/man1/modulemd-validator.1.gz
     libmount:
         provides:
-            - libmount = 2.37.4-11.el9_2
-            - libmount(x86-64) = 2.37.4-11.el9_2
+            - libmount
+            - libmount(x86-64)
             - libmount.so.1()(64bit)
             - libmount.so.1(MOUNT_2.19)(64bit)
             - libmount.so.1(MOUNT_2.20)(64bit)
@@ -21983,7 +21983,7 @@ rpms:
             - libmount.so.1(MOUNT_2_35)(64bit)
             - libmount.so.1(MOUNT_2_37)(64bit)
         requires:
-            - libblkid = 2.37.4-11.el9_2
+            - libblkid
             - libblkid.so.1()(64bit)
             - libblkid.so.1(BLKID_1.0)(64bit)
             - libblkid.so.1(BLKID_2.15)(64bit)
@@ -22004,7 +22004,7 @@ rpms:
             - libc.so.6(GLIBC_2.9)(64bit)
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
-            - libuuid = 2.37.4-11.el9_2
+            - libuuid
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -22021,8 +22021,8 @@ rpms:
             - /usr/share/licenses/libmount/COPYING.LGPL-2.1-or-later
     libnghttp2:
         provides:
-            - libnghttp2 = 1.43.0-5.el9
-            - libnghttp2(x86-64) = 1.43.0-5.el9
+            - libnghttp2
+            - libnghttp2(x86-64)
             - libnghttp2.so.14()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -22045,7 +22045,7 @@ rpms:
             - /usr/share/licenses/libnghttp2/COPYING
     libnl3:
         provides:
-            - config(libnl3) = 3.7.0-1.el9
+            - config(libnl3)
             - libnl-3.so.200()(64bit)
             - libnl-3.so.200(libnl_3)(64bit)
             - libnl-3.so.200(libnl_3_2_26)(64bit)
@@ -22074,10 +22074,10 @@ rpms:
             - libnl-xfrm-3.so.200()(64bit)
             - libnl-xfrm-3.so.200(libnl_3)(64bit)
             - libnl-xfrm-3.so.200(libnl_3_6)(64bit)
-            - libnl3 = 3.7.0-1.el9
-            - libnl3(x86-64) = 3.7.0-1.el9
+            - libnl3
+            - libnl3(x86-64)
         requires:
-            - config(libnl3) = 3.7.0-1.el9
+            - config(libnl3)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
@@ -22140,13 +22140,13 @@ rpms:
             - /usr/share/doc/libnl3/COPYING
     libpwquality:
         provides:
-            - config(libpwquality) = 1.4.4-8.el9
-            - libpwquality = 1.4.4-8.el9
-            - libpwquality(x86-64) = 1.4.4-8.el9
+            - config(libpwquality)
+            - libpwquality
+            - libpwquality(x86-64)
             - libpwquality.so.1()(64bit)
             - libpwquality.so.1(LIBPWQUALITY_1.0)(64bit)
         requires:
-            - config(libpwquality) = 1.4.4-8.el9
+            - config(libpwquality)
             - cracklib
             - cracklib-dicts >= 2.8
             - libc.so.6()(64bit)
@@ -22250,8 +22250,8 @@ rpms:
             - /usr/share/man/man8/pam_pwquality.8.gz
     librepo:
         provides:
-            - librepo = 1.14.5-1.el9
-            - librepo(x86-64) = 1.14.5-1.el9
+            - librepo
+            - librepo(x86-64)
             - librepo.so.0()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -22292,7 +22292,7 @@ rpms:
             - /usr/share/licenses/librepo/COPYING
     libreport-filesystem:
         provides:
-            - libreport-filesystem = 2.15.2-6.el9
+            - libreport-filesystem
         requires:
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -22311,8 +22311,8 @@ rpms:
             - /usr/share/libreport/workflows
     librhsm:
         provides:
-            - librhsm = 0.0.3-7.el9
-            - librhsm(x86-64) = 0.0.3-7.el9
+            - librhsm
+            - librhsm(x86-64)
             - librhsm.so.0()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -22344,8 +22344,8 @@ rpms:
             - /usr/share/licenses/librhsm/COPYING
     libseccomp:
         provides:
-            - libseccomp = 2.5.2-2.el9
-            - libseccomp(x86-64) = 2.5.2-2.el9
+            - libseccomp
+            - libseccomp(x86-64)
             - libseccomp.so.2()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -22372,8 +22372,8 @@ rpms:
             - /usr/share/licenses/libseccomp/LICENSE
     libselinux:
         provides:
-            - libselinux = 3.5-1.el9
-            - libselinux(x86-64) = 3.5-1.el9
+            - libselinux
+            - libselinux(x86-64)
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
             - libselinux.so.1(LIBSELINUX_3.4)(64bit)
@@ -22412,9 +22412,9 @@ rpms:
             - /usr/share/licenses/libselinux/LICENSE
     libsemanage:
         provides:
-            - config(libsemanage) = 3.5-1.el9
-            - libsemanage = 3.5-1.el9
-            - libsemanage(x86-64) = 3.5-1.el9
+            - config(libsemanage)
+            - libsemanage
+            - libsemanage(x86-64)
             - libsemanage.so.2()(64bit)
             - libsemanage.so.2(LIBSEMANAGE_1.0)(64bit)
             - libsemanage.so.2(LIBSEMANAGE_1.1)(64bit)
@@ -22422,7 +22422,7 @@ rpms:
         requires:
             - audit-libs
             - bzip2-libs
-            - config(libsemanage) = 3.5-1.el9
+            - config(libsemanage)
             - libaudit.so.1()(64bit)
             - libbz2.so.1()(64bit)
             - libc.so.6()(64bit)
@@ -22462,8 +22462,8 @@ rpms:
             - /var/lib/selinux/tmp
     libsepol:
         provides:
-            - libsepol = 3.5-1.el9
-            - libsepol(x86-64) = 3.5-1.el9
+            - libsepol
+            - libsepol(x86-64)
             - libsepol.so.2()(64bit)
             - libsepol.so.2(LIBSEPOL_1.0)(64bit)
             - libsepol.so.2(LIBSEPOL_1.1)(64bit)
@@ -22493,8 +22493,8 @@ rpms:
             - /usr/share/licenses/libsepol/LICENSE
     libsigsegv:
         provides:
-            - libsigsegv = 2.13-4.el9
-            - libsigsegv(x86-64) = 2.13-4.el9
+            - libsigsegv
+            - libsigsegv(x86-64)
             - libsigsegv.so.2()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -22519,8 +22519,8 @@ rpms:
             - /usr/share/licenses/libsigsegv/COPYING
     libsmartcols:
         provides:
-            - libsmartcols = 2.37.4-11.el9_2
-            - libsmartcols(x86-64) = 2.37.4-11.el9_2
+            - libsmartcols
+            - libsmartcols(x86-64)
             - libsmartcols.so.1()(64bit)
             - libsmartcols.so.1(SMARTCOLS_2.25)(64bit)
             - libsmartcols.so.1(SMARTCOLS_2.27)(64bit)
@@ -22554,8 +22554,8 @@ rpms:
             - /usr/share/licenses/libsmartcols/COPYING.LGPL-2.1-or-later
     libsolv:
         provides:
-            - libsolv = 0.7.22-4.el9
-            - libsolv(x86-64) = 0.7.22-4.el9
+            - libsolv
+            - libsolv(x86-64)
             - libsolv.so.1()(64bit)
             - libsolv.so.1(SOLV_1.0)(64bit)
             - libsolv.so.1(SOLV_1.1)(64bit)
@@ -22610,8 +22610,8 @@ rpms:
             - /usr/share/licenses/libsolv/LICENSE.BSD
     libstdc++:
         provides:
-            - libstdc++ = 11.3.1-4.3.el9
-            - libstdc++(x86-64) = 11.3.1-4.3.el9
+            - libstdc++
+            - libstdc++(x86-64)
             - libstdc++.so.6()(64bit)
             - libstdc++.so.6(CXXABI_1.3)(64bit)
             - libstdc++.so.6(CXXABI_1.3.1)(64bit)
@@ -22722,9 +22722,9 @@ rpms:
             - /usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.29-gdb.py
     libtasn1:
         provides:
-            - bundled(gnulib) = 20130324
-            - libtasn1 = 4.16.0-8.el9_1
-            - libtasn1(x86-64) = 4.16.0-8.el9_1
+            - bundled(gnulib)
+            - libtasn1
+            - libtasn1(x86-64)
             - libtasn1.so.6()(64bit)
             - libtasn1.so.6(LIBTASN1_0_3)(64bit)
             - libtasn1.so.6(LIBTASN1_4_16_0)(64bit)
@@ -22756,8 +22756,8 @@ rpms:
     libunistring:
         provides:
             - bundled(gnulib)
-            - libunistring = 0.9.10-15.el9
-            - libunistring(x86-64) = 0.9.10-15.el9
+            - libunistring
+            - libunistring(x86-64)
             - libunistring.so.2()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -22788,12 +22788,12 @@ rpms:
             - /usr/share/licenses/libunistring/COPYING.LIB
     libuser:
         provides:
-            - config(libuser) = 0.63-12.el9
-            - libuser = 0.63-12.el9
-            - libuser(x86-64) = 0.63-12.el9
+            - config(libuser)
+            - libuser
+            - libuser(x86-64)
             - libuser.so.1()(64bit)
         requires:
-            - config(libuser) = 0.63-12.el9
+            - config(libuser)
             - libaudit.so.1()(64bit)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -22961,11 +22961,11 @@ rpms:
             - /usr/share/man/man5/libuser.conf.5.gz
     libutempter:
         provides:
-            - libutempter = 1.2.1-6.el9
-            - libutempter(x86-64) = 1.2.1-6.el9
+            - libutempter
+            - libutempter(x86-64)
             - libutempter.so.0()(64bit)
             - libutempter.so.0(UTEMPTER_1.1)(64bit)
-            - utempter = 0.5.2
+            - utempter
         requires:
             - /bin/sh
             - libc.so.6()(64bit)
@@ -22996,8 +22996,8 @@ rpms:
             - /usr/share/licenses/libutempter/COPYING
     libuuid:
         provides:
-            - libuuid = 2.37.4-11.el9_2
-            - libuuid(x86-64) = 2.37.4-11.el9_2
+            - libuuid
+            - libuuid(x86-64)
             - libuuid.so.1()(64bit)
             - libuuid.so.1(UUIDD_PRIVATE)(64bit)
             - libuuid.so.1(UUID_1.0)(64bit)
@@ -23032,8 +23032,8 @@ rpms:
             - /usr/share/licenses/libuuid/COPYING.BSD-3-Clause
     libverto:
         provides:
-            - libverto = 0.3.2-3.el9
-            - libverto(x86-64) = 0.3.2-3.el9
+            - libverto
+            - libverto(x86-64)
             - libverto.so.1()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -23061,17 +23061,17 @@ rpms:
             - /usr/share/licenses/libverto/COPYING
     libxcrypt:
         provides:
-            - libcrypt = 2.27
-            - libcrypt(x86-64) = 2.27
-            - libcrypt-nss = 2.27
-            - libcrypt-nss(x86-64) = 2.27
+            - libcrypt
+            - libcrypt(x86-64)
+            - libcrypt-nss
+            - libcrypt-nss(x86-64)
             - libcrypt.so.2()(64bit)
             - libcrypt.so.2(XCRYPT_2.0)(64bit)
             - libcrypt.so.2(XCRYPT_4.3)(64bit)
             - libcrypt.so.2(XCRYPT_4.4)(64bit)
-            - libxcrypt = 4.4.18-3.el9
-            - libxcrypt(x86-64) = 4.4.18-3.el9
-            - libxcrypt-common = 4.4.18-3.el9
+            - libxcrypt
+            - libxcrypt(x86-64)
+            - libxcrypt-common
         requires:
             - glibc(x86-64) >= 2.27
             - libc.so.6()(64bit)
@@ -23106,8 +23106,8 @@ rpms:
             - /usr/share/man/man5/crypt.5.gz
     libxml2:
         provides:
-            - libxml2 = 2.9.13-3.el9_2.1
-            - libxml2(x86-64) = 2.9.13-3.el9_2.1
+            - libxml2
+            - libxml2(x86-64)
             - libxml2.so.2()(64bit)
             - libxml2.so.2(LIBXML2_2.4.30)(64bit)
             - libxml2.so.2(LIBXML2_2.5.0)(64bit)
@@ -23215,8 +23215,8 @@ rpms:
             - /usr/share/man/man3/libxml.3.gz
     libyaml:
         provides:
-            - libyaml = 0.2.5-7.el9
-            - libyaml(x86-64) = 0.2.5-7.el9
+            - libyaml
+            - libyaml(x86-64)
             - libyaml-0.so.2()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -23241,8 +23241,8 @@ rpms:
             - /usr/share/licenses/libyaml/License
     libzstd:
         provides:
-            - libzstd = 1.5.1-2.el9
-            - libzstd(x86-64) = 1.5.1-2.el9
+            - libzstd
+            - libzstd(x86-64)
             - libzstd.so.1()(64bit)
         requires:
             - libc.so.6()(64bit)
@@ -23270,9 +23270,9 @@ rpms:
         provides:
             - liblua-5.3.so()(64bit)
             - liblua-5.4.so()(64bit)
-            - lua(abi) = 5.4
-            - lua-libs = 5.4.4-3.el9
-            - lua-libs(x86-64) = 5.4.4-3.el9
+            - lua(abi)
+            - lua-libs
+            - lua-libs(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.11)(64bit)
@@ -23307,8 +23307,8 @@ rpms:
     lz4-libs:
         provides:
             - liblz4.so.1()(64bit)
-            - lz4-libs = 1.9.3-5.el9
-            - lz4-libs(x86-64) = 1.9.3-5.el9
+            - lz4-libs
+            - lz4-libs(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -23330,9 +23330,9 @@ rpms:
     mpfr:
         provides:
             - libmpfr.so.6()(64bit)
-            - mpfr = 4.1.0-7.el9
-            - mpfr(x86-64) = 4.1.0-7.el9
-            - mpfr3 = 4.1.0-7.el9
+            - mpfr
+            - mpfr(x86-64)
+            - mpfr3
         requires:
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
@@ -23364,7 +23364,7 @@ rpms:
             - /usr/share/licenses/mpfr/COPYING.LESSER
     ncurses-base:
         provides:
-            - ncurses-base = 6.2-8.20210508.el9
+            - ncurses-base
         requires:
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -23559,8 +23559,8 @@ rpms:
             - libpanelw.so.6()(64bit)
             - libtic.so.6()(64bit)
             - libtinfo.so.6()(64bit)
-            - ncurses-libs = 6.2-8.20210508.el9
-            - ncurses-libs(x86-64) = 6.2-8.20210508.el9
+            - ncurses-libs
+            - ncurses-libs(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -23575,7 +23575,7 @@ rpms:
             - libncurses.so.6()(64bit)
             - libncursesw.so.6()(64bit)
             - libtinfo.so.6()(64bit)
-            - ncurses-base = 6.2-8.20210508.el9
+            - ncurses-base
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -23634,8 +23634,8 @@ rpms:
             - libnettle.so.8()(64bit)
             - libnettle.so.8(NETTLE_8)(64bit)
             - libnettle.so.8(NETTLE_INTERNAL_8_5)(64bit)
-            - nettle = 3.8-3.el9_0
-            - nettle(x86-64) = 3.8-3.el9_0
+            - nettle
+            - nettle(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -23677,8 +23677,8 @@ rpms:
         provides:
             - libnpth.so.0()(64bit)
             - libnpth.so.0(NPTH_1.0)(64bit)
-            - npth = 1.6-8.el9
-            - npth(x86-64) = 1.6-8.el9
+            - npth
+            - npth(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.17)(64bit)
@@ -23702,16 +23702,16 @@ rpms:
             - /usr/share/licenses/npth/COPYING.LIB
     openldap:
         provides:
-            - config(openldap) = 2.6.2-3.el9
+            - config(openldap)
             - liblber.so.2()(64bit)
             - liblber.so.2(OPENLDAP_2.200)(64bit)
             - libldap.so.2()(64bit)
             - libldap.so.2(OPENLDAP_2.200)(64bit)
             - libslapi.so.2()(64bit)
-            - openldap = 2.6.2-3.el9
-            - openldap(x86-64) = 2.6.2-3.el9
+            - openldap
+            - openldap(x86-64)
         requires:
-            - config(openldap) = 2.6.2-3.el9
+            - config(openldap)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
             - libc.so.6(GLIBC_2.17)(64bit)
@@ -23846,15 +23846,15 @@ rpms:
             - libldap_r-2.4.so.2()(64bit)
             - libslapi-2.4.so.2()(64bit)
             - libslapi-2.4.so.2()(64bit)
-            - openldap-compat = 2.6.2-3.el9
-            - openldap-compat(x86-64) = 2.6.2-3.el9
+            - openldap-compat
+            - openldap-compat(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - liblber.so.2()(64bit)
             - libldap.so.2()(64bit)
             - libslapi.so.2()(64bit)
-            - openldap(x86-64) = 2.6.2-3.el9
+            - openldap(x86-64)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -23879,8 +23879,8 @@ rpms:
             - /usr/lib64/libslapi-2.4.so.2.0.200
     openssl:
         provides:
-            - openssl = 1:3.0.7-17.el9_2
-            - openssl(x86-64) = 1:3.0.7-17.el9_2
+            - openssl
+            - openssl(x86-64)
         requires:
             - /usr/bin/bash
             - /usr/bin/sh
@@ -23900,7 +23900,7 @@ rpms:
             - libcrypto.so.3(OPENSSL_3.0.3)(64bit)
             - libssl.so.3()(64bit)
             - libssl.so.3(OPENSSL_3.0.0)(64bit)
-            - openssl-libs(x86-64) = 1:3.0.7-17.el9_2
+            - openssl-libs(x86-64)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -24195,18 +24195,18 @@ rpms:
             - /usr/share/man/man7/x509.7ossl.gz
     openssl-libs:
         provides:
-            - config(openssl-libs) = 1:3.0.7-17.el9_2
+            - config(openssl-libs)
             - libcrypto.so.3()(64bit)
             - libcrypto.so.3(OPENSSL_3.0.0)(64bit)
             - libcrypto.so.3(OPENSSL_3.0.1)(64bit)
             - libcrypto.so.3(OPENSSL_3.0.3)(64bit)
             - libssl.so.3()(64bit)
             - libssl.so.3(OPENSSL_3.0.0)(64bit)
-            - openssl-libs = 1:3.0.7-17.el9_2
-            - openssl-libs(x86-64) = 1:3.0.7-17.el9_2
+            - openssl-libs
+            - openssl-libs(x86-64)
         requires:
             - ca-certificates >= 2008-5
-            - config(openssl-libs) = 1:3.0.7-17.el9_2
+            - config(openssl-libs)
             - crypto-policies >= 20180730
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -24274,8 +24274,8 @@ rpms:
         provides:
             - libp11-kit.so.0()(64bit)
             - libp11-kit.so.0(LIBP11_KIT_1.0)(64bit)
-            - p11-kit = 0.24.1-2.el9
-            - p11-kit(x86-64) = 0.24.1-2.el9
+            - p11-kit
+            - p11-kit(x86-64)
         requires:
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
@@ -24404,8 +24404,8 @@ rpms:
             - /usr/share/p11-kit/modules
     p11-kit-trust:
         provides:
-            - p11-kit-trust = 0.24.1-2.el9
-            - p11-kit-trust(x86-64) = 0.24.1-2.el9
+            - p11-kit-trust
+            - p11-kit-trust(x86-64)
         requires:
             - /bin/sh
             - /bin/sh
@@ -24431,7 +24431,7 @@ rpms:
             - libp11-kit.so.0(LIBP11_KIT_1.0)(64bit)
             - libtasn1.so.6()(64bit)
             - libtasn1.so.6(LIBTASN1_0_3)(64bit)
-            - p11-kit(x86-64) = 0.24.1-2.el9
+            - p11-kit(x86-64)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -24452,7 +24452,7 @@ rpms:
             - /usr/share/p11-kit/modules/p11-kit-trust.module
     pam:
         provides:
-            - config(pam) = 1.5.1-14.el9
+            - config(pam)
             - libpam.so.0()(64bit)
             - libpam.so.0(LIBPAM_1.0)(64bit)
             - libpam.so.0(LIBPAM_1.4)(64bit)
@@ -24469,12 +24469,12 @@ rpms:
             - libpam_misc.so.0(LIBPAM_MISC_1.0)(64bit)
             - libpamc.so.0()(64bit)
             - libpamc.so.0(LIBPAMC_1.0)(64bit)
-            - pam = 1.5.1-14.el9
-            - pam(x86-64) = 1.5.1-14.el9
+            - pam
+            - pam(x86-64)
         requires:
             - /usr/bin/sh
             - audit-libs >= 1.0.8
-            - config(pam) = 1.5.1-14.el9
+            - config(pam)
             - glibc >= 2.3.90-37
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
@@ -24902,13 +24902,13 @@ rpms:
             - /var/run/sepermit
     passwd:
         provides:
-            - config(passwd) = 0.80-12.el9
-            - passwd = 0.80-12.el9
-            - passwd(x86-64) = 0.80-12.el9
+            - config(passwd)
+            - passwd
+            - passwd(x86-64)
         requires:
             - /etc/pam.d/system-auth
             - audit-libs >= 2.4.5
-            - config(passwd) = 0.80-12.el9
+            - config(passwd)
             - libaudit.so.1()(64bit)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
@@ -25019,8 +25019,8 @@ rpms:
         provides:
             - libpcre.so.1()(64bit)
             - libpcreposix.so.0()(64bit)
-            - pcre = 8.44-3.el9.3
-            - pcre(x86-64) = 8.44-3.el9.3
+            - pcre
+            - pcre(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -25055,8 +25055,8 @@ rpms:
             - bundled(sljit)
             - libpcre2-8.so.0()(64bit)
             - libpcre2-posix.so.3()(64bit)
-            - pcre2 = 10.40-2.el9
-            - pcre2(x86-64) = 10.40-2.el9
+            - pcre2
+            - pcre2(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -25065,7 +25065,7 @@ rpms:
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libpcre2-8.so.0()(64bit)
-            - pcre2-syntax = 10.40-2.el9
+            - pcre2-syntax
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -25083,7 +25083,7 @@ rpms:
             - /usr/lib64/libpcre2-posix.so.3.0.2
     pcre2-syntax:
         provides:
-            - pcre2-syntax = 10.40-2.el9
+            - pcre2-syntax
         requires:
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -25110,8 +25110,8 @@ rpms:
         provides:
             - libpopt.so.0()(64bit)
             - libpopt.so.0(LIBPOPT_0)(64bit)
-            - popt = 1.18-8.el9
-            - popt(x86-64) = 1.18-8.el9
+            - popt
+            - popt(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -25173,21 +25173,21 @@ rpms:
             - /usr/share/locale/zh_TW/LC_MESSAGES/popt.mo
     python3:
         provides:
-            - platform-python = 3.9.16-1.el9_2.1
-            - platform-python(x86-64) = 3.9.16-1.el9_2.1
-            - python(abi) = 3.9
-            - python(abi) = 3.9
-            - python3 = 3.9.16-1.el9_2.1
-            - python3(x86-64) = 3.9.16-1.el9_2.1
-            - python3.9 = 3.9.16-1.el9_2.1
-            - python3.9(x86-64) = 3.9.16-1.el9_2.1
-            - python39 = 3.9.16-1.el9_2.1
+            - platform-python
+            - platform-python(x86-64)
+            - python(abi)
+            - python(abi)
+            - python3
+            - python3(x86-64)
+            - python3.9
+            - python3.9(x86-64)
+            - python39
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.34)(64bit)
             - libpython3.9.so.1.0()(64bit)
-            - python3-libs(x86-64) = 3.9.16-1.el9_2.1
+            - python3-libs(x86-64)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -25210,14 +25210,14 @@ rpms:
             - /usr/share/man/man1/python3.9.1.gz
     python3-chardet:
         provides:
-            - python-chardet = 4.0.0-5.el9
-            - python3-chardet = 4.0.0-5.el9
-            - python3.9-chardet = 4.0.0-5.el9
-            - python3.9dist(chardet) = 4
-            - python3dist(chardet) = 4
+            - python-chardet
+            - python3-chardet
+            - python3.9-chardet
+            - python3.9dist(chardet)
+            - python3dist(chardet)
         requires:
             - /usr/bin/python3
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -25373,13 +25373,13 @@ rpms:
             - /usr/share/licenses/python3-chardet/LICENSE
     python3-cloud-what:
         provides:
-            - python-cloud-what = 1.29.33.1-1.el9_2
-            - python3-cloud-what = 1.29.33.1-1.el9_2
-            - python3-cloud-what(x86-64) = 1.29.33.1-1.el9_2
-            - python3.9-cloud-what = 1.29.33.1-1.el9_2
+            - python-cloud-what
+            - python3-cloud-what
+            - python3-cloud-what(x86-64)
+            - python3.9-cloud-what
         requires:
             - dmidecode
-            - python(abi) = 3.9
+            - python(abi)
             - python3-requests
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -25421,13 +25421,13 @@ rpms:
             - /var/cache/cloud-what
     python3-dateutil:
         provides:
-            - python-dateutil = 1:2.8.1-6.el9
-            - python3-dateutil = 1:2.8.1-6.el9
-            - python3.9-dateutil = 1:2.8.1-6.el9
-            - python3.9dist(python-dateutil) = 2.8.1
-            - python3dist(python-dateutil) = 2.8.1
+            - python-dateutil
+            - python3-dateutil
+            - python3.9-dateutil
+            - python3.9dist(python-dateutil)
+            - python3dist(python-dateutil)
         requires:
-            - python(abi) = 3.9
+            - python(abi)
             - python3.9dist(six) >= 1.5
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -25513,12 +25513,12 @@ rpms:
             - /usr/share/licenses/python3-dateutil/LICENSE
     python3-dbus:
         provides:
-            - python-dbus = 1.2.18-2.el9
-            - python3-dbus = 1.2.18-2.el9
-            - python3-dbus(x86-64) = 1.2.18-2.el9
-            - python3.9-dbus = 1.2.18-2.el9
-            - python3.9dist(dbus-python) = 1.2.18
-            - python3dist(dbus-python) = 1.2.18
+            - python-dbus
+            - python3-dbus
+            - python3-dbus(x86-64)
+            - python3.9-dbus
+            - python3.9dist(dbus-python)
+            - python3dist(dbus-python)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
@@ -25526,7 +25526,7 @@ rpms:
             - libdbus-1.so.3()(64bit)
             - libdbus-1.so.3(LIBDBUS_1_3)(64bit)
             - libglib-2.0.so.0()(64bit)
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -25607,13 +25607,13 @@ rpms:
             - /usr/share/licenses/python3-dbus/COPYING
     python3-decorator:
         provides:
-            - python-decorator = 4.4.2-6.el9
-            - python3-decorator = 4.4.2-6.el9
-            - python3.9-decorator = 4.4.2-6.el9
-            - python3.9dist(decorator) = 4.4.2
-            - python3dist(decorator) = 4.4.2
+            - python-decorator
+            - python3-decorator
+            - python3.9-decorator
+            - python3.9dist(decorator)
+            - python3dist(decorator)
         requires:
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -25636,14 +25636,14 @@ rpms:
             - /usr/share/licenses/python3-decorator/LICENSE.txt
     python3-dnf:
         provides:
-            - python-dnf = 4.14.0-5.el9_2
-            - python3-dnf = 4.14.0-5.el9_2
-            - python3.9-dnf = 4.14.0-5.el9_2
+            - python-dnf
+            - python3-dnf
+            - python3.9-dnf
         requires:
             - /usr/bin/python3
-            - dnf-data = 4.14.0-5.el9_2
+            - dnf-data
             - libmodulemd >= 2.9.3
-            - python(abi) = 3.9
+            - python(abi)
             - python3-gpg
             - python3-hawkey >= 0.66.0
             - python3-libcomps >= 0.1.8
@@ -25924,18 +25924,18 @@ rpms:
             - /usr/lib/python3.9/site-packages/dnf/yum/rpmtrans.py
     python3-dnf-plugins-core:
         provides:
-            - config(python3-dnf-plugins-core) = 4.3.0-5.el9_2
-            - python-dnf-plugins-core = 4.3.0-5.el9_2
-            - python3-dnf-plugin-system-upgrade = 4.3.0-5.el9_2
-            - python3-dnf-plugins-core = 4.3.0-5.el9_2
-            - python3-dnf-plugins-extras-debug = 4.3.0-5.el9_2
-            - python3-dnf-plugins-extras-repoclosure = 4.3.0-5.el9_2
-            - python3-dnf-plugins-extras-repograph = 4.3.0-5.el9_2
-            - python3-dnf-plugins-extras-repomanage = 4.3.0-5.el9_2
-            - python3.9-dnf-plugins-core = 4.3.0-5.el9_2
+            - config(python3-dnf-plugins-core)
+            - python-dnf-plugins-core
+            - python3-dnf-plugin-system-upgrade
+            - python3-dnf-plugins-core
+            - python3-dnf-plugins-extras-debug
+            - python3-dnf-plugins-extras-repoclosure
+            - python3-dnf-plugins-extras-repograph
+            - python3-dnf-plugins-extras-repomanage
+            - python3.9-dnf-plugins-core
         requires:
-            - config(python3-dnf-plugins-core) = 4.3.0-5.el9_2
-            - python(abi) = 3.9
+            - config(python3-dnf-plugins-core)
+            - python(abi)
             - python3-dateutil
             - python3-dbus
             - python3-dnf >= 4.11.0
@@ -26046,12 +26046,12 @@ rpms:
             - /var/cache/dnf/packages.db
     python3-ethtool:
         provides:
-            - python-ethtool = 0.15-2.el9
-            - python3-ethtool = 0.15-2.el9
-            - python3-ethtool(x86-64) = 0.15-2.el9
-            - python3.9-ethtool = 0.15-2.el9
-            - python3.9dist(ethtool) = 0.15
-            - python3dist(ethtool) = 0.15
+            - python-ethtool
+            - python3-ethtool
+            - python3-ethtool(x86-64)
+            - python3.9-ethtool
+            - python3.9dist(ethtool)
+            - python3dist(ethtool)
         requires:
             - /usr/bin/python3
             - libc.so.6()(64bit)
@@ -26065,7 +26065,7 @@ rpms:
             - libnl-3.so.200(libnl_3)(64bit)
             - libnl-route-3.so.200()(64bit)
             - libnl-route-3.so.200(libnl_3)(64bit)
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -26092,12 +26092,12 @@ rpms:
             - /usr/share/man/man8/pifconfig.8.gz
     python3-gobject-base:
         provides:
-            - python-gobject-base = 3.40.1-6.el9
-            - python3-gobject-base = 3.40.1-6.el9
-            - python3-gobject-base(x86-64) = 3.40.1-6.el9
-            - python3.9-gobject-base = 3.40.1-6.el9
-            - python3.9dist(pygobject) = 3.40.1
-            - python3dist(pygobject) = 3.40.1
+            - python-gobject-base
+            - python3-gobject-base
+            - python3-gobject-base(x86-64)
+            - python3.9-gobject-base
+            - python3.9dist(pygobject)
+            - python3dist(pygobject)
         requires:
             - gobject-introspection(x86-64) >= 1.56.0
             - libc.so.6()(64bit)
@@ -26110,8 +26110,8 @@ rpms:
             - libgirepository-1.0.so.1()(64bit)
             - libglib-2.0.so.0()(64bit)
             - libgobject-2.0.so.0()(64bit)
-            - python(abi) = 3.9
-            - python3-gobject-base-noarch = 3.40.1-6.el9
+            - python(abi)
+            - python3-gobject-base-noarch
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -26166,12 +26166,12 @@ rpms:
             - /usr/lib64/python3.9/site-packages/gi/types.py
     python3-gobject-base-noarch:
         provides:
-            - python-gobject-base-noarch = 3.40.1-6.el9
-            - python3-gobject-base-noarch = 3.40.1-6.el9
-            - python3.9-gobject-base-noarch = 3.40.1-6.el9
+            - python-gobject-base-noarch
+            - python3-gobject-base-noarch
+            - python3.9-gobject-base-noarch
         requires:
-            - python(abi) = 3.9
-            - python3-gobject-base = 3.40.1-6.el9
+            - python(abi)
+            - python3-gobject-base
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -26233,14 +26233,14 @@ rpms:
             - /usr/share/licenses/python3-gobject-base-noarch/COPYING
     python3-gpg:
         provides:
-            - python-gpg = 1.15.1-6.el9
-            - python3-gpg = 1.15.1-6.el9
-            - python3-gpg(x86-64) = 1.15.1-6.el9
-            - python3.9-gpg = 1.15.1-6.el9
-            - python3.9dist(gpg) = 1.15.1
-            - python3dist(gpg) = 1.15.1
+            - python-gpg
+            - python3-gpg
+            - python3-gpg(x86-64)
+            - python3.9-gpg
+            - python3.9dist(gpg)
+            - python3dist(gpg)
         requires:
-            - gpgme(x86-64) = 1.15.1-6.el9
+            - gpgme(x86-64)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
@@ -26249,7 +26249,7 @@ rpms:
             - libgpgme.so.11()(64bit)
             - libgpgme.so.11(GPGME_1.0)(64bit)
             - libgpgme.so.11(GPGME_1.1)(64bit)
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -26362,16 +26362,16 @@ rpms:
             - /usr/share/doc/python3-gpg/README
     python3-hawkey:
         provides:
-            - python-hawkey = 0.69.0-3.el9_2
-            - python3-hawkey = 0.69.0-3.el9_2
-            - python3-hawkey(x86-64) = 0.69.0-3.el9_2
-            - python3.9-hawkey = 0.69.0-3.el9_2
+            - python-hawkey
+            - python3-hawkey
+            - python3-hawkey(x86-64)
+            - python3.9-hawkey
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - libdnf(x86-64) = 0.69.0-3.el9_2
+            - libdnf(x86-64)
             - libdnf.so.2()(64bit)
             - libgcc_s.so.1()(64bit)
             - libgcc_s.so.1(GCC_3.0)(64bit)
@@ -26388,8 +26388,8 @@ rpms:
             - libstdc++.so.6(GLIBCXX_3.4)(64bit)
             - libstdc++.so.6(GLIBCXX_3.4.21)(64bit)
             - libstdc++.so.6(GLIBCXX_3.4.29)(64bit)
-            - python(abi) = 3.9
-            - python3-libdnf = 0.69.0-3.el9_2
+            - python(abi)
+            - python3-libdnf
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -26416,13 +26416,13 @@ rpms:
             - /usr/lib64/python3.9/site-packages/hawkey/test/_hawkey_test.so
     python3-idna:
         provides:
-            - python-idna = 2.10-7.el9
-            - python3-idna = 2.10-7.el9
-            - python3.9-idna = 2.10-7.el9
-            - python3.9dist(idna) = 2.10
-            - python3dist(idna) = 2.10
+            - python-idna
+            - python3-idna
+            - python3.9-idna
+            - python3.9dist(idna)
+            - python3dist(idna)
         requires:
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -26467,13 +26467,13 @@ rpms:
             - /usr/share/licenses/python3-idna/LICENSE.rst
     python3-iniparse:
         provides:
-            - python-iniparse = 0.4-45.el9
-            - python3-iniparse = 0.4-45.el9
-            - python3.9-iniparse = 0.4-45.el9
-            - python3.9dist(iniparse) = 0.4
-            - python3dist(iniparse) = 0.4
+            - python-iniparse
+            - python3-iniparse
+            - python3.9-iniparse
+            - python3.9dist(iniparse)
+            - python3dist(iniparse)
         requires:
-            - python(abi) = 3.9
+            - python(abi)
             - python3.9dist(six)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -26518,14 +26518,14 @@ rpms:
             - /usr/share/licenses/python-iniparse/LICENSE-PSF
     python3-inotify:
         provides:
-            - python-inotify = 0.9.6-25.el9
-            - python3-inotify = 0.9.6-25.el9
-            - python3.9-inotify = 0.9.6-25.el9
-            - python3.9dist(pyinotify) = 0.9.6
-            - python3dist(pyinotify) = 0.9.6
+            - python-inotify
+            - python3-inotify
+            - python3.9-inotify
+            - python3.9dist(pyinotify)
+            - python3dist(pyinotify)
         requires:
             - /usr/bin/python3
-            - python(abi) = 3.9
+            - python(abi)
             - python3.9dist(setuptools)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -26549,23 +26549,23 @@ rpms:
             - /usr/share/licenses/python3-inotify/COPYING
     python3-libcomps:
         provides:
-            - python-libcomps = 0.1.18-1.el9
-            - python3-libcomps = 0.1.18-1.el9
-            - python3-libcomps(x86-64) = 0.1.18-1.el9
-            - python3.9-libcomps = 0.1.18-1.el9
-            - python3.9dist(libcomps) = 0.1.18
-            - python3dist(libcomps) = 0.1.18
+            - python-libcomps
+            - python3-libcomps
+            - python3-libcomps(x86-64)
+            - python3.9-libcomps
+            - python3.9dist(libcomps)
+            - python3dist(libcomps)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - libcomps(x86-64) = 0.1.18-1.el9
+            - libcomps(x86-64)
             - libcomps.so.0()(64bit)
             - libpython3.9.so.1.0()(64bit)
             - libz.so.1()(64bit)
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -26589,10 +26589,10 @@ rpms:
             - /usr/lib64/python3.9/site-packages/libcomps/_libpycomps.so
     python3-libdnf:
         provides:
-            - python-libdnf = 0.69.0-3.el9_2
-            - python3-libdnf = 0.69.0-3.el9_2
-            - python3-libdnf(x86-64) = 0.69.0-3.el9_2
-            - python3.9-libdnf = 0.69.0-3.el9_2
+            - python-libdnf
+            - python3-libdnf
+            - python3-libdnf(x86-64)
+            - python3.9-libdnf
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -26600,7 +26600,7 @@ rpms:
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.32)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - libdnf(x86-64) = 0.69.0-3.el9_2
+            - libdnf(x86-64)
             - libdnf.so.2()(64bit)
             - libgcc_s.so.1()(64bit)
             - libgcc_s.so.1(GCC_3.0)(64bit)
@@ -26619,7 +26619,7 @@ rpms:
             - libstdc++.so.6(GLIBCXX_3.4.21)(64bit)
             - libstdc++.so.6(GLIBCXX_3.4.29)(64bit)
             - libstdc++.so.6(GLIBCXX_3.4.9)(64bit)
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -26683,10 +26683,10 @@ rpms:
             - /usr/lib64/python3.9/site-packages/libdnf/utils.py
     python3-librepo:
         provides:
-            - python-librepo = 1.14.5-1.el9
-            - python3-librepo = 1.14.5-1.el9
-            - python3-librepo(x86-64) = 1.14.5-1.el9
-            - python3.9-librepo = 1.14.5-1.el9
+            - python-librepo
+            - python3-librepo
+            - python3-librepo(x86-64)
+            - python3.9-librepo
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
@@ -26697,9 +26697,9 @@ rpms:
             - libgcc_s.so.1(GCC_3.3.1)(64bit)
             - libglib-2.0.so.0()(64bit)
             - libpython3.9.so.1.0()(64bit)
-            - librepo(x86-64) = 1.14.5-1.el9
+            - librepo(x86-64)
             - librepo.so.0()(64bit)
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -26718,14 +26718,14 @@ rpms:
             - /usr/lib64/python3.9/site-packages/librepo/_librepo.so
     python3-libs:
         provides:
-            - bundled(libmpdec) = 2.5.0
-            - bundled(mpdecimal) = 2.5.0
+            - bundled(libmpdec)
+            - bundled(mpdecimal)
             - libpython3.9.so.1.0()(64bit)
             - libpython3.so()(64bit)
-            - python-libs = 3.9.16-1.el9_2.1
-            - python3-libs = 3.9.16-1.el9_2.1
-            - python3-libs(x86-64) = 3.9.16-1.el9_2.1
-            - python3.9-libs = 3.9.16-1.el9_2.1
+            - python-libs
+            - python3-libs
+            - python3-libs(x86-64)
+            - python3.9-libs
         requires:
             - /usr/bin/sh
             - libbz2.so.1()(64bit)
@@ -29347,32 +29347,32 @@ rpms:
             - /usr/share/doc/python3-libs/README.rst
     python3-pip-wheel:
         provides:
-            - bundled(python3dist(appdirs)) = 1.4.4
-            - bundled(python3dist(cachecontrol)) = 0.12.6
-            - bundled(python3dist(certifi)) = 2021.5.30
-            - bundled(python3dist(chardet)) = 4
-            - bundled(python3dist(colorama)) = 0.4.4
-            - bundled(python3dist(distlib)) = 0.3.2
-            - bundled(python3dist(distro)) = 1.5
-            - bundled(python3dist(html5lib)) = 1.1
-            - bundled(python3dist(idna)) = 3.2
-            - bundled(python3dist(msgpack)) = 1.0.2
-            - bundled(python3dist(packaging)) = 21
-            - bundled(python3dist(pep517)) = 0.11
-            - bundled(python3dist(progress)) = 1.5
-            - bundled(python3dist(pyparsing)) = 2.4.7
-            - bundled(python3dist(requests)) = 2.26
-            - bundled(python3dist(resolvelib)) = 0.7.1
-            - bundled(python3dist(setuptools)) = 44
-            - bundled(python3dist(six)) = 1.16
-            - bundled(python3dist(tenacity)) = 8.0.1
-            - bundled(python3dist(tomli)) = 1.0.3
-            - bundled(python3dist(urllib3)) = 1.26.6
-            - bundled(python3dist(webencodings)) = 0.5.1
-            - python-pip-wheel = 21.2.3-6.el9
-            - python-pip-wheel = 21.2.3-6.el9
-            - python3-pip-wheel = 21.2.3-6.el9
-            - python3.9-pip-wheel = 21.2.3-6.el9
+            - bundled(python3dist(appdirs))
+            - bundled(python3dist(cachecontrol))
+            - bundled(python3dist(certifi))
+            - bundled(python3dist(chardet))
+            - bundled(python3dist(colorama))
+            - bundled(python3dist(distlib))
+            - bundled(python3dist(distro))
+            - bundled(python3dist(html5lib))
+            - bundled(python3dist(idna))
+            - bundled(python3dist(msgpack))
+            - bundled(python3dist(packaging))
+            - bundled(python3dist(pep517))
+            - bundled(python3dist(progress))
+            - bundled(python3dist(pyparsing))
+            - bundled(python3dist(requests))
+            - bundled(python3dist(resolvelib))
+            - bundled(python3dist(setuptools))
+            - bundled(python3dist(six))
+            - bundled(python3dist(tenacity))
+            - bundled(python3dist(tomli))
+            - bundled(python3dist(urllib3))
+            - bundled(python3dist(webencodings))
+            - python-pip-wheel
+            - python-pip-wheel
+            - python3-pip-wheel
+            - python3.9-pip-wheel
         requires:
             - ca-certificates
             - rpmlib(CompressedFileNames) <= 3.0.4-1
@@ -29387,13 +29387,13 @@ rpms:
             - /usr/share/python3-wheels/pip-21.2.3-py3-none-any.whl
     python3-pysocks:
         provides:
-            - python-pysocks = 1.7.1-12.el9
-            - python3-pysocks = 1.7.1-12.el9
-            - python3.9-pysocks = 1.7.1-12.el9
-            - python3.9dist(pysocks) = 1.7.1
-            - python3dist(pysocks) = 1.7.1
+            - python-pysocks
+            - python3-pysocks
+            - python3.9-pysocks
+            - python3.9dist(pysocks)
+            - python3dist(pysocks)
         requires:
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -29417,16 +29417,16 @@ rpms:
             - /usr/share/licenses/python3-pysocks/LICENSE
     python3-requests:
         provides:
-            - python-requests = 2.25.1-7.el9_2
-            - python3-requests = 2.25.1-7.el9_2
-            - python3.9-requests = 2.25.1-7.el9_2
-            - python3.9dist(requests) = 2.25.1
-            - python3dist(requests) = 2.25.1
+            - python-requests
+            - python3-requests
+            - python3.9-requests
+            - python3.9dist(requests)
+            - python3dist(requests)
         requires:
-            - (python3.9dist(chardet) < 5 with python3.9dist(chardet) >= 3.0.2)
-            - (python3.9dist(idna) < 3 with python3.9dist(idna) >= 2.5)
-            - (python3.9dist(urllib3) < 1.27 with python3.9dist(urllib3) >= 1.21.1)
-            - python(abi) = 3.9
+            - (python3.9dist(chardet)
+            - (python3.9dist(idna)
+            - (python3.9dist(urllib3)
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -29503,13 +29503,13 @@ rpms:
             - /usr/share/licenses/python3-requests/LICENSE
     python3-rpm:
         provides:
-            - python-rpm = 4.16.1.3-22.el9
-            - python3-rpm = 4.16.1.3-22.el9
-            - python3-rpm(x86-64) = 4.16.1.3-22.el9
-            - python3.9-rpm = 4.16.1.3-22.el9
-            - python3.9dist(rpm) = 4.16.1.3
-            - python3dist(rpm) = 4.16.1.3
-            - rpm-python3 = 4.16.1.3-22.el9
+            - python-rpm
+            - python3-rpm
+            - python3-rpm(x86-64)
+            - python3.9-rpm
+            - python3.9dist(rpm)
+            - python3dist(rpm)
+            - rpm-python3
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
@@ -29520,8 +29520,8 @@ rpms:
             - librpmbuild.so.9()(64bit)
             - librpmio.so.9()(64bit)
             - librpmsign.so.9()(64bit)
-            - python(abi) = 3.9
-            - rpm-libs(x86-64) = 4.16.1.3-22.el9
+            - python(abi)
+            - rpm-libs(x86-64)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -29544,24 +29544,24 @@ rpms:
             - /usr/lib64/python3.9/site-packages/rpm/transaction.py
     python3-setuptools:
         provides:
-            - bundled(python3dist(appdirs)) = 1.4.3
-            - bundled(python3dist(ordered-set)) = 3.1.1
-            - bundled(python3dist(packaging)) = 20.4
-            - bundled(python3dist(pyparsing)) = 2.2.1
-            - platform-python-setuptools = 53.0.0-12.el9
-            - python-pkg-resources = 53.0.0-12.el9
-            - python-pkg_resources = 53.0.0-12.el9
-            - python-setuptools = 53.0.0-12.el9
-            - python3-pkg-resources = 53.0.0-12.el9
-            - python3-pkg_resources = 53.0.0-12.el9
-            - python3-setuptools = 53.0.0-12.el9
-            - python3.9-pkg-resources = 53.0.0-12.el9
-            - python3.9-pkg_resources = 53.0.0-12.el9
-            - python3.9-setuptools = 53.0.0-12.el9
-            - python3.9dist(setuptools) = 53
-            - python3dist(setuptools) = 53
+            - bundled(python3dist(appdirs))
+            - bundled(python3dist(ordered-set))
+            - bundled(python3dist(packaging))
+            - bundled(python3dist(pyparsing))
+            - platform-python-setuptools
+            - python-pkg-resources
+            - python-pkg_resources
+            - python-setuptools
+            - python3-pkg-resources
+            - python3-pkg_resources
+            - python3-setuptools
+            - python3.9-pkg-resources
+            - python3.9-pkg_resources
+            - python3.9-setuptools
+            - python3.9dist(setuptools)
+            - python3dist(setuptools)
         requires:
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -30063,14 +30063,14 @@ rpms:
             - /usr/share/licenses/python3-setuptools/LICENSE
     python3-setuptools-wheel:
         provides:
-            - bundled(python3dist(appdirs)) = 1.4.3
-            - bundled(python3dist(ordered-set)) = 3.1.1
-            - bundled(python3dist(packaging)) = 20.4
-            - bundled(python3dist(pyparsing)) = 2.2.1
-            - python-setuptools-wheel = 53.0.0-12.el9
-            - python-setuptools-wheel = 53.0.0-12.el9
-            - python3-setuptools-wheel = 53.0.0-12.el9
-            - python3.9-setuptools-wheel = 53.0.0-12.el9
+            - bundled(python3dist(appdirs))
+            - bundled(python3dist(ordered-set))
+            - bundled(python3dist(packaging))
+            - bundled(python3dist(pyparsing))
+            - python-setuptools-wheel
+            - python-setuptools-wheel
+            - python3-setuptools-wheel
+            - python3.9-setuptools-wheel
         requires:
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -30083,13 +30083,13 @@ rpms:
             - /usr/share/python3-wheels/setuptools-53.0.0-py3-none-any.whl
     python3-six:
         provides:
-            - python-six = 1.15.0-9.el9
-            - python3-six = 1.15.0-9.el9
-            - python3.9-six = 1.15.0-9.el9
-            - python3.9dist(six) = 1.15
-            - python3dist(six) = 1.15
+            - python-six
+            - python3-six
+            - python3.9-six
+            - python3.9dist(six)
+            - python3dist(six)
         requires:
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -30114,13 +30114,13 @@ rpms:
             - /usr/share/licenses/python3-six/LICENSE
     python3-subscription-manager-rhsm:
         provides:
-            - python-rhsm = 1.29.33.1-1.el9_2
-            - python-subscription-manager-rhsm = 1.29.33.1-1.el9_2
-            - python3-rhsm = 1.29.33.1-1.el9_2
-            - python3-subscription-manager-rhsm = 1.29.33.1-1.el9_2
-            - python3-subscription-manager-rhsm(x86-64) = 1.29.33.1-1.el9_2
-            - python3.9-rhsm = 1.29.33.1-1.el9_2
-            - python3.9-subscription-manager-rhsm = 1.29.33.1-1.el9_2
+            - python-rhsm
+            - python-subscription-manager-rhsm
+            - python3-rhsm
+            - python3-subscription-manager-rhsm
+            - python3-subscription-manager-rhsm(x86-64)
+            - python3.9-rhsm
+            - python3.9-subscription-manager-rhsm
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -30128,8 +30128,8 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libcrypto.so.3()(64bit)
             - libcrypto.so.3(OPENSSL_3.0.0)(64bit)
-            - python(abi) = 3.9
-            - python3-cloud-what = 1.29.33.1-1.el9_2
+            - python(abi)
+            - python3-cloud-what
             - python3-dateutil
             - python3-iniparse
             - python3-rpm
@@ -30188,14 +30188,14 @@ rpms:
             - /usr/lib64/python3.9/site-packages/rhsm/utils.py
     python3-systemd:
         provides:
-            - python-systemd = 234-18.el9
-            - python3-systemd = 234-18.el9
-            - python3-systemd(x86-64) = 234-18.el9
-            - python3.9-systemd = 234-18.el9
-            - python3.9dist(systemd-python) = 234
-            - python3dist(systemd-python) = 234
-            - systemd-python3 = 234-18.el9
-            - systemd-python3(x86-64) = 234-18.el9
+            - python-systemd
+            - python3-systemd
+            - python3-systemd(x86-64)
+            - python3.9-systemd
+            - python3.9dist(systemd-python)
+            - python3dist(systemd-python)
+            - systemd-python3
+            - systemd-python3(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -30213,7 +30213,7 @@ rpms:
             - libsystemd.so.0(LIBSYSTEMD_230)(64bit)
             - libsystemd.so.0(LIBSYSTEMD_233)(64bit)
             - libsystemd.so.0(LIBSYSTEMD_246)(64bit)
-            - python(abi) = 3.9
+            - python(abi)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PartialHardlinkSets) <= 4.0.4-1
@@ -30267,14 +30267,14 @@ rpms:
             - /usr/share/licenses/python3-systemd/LICENSE.txt
     python3-urllib3:
         provides:
-            - python-urllib3 = 1.26.5-3.el9
-            - python3-urllib3 = 1.26.5-3.el9
-            - python3.9-urllib3 = 1.26.5-3.el9
-            - python3.9dist(urllib3) = 1.26.5
-            - python3dist(urllib3) = 1.26.5
+            - python-urllib3
+            - python3-urllib3
+            - python3.9-urllib3
+            - python3.9dist(urllib3)
+            - python3dist(urllib3)
         requires:
             - ca-certificates
-            - python(abi) = 3.9
+            - python(abi)
             - python3-idna
             - python3-pysocks
             - python3-six
@@ -30426,8 +30426,8 @@ rpms:
         provides:
             - libhistory.so.8()(64bit)
             - libreadline.so.8()(64bit)
-            - readline = 8.1-4.el9
-            - readline(x86-64) = 8.1-4.el9
+            - readline
+            - readline(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.11)(64bit)
@@ -30462,17 +30462,17 @@ rpms:
     redhat-release:
         provides:
             - base-module(platform:el9)
-            - config(redhat-release) = 9.2-0.13.el9
-            - redhat-release = 9.2-0.13.el9
-            - redhat-release(x86-64) = 9.2-0.13.el9
+            - config(redhat-release)
+            - redhat-release
+            - redhat-release(x86-64)
             - redhat-release-client
             - redhat-release-computenode
             - redhat-release-server
             - redhat-release-workstation
-            - system-release = 9.2-0.13.el9
-            - system-release(releasever) = 9
+            - system-release
+            - system-release(releasever)
         requires:
-            - config(redhat-release) = 9.2-0.13.el9
+            - config(redhat-release)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -30511,11 +30511,11 @@ rpms:
             - /usr/share/doc/redhat-release/GPL-source-offer
     rootfiles:
         provides:
-            - config(rootfiles) = 8.1-31.el9
-            - rootfiles = 8.1-31.el9
+            - config(rootfiles)
+            - rootfiles
         requires:
             - /bin/sh
-            - config(rootfiles) = 8.1-31.el9
+            - config(rootfiles)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -30528,14 +30528,14 @@ rpms:
             - /root/.tcshrc
     rpm:
         provides:
-            - config(rpm) = 4.16.1.3-22.el9
-            - rpm = 4.16.1.3-22.el9
-            - rpm(x86-64) = 4.16.1.3-22.el9
+            - config(rpm)
+            - rpm
+            - rpm(x86-64)
         requires:
             - /bin/sh
             - /bin/sh
             - /usr/bin/sh
-            - config(rpm) = 4.16.1.3-22.el9
+            - config(rpm)
             - coreutils
             - curl
             - libarchive.so.13()(64bit)
@@ -30807,8 +30807,8 @@ rpms:
     rpm-build-libs:
         provides:
             - librpmbuild.so.9()(64bit)
-            - rpm-build-libs = 4.16.1.3-22.el9
-            - rpm-build-libs(x86-64) = 4.16.1.3-22.el9
+            - rpm-build-libs
+            - rpm-build-libs(x86-64)
         requires:
             - libacl.so.1()(64bit)
             - libaudit.so.1()(64bit)
@@ -30849,7 +30849,7 @@ rpms:
             - libsqlite3.so.0()(64bit)
             - libz.so.1()(64bit)
             - libzstd.so.1()(64bit)
-            - rpm-libs(x86-64) = 4.16.1.3-22.el9
+            - rpm-libs(x86-64)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -30865,8 +30865,8 @@ rpms:
         provides:
             - librpm.so.9()(64bit)
             - librpmio.so.9()(64bit)
-            - rpm-libs = 4.16.1.3-22.el9
-            - rpm-libs(x86-64) = 4.16.1.3-22.el9
+            - rpm-libs
+            - rpm-libs(x86-64)
         requires:
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
@@ -30902,7 +30902,7 @@ rpms:
             - libsqlite3.so.0()(64bit)
             - libz.so.1()(64bit)
             - libzstd.so.1()(64bit)
-            - rpm = 4.16.1.3-22.el9
+            - rpm
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -30922,8 +30922,8 @@ rpms:
     rpm-sign-libs:
         provides:
             - librpmsign.so.9()(64bit)
-            - rpm-sign-libs = 4.16.1.3-22.el9
-            - rpm-sign-libs(x86-64) = 4.16.1.3-22.el9
+            - rpm-sign-libs
+            - rpm-sign-libs(x86-64)
         requires:
             - /usr/bin/gpg2
             - libacl.so.1()(64bit)
@@ -30949,7 +30949,7 @@ rpms:
             - libsqlite3.so.0()(64bit)
             - libz.so.1()(64bit)
             - libzstd.so.1()(64bit)
-            - rpm-libs(x86-64) = 4.16.1.3-22.el9
+            - rpm-libs(x86-64)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -30965,8 +30965,8 @@ rpms:
         provides:
             - /bin/sed
             - bundled(gnulib)
-            - sed = 4.8-9.el9
-            - sed(x86-64) = 4.8-9.el9
+            - sed
+            - sed(x86-64)
         requires:
             - libacl.so.1()(64bit)
             - libacl.so.1(ACL_1.0)(64bit)
@@ -31043,10 +31043,10 @@ rpms:
             - /usr/share/man/man1/sed.1.gz
     setup:
         provides:
-            - config(setup) = 2.13.7-9.el9
-            - setup = 2.13.7-9.el9
+            - config(setup)
+            - setup
         requires:
-            - config(setup) = 2.13.7-9.el9
+            - config(setup)
             - rpmlib(BuiltinLuaScripts) <= 4.2.2-1
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -31097,13 +31097,13 @@ rpms:
             - /usr/share/licenses/setup/COPYING
     shadow-utils:
         provides:
-            - config(shadow-utils) = 2:4.9-6.el9
-            - shadow = 2:4.9-6.el9
-            - shadow-utils = 2:4.9-6.el9
-            - shadow-utils(x86-64) = 2:4.9-6.el9
+            - config(shadow-utils)
+            - shadow
+            - shadow-utils
+            - shadow-utils(x86-64)
         requires:
             - audit-libs >= 1.6.5
-            - config(shadow-utils) = 2:4.9-6.el9
+            - config(shadow-utils)
             - libacl.so.1()(64bit)
             - libacl.so.1(ACL_1.1)(64bit)
             - libattr.so.1()(64bit)
@@ -31531,8 +31531,8 @@ rpms:
     sqlite-libs:
         provides:
             - libsqlite3.so.0()(64bit)
-            - sqlite-libs = 3.34.1-6.el9_1
-            - sqlite-libs(x86-64) = 3.34.1-6.el9_1
+            - sqlite-libs
+            - sqlite-libs(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -31560,11 +31560,11 @@ rpms:
             - /usr/share/doc/sqlite-libs/README.md
     subscription-manager:
         provides:
-            - config(subscription-manager) = 1.29.33.1-1.el9_2
-            - python3.9dist(subscription-manager) = 1.29.33.1
-            - python3dist(subscription-manager) = 1.29.33.1
-            - subscription-manager = 1.29.33.1-1.el9_2
-            - subscription-manager(x86-64) = 1.29.33.1-1.el9_2
+            - config(subscription-manager)
+            - python3.9dist(subscription-manager)
+            - python3dist(subscription-manager)
+            - subscription-manager
+            - subscription-manager(x86-64)
         requires:
             - /bin/sh
             - /bin/sh
@@ -31572,7 +31572,7 @@ rpms:
             - /bin/sh
             - /bin/sh
             - /usr/bin/python3
-            - config(subscription-manager) = 1.29.33.1-1.el9_2
+            - config(subscription-manager)
             - dmidecode
             - dnf >= 1.0.0
             - libc.so.6()(64bit)
@@ -31582,10 +31582,10 @@ rpms:
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
-            - libdnf-plugin-subscription-manager = 1.29.33.1
+            - libdnf-plugin-subscription-manager
             - libglib-2.0.so.0()(64bit)
-            - python(abi) = 3.9
-            - python3-cloud-what = 1.29.33.1-1.el9_2
+            - python(abi)
+            - python3-cloud-what
             - python3-dateutil
             - python3-dbus
             - python3-decorator
@@ -31596,7 +31596,7 @@ rpms:
             - python3-inotify
             - python3-librepo
             - python3-setuptools
-            - python3-subscription-manager-rhsm = 1.29.33.1
+            - python3-subscription-manager-rhsm
             - python3.9dist(ethtool)
             - python3.9dist(iniparse)
             - python3.9dist(python-dateutil)
@@ -32229,7 +32229,7 @@ rpms:
             - /var/spool/rhsm/debug
     subscription-manager-rhsm-certificates:
         provides:
-            - subscription-manager-rhsm-certificates = 20220623-1.el9
+            - subscription-manager-rhsm-certificates
         requires:
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -32246,7 +32246,7 @@ rpms:
         provides:
             - /bin/systemctl
             - /sbin/shutdown
-            - config(systemd) = 252-14.el9_2.3
+            - config(systemd)
             - group(adm)
             - group(audio)
             - group(cdrom)
@@ -32272,15 +32272,15 @@ rpms:
             - libsystemd-core-252.so(SD_SHARED)(64bit)
             - libsystemd-shared-252.so()(64bit)
             - libsystemd-shared-252.so(SD_SHARED)(64bit)
-            - pkgconfig(systemd) = 252
-            - pkgconfig(udev) = 252
+            - pkgconfig(systemd)
+            - pkgconfig(udev)
             - syslog
-            - system-setup-keyboard = 0.9
-            - systemd = 252-14.el9_2.3
-            - systemd(x86-64) = 252-14.el9_2.3
-            - systemd-sysv = 206
-            - systemd-units = 252-14.el9_2.3
-            - timedatex = 0.6-3
+            - system-setup-keyboard
+            - systemd
+            - systemd(x86-64)
+            - systemd-sysv
+            - systemd-units
+            - timedatex
             - user(nobody)
             - user(root)
             - user(systemd-oom)
@@ -32294,7 +32294,7 @@ rpms:
             - /usr/bin/sh
             - /usr/sbin/groupadd
             - acl
-            - config(systemd) = 252-14.el9_2.3
+            - config(systemd)
             - coreutils
             - coreutils
             - dbus >= 1.9.18
@@ -32384,9 +32384,9 @@ rpms:
             - rpmlib(PayloadIsZstd) <= 5.4.18-1
             - rtld(GNU_HASH)
             - sed
-            - systemd-libs = 252-14.el9_2.3
-            - systemd-pam = 252-14.el9_2.3
-            - systemd-rpm-macros = 252-14.el9_2.3
+            - systemd-libs
+            - systemd-pam
+            - systemd-rpm-macros
             - util-linux
         files:
             - /etc/X11/xinit/xinitrc.d/50-systemd-user.sh
@@ -33263,10 +33263,10 @@ rpms:
             - libudev.so.1(LIBUDEV_199)(64bit)
             - libudev.so.1(LIBUDEV_215)(64bit)
             - libudev.so.1(LIBUDEV_247)(64bit)
-            - nss-myhostname = 0.4
-            - nss-myhostname(x86-64) = 0.4
-            - systemd-libs = 252-14.el9_2.3
-            - systemd-libs(x86-64) = 252-14.el9_2.3
+            - nss-myhostname
+            - nss-myhostname(x86-64)
+            - systemd-libs
+            - systemd-libs(x86-64)
         requires:
             - /bin/sh
             - /usr/bin/getent
@@ -33342,8 +33342,8 @@ rpms:
             - /usr/share/man/man8/libnss_systemd.so.2.8.gz
     systemd-pam:
         provides:
-            - systemd-pam = 252-14.el9_2.3
-            - systemd-pam(x86-64) = 252-14.el9_2.3
+            - systemd-pam
+            - systemd-pam(x86-64)
         requires:
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
@@ -33386,7 +33386,7 @@ rpms:
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
             - rpmlib(PayloadIsZstd) <= 5.4.18-1
             - rtld(GNU_HASH)
-            - systemd = 252-14.el9_2.3
+            - systemd
         files:
             - /usr/lib/.build-id
             - /usr/lib/.build-id/2f
@@ -33395,7 +33395,7 @@ rpms:
             - /usr/share/man/man8/pam_systemd.8.gz
     systemd-rpm-macros:
         provides:
-            - systemd-rpm-macros = 252-14.el9_2.3
+            - systemd-rpm-macros
         requires:
             - /usr/bin/bash
             - rpmlib(CompressedFileNames) <= 3.0.4-1
@@ -33415,8 +33415,8 @@ rpms:
             - /bin/tar
             - bundled(gnulib)
             - bundled(paxutils)
-            - tar = 2:1.34-6.el9_1
-            - tar(x86-64) = 2:1.34-6.el9_1
+            - tar
+            - tar(x86-64)
         requires:
             - libacl.so.1()(64bit)
             - libacl.so.1(ACL_1.0)(64bit)
@@ -33510,8 +33510,8 @@ rpms:
             - libtss2-tcti-mssim.so.0()(64bit)
             - libtss2-tcti-swtpm.so.0()(64bit)
             - libtss2-tctildr.so.0()(64bit)
-            - tpm2-tss = 3.0.3-8.el9
-            - tpm2-tss(x86-64) = 3.0.3-8.el9
+            - tpm2-tss
+            - tpm2-tss(x86-64)
             - user(tss)
         requires:
             - /bin/sh
@@ -33599,7 +33599,7 @@ rpms:
             - /usr/share/licenses/tpm2-tss/LICENSE
     tzdata:
         provides:
-            - tzdata = 2023c-1.el9
+            - tzdata
         requires:
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
@@ -35477,11 +35477,11 @@ rpms:
             - /usr/share/zoneinfo/zone1970.tab
     usermode:
         provides:
-            - config(usermode) = 1.114-4.el9
-            - usermode = 1.114-4.el9
-            - usermode(x86-64) = 1.114-4.el9
+            - config(usermode)
+            - usermode
+            - usermode(x86-64)
         requires:
-            - config(usermode) = 1.114-4.el9
+            - config(usermode)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.3)(64bit)
@@ -35590,22 +35590,22 @@ rpms:
         provides:
             - /sbin/findfs
             - /sbin/nologin
-            - config(util-linux) = 2.37.4-11.el9_2
-            - eject = 2.1.6
-            - rfkill = 0.5
-            - util-linux = 2.37.4-11.el9_2
-            - util-linux(x86-64) = 2.37.4-11.el9_2
-            - util-linux-ng = 2.37.4-11.el9_2
+            - config(util-linux)
+            - eject
+            - rfkill
+            - util-linux
+            - util-linux(x86-64)
+            - util-linux-ng
         requires:
             - /bin/sh
             - /etc/pam.d/system-auth
             - audit-libs >= 1.0.6
-            - config(util-linux) = 2.37.4-11.el9_2
+            - config(util-linux)
             - coreutils
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
             - libaudit.so.1()(64bit)
-            - libblkid = 2.37.4-11.el9_2
+            - libblkid
             - libblkid.so.1()(64bit)
             - libblkid.so.1(BLKID_2.15)(64bit)
             - libblkid.so.1(BLKID_2.17)(64bit)
@@ -35636,7 +35636,7 @@ rpms:
             - libcap-ng.so.0()(64bit)
             - libcrypt.so.2()(64bit)
             - libcrypt.so.2(XCRYPT_2.0)(64bit)
-            - libfdisk = 2.37.4-11.el9_2
+            - libfdisk
             - libfdisk.so.1()(64bit)
             - libfdisk.so.1(FDISK_2.26)(64bit)
             - libfdisk.so.1(FDISK_2.27)(64bit)
@@ -35647,7 +35647,7 @@ rpms:
             - libfdisk.so.1(FDISK_2.32)(64bit)
             - libfdisk.so.1(FDISK_2.33)(64bit)
             - libfdisk.so.1(FDISK_2.36)(64bit)
-            - libmount = 2.37.4-11.el9_2
+            - libmount
             - libmount.so.1()(64bit)
             - libmount.so.1(MOUNT_2.19)(64bit)
             - libmount.so.1(MOUNT_2.21)(64bit)
@@ -35663,7 +35663,7 @@ rpms:
             - libreadline.so.8()(64bit)
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
-            - libsmartcols = 2.37.4-11.el9_2
+            - libsmartcols
             - libsmartcols.so.1()(64bit)
             - libsmartcols.so.1(SMARTCOLS_2.25)(64bit)
             - libsmartcols.so.1(SMARTCOLS_2.27)(64bit)
@@ -35680,7 +35680,7 @@ rpms:
             - libudev.so.1(LIBUDEV_183)(64bit)
             - libutempter.so.0()(64bit)
             - libutempter.so.0(UTEMPTER_1.1)(64bit)
-            - libuuid = 2.37.4-11.el9_2
+            - libuuid
             - libuuid.so.1()(64bit)
             - libuuid.so.1(UUID_1.0)(64bit)
             - libuuid.so.1(UUID_2.31)(64bit)
@@ -35691,7 +35691,7 @@ rpms:
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
             - rpmlib(PayloadIsZstd) <= 5.4.18-1
             - rtld(GNU_HASH)
-            - util-linux-core = 2.37.4-11.el9_2
+            - util-linux-core
         files:
             - /etc/adjtime
             - /etc/pam.d/login
@@ -36143,16 +36143,16 @@ rpms:
             - /sbin/blkid
             - /sbin/blockdev
             - /sbin/fsck
-            - config(util-linux-core) = 2.37.4-11.el9_2
-            - hardlink = 1:1.3-9
-            - util-linux-core = 2.37.4-11.el9_2
-            - util-linux-core(x86-64) = 2.37.4-11.el9_2
+            - config(util-linux-core)
+            - hardlink
+            - util-linux-core
+            - util-linux-core(x86-64)
         requires:
             - /bin/sh
-            - config(util-linux-core) = 2.37.4-11.el9_2
+            - config(util-linux-core)
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
-            - libblkid = 2.37.4-11.el9_2
+            - libblkid
             - libblkid.so.1()(64bit)
             - libblkid.so.1(BLKID_1.0)(64bit)
             - libblkid.so.1(BLKID_2.15)(64bit)
@@ -36181,7 +36181,7 @@ rpms:
             - libc.so.6(GLIBC_2.7)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
             - libc.so.6(GLIBC_2.9)(64bit)
-            - libmount = 2.37.4-11.el9_2
+            - libmount
             - libmount.so.1()(64bit)
             - libmount.so.1(MOUNT_2.19)(64bit)
             - libmount.so.1(MOUNT_2.20)(64bit)
@@ -36197,7 +36197,7 @@ rpms:
             - libmount.so.1(MOUNT_2_37)(64bit)
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
-            - libsmartcols = 2.37.4-11.el9_2
+            - libsmartcols
             - libsmartcols.so.1()(64bit)
             - libsmartcols.so.1(SMARTCOLS_2.25)(64bit)
             - libsmartcols.so.1(SMARTCOLS_2.27)(64bit)
@@ -36208,7 +36208,7 @@ rpms:
             - libtinfo.so.6()(64bit)
             - libudev.so.1()(64bit)
             - libudev.so.1(LIBUDEV_183)(64bit)
-            - libuuid = 2.37.4-11.el9_2
+            - libuuid
             - libuuid.so.1()(64bit)
             - libuuid.so.1(UUID_1.0)(64bit)
             - rpmlib(CompressedFileNames) <= 3.0.4-1
@@ -36357,13 +36357,13 @@ rpms:
     vim-minimal:
         provides:
             - /usr/bin/vi
-            - config(vim-minimal) = 2:8.2.2637-20.el9_1
+            - config(vim-minimal)
             - vi
-            - vim-minimal = 2:8.2.2637-20.el9_1
-            - vim-minimal(x86-64) = 2:8.2.2637-20.el9_1
+            - vim-minimal
+            - vim-minimal(x86-64)
         requires:
             - /usr/bin/sh
-            - config(vim-minimal) = 2:8.2.2637-20.el9_1
+            - config(vim-minimal)
             - libacl.so.1()(64bit)
             - libacl.so.1(ACL_1.0)(64bit)
             - libc.so.6()(64bit)
@@ -36403,8 +36403,8 @@ rpms:
             - /usr/share/man/man5/virc.5.gz
     virt-what:
         provides:
-            - virt-what = 1.25-3.el9
-            - virt-what(x86-64) = 1.25-3.el9
+            - virt-what
+            - virt-what(x86-64)
         requires:
             - /usr/bin/sh
             - dmidecode
@@ -36431,8 +36431,8 @@ rpms:
             - /usr/share/man/man1/virt-what.1.gz
     which:
         provides:
-            - which = 2.21-28.el9
-            - which(x86-64) = 2.21-28.el9
+            - which
+            - which(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -36468,8 +36468,8 @@ rpms:
             - liblzma.so.5()(64bit)
             - liblzma.so.5(XZ_5.0)(64bit)
             - liblzma.so.5(XZ_5.2)(64bit)
-            - xz-libs = 5.2.5-8.el9_0
-            - xz-libs(x86-64) = 5.2.5-8.el9_0
+            - xz-libs
+            - xz-libs(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -36496,12 +36496,12 @@ rpms:
             - /usr/share/licenses/xz-libs/COPYING
     yum:
         provides:
-            - config(yum) = 4.14.0-5.el9_2
-            - dnf-yum = 4.14.0-5.el9_2
-            - yum = 4.14.0-5.el9_2
+            - config(yum)
+            - dnf-yum
+            - yum
         requires:
-            - config(yum) = 4.14.0-5.el9_2
-            - dnf = 4.14.0-5.el9_2
+            - config(yum)
+            - dnf
             - rpmlib(CompressedFileNames) <= 3.0.4-1
             - rpmlib(FileDigests) <= 4.6.0-1
             - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
@@ -36533,8 +36533,8 @@ rpms:
             - libz.so.1(ZLIB_1.2.5.2)(64bit)
             - libz.so.1(ZLIB_1.2.7.1)(64bit)
             - libz.so.1(ZLIB_1.2.9)(64bit)
-            - zlib = 1.2.11-39.el9
-            - zlib(x86-64) = 1.2.11-39.el9
+            - zlib
+            - zlib(x86-64)
         requires:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)

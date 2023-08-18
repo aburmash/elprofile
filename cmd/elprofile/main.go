@@ -38,7 +38,7 @@ var (
 	ArgRequires bool
 	ArgProvides bool
 	ArgFiles    bool
-	ArgTestAll  bool
+	ArgQuiet    bool
 )
 
 func init() {
@@ -46,7 +46,8 @@ func init() {
 	rootCmd.PersistentFlags().BoolVarP(&ArgRequires, "requires", "r", false, "Only test requires")
 	rootCmd.PersistentFlags().BoolVarP(&ArgProvides, "provides", "p", false, "Only test provides")
 	rootCmd.PersistentFlags().BoolVarP(&ArgFiles, "files", "f", false, "Only test files")
-	rootCmd.PersistentFlags().BoolVarP(&ArgTestAll, "all", "a", false, "Do all tests")
+	rootCmd.PersistentFlags().BoolVarP(&ArgQuiet, "quiet", "q", false, "Only show issues")
+
 }
 
 func main() {
@@ -66,8 +67,7 @@ func CobraRunE(cmd *cobra.Command, args []string) (err error) {
 		testfile = args[0]
 	}
 
-	if ArgTestAll {
-		fmt.Printf("Reporting on all tests\n")
+	if !ArgFiles && !ArgProvides && !ArgRequires {
 		ArgRequires = true
 		ArgProvides = true
 		ArgFiles = true
@@ -129,12 +129,17 @@ func CobraRunE(cmd *cobra.Command, args []string) (err error) {
 
 		for rpmName := range packages.Rpms {
 
+			missingProvides := make(map[string]bool)
+			missingRequires := make(map[string]bool)
+
 			if ArgRequires {
 				var err error
 
 				requires, err := rpmdb.PkgInspect(rpmName, "--requires")
 				if err != nil {
-					fmt.Fprintf(os.Stderr, "%-20s %s\n", "NOT INSTALLED", rpmName)
+					if !ArgQuiet {
+						fmt.Fprintf(os.Stderr, "%-40s %s\n", rpmName, "NOT INSTALLED")
+					}
 					continue
 				}
 
@@ -145,7 +150,8 @@ func CobraRunE(cmd *cobra.Command, args []string) (err error) {
 
 				for _, req := range LookingFor {
 					if _, ok := requireMap[req]; !ok {
-						fmt.Printf("%-20s %-25s %s\n", "MISSING REQUIRES:", rpmName, req)
+						missingRequires[req] = true
+						//fmt.Printf("%-20s %-25s %s\n", "MISSING REQUIRES:", rpmName, req)
 					}
 				}
 			}
@@ -153,21 +159,36 @@ func CobraRunE(cmd *cobra.Command, args []string) (err error) {
 			if ArgProvides {
 				var err error
 
-				provides, err := rpmdb.PkgInspect(rpmName, "--requires")
+				provides, err := rpmdb.PkgInspect(rpmName, "--provides")
 				if err != nil {
-					fmt.Fprintf(os.Stderr, "%-20s %s\n", "NOT INSTALLED", rpmName)
+					if !ArgQuiet {
+						fmt.Fprintf(os.Stderr, "%-40s %s\n", rpmName, "NOT INSTALLED")
+					}
 					continue
 				}
 
 				providesMap := util.ArrayToMap(provides)
 
-				LookingFor := util.ArrayMatch(`.*`, packages.Rpms[rpmName].Requires)
+				LookingFor := util.ArrayMatch(`.*`, packages.Rpms[rpmName].Provides)
 				LookingFor = util.ArrayNotMatch(`=`, LookingFor)
 
 				for _, req := range LookingFor {
 					if _, ok := providesMap[req]; !ok {
-						fmt.Printf("%-20s %-25s %s\n", "MISSING PROVIDES:", rpmName, req)
+						missingProvides[req] = true
+						//fmt.Printf("%-20s %-25s %s\n", "MISSING PROVIDES:", rpmName, req)
 					}
+				}
+			}
+
+			for req := range missingRequires {
+				if _, ok := missingProvides[req]; !ok {
+					fmt.Printf("%-40s %-18s %s\n", rpmName, "MISSING REQUIRES:", req)
+				}
+			}
+
+			for req := range missingProvides {
+				if _, ok := missingRequires[req]; !ok {
+					fmt.Printf("%-40s %-18s %s\n", rpmName, "MISSING PROVIDES:", req)
 				}
 			}
 
@@ -176,7 +197,9 @@ func CobraRunE(cmd *cobra.Command, args []string) (err error) {
 
 				files, err := rpmdb.PkgInspect(rpmName, "-l")
 				if err != nil {
-					fmt.Fprintf(os.Stderr, "%-20s %s\n", "NOT INSTALLED", rpmName)
+					if !ArgQuiet {
+						fmt.Fprintf(os.Stderr, "%-40s %s\n", rpmName, "NOT INSTALLED")
+					}
 					continue
 				}
 
@@ -187,7 +210,7 @@ func CobraRunE(cmd *cobra.Command, args []string) (err error) {
 
 				for _, req := range LookingFor {
 					if _, ok := filesMap[req]; !ok {
-						fmt.Printf("%-20s %-25s %s\n", "MISSING FILES:", rpmName, req)
+						fmt.Printf("%-40s %-18s %s\n", rpmName, "MISSING FILES:", req)
 					}
 				}
 			}
