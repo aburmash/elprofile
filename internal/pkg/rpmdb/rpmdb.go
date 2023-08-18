@@ -8,7 +8,7 @@ import (
 )
 
 func PkgList() ([]string, error) {
-	rpmqa, err := exec.Command("rpm", "-qa", "--qf", "%{NAME}\n").Output()
+	rpmqa, err := exec.Command("rpm", "-qa", "--qf", "%{NAME}-%{VERSION}.%{ARCH}\n").Output()
 	//rpmqa, err := exec.Command("echo", "ImageMagick").Output()
 	if err != nil {
 		return nil, err
@@ -29,7 +29,6 @@ func PkgInspect(pkgName, command string) ([]string, error) {
 		r := regexp.MustCompile(" [<|>|=] ")
 		name := r.Split(prov, 2)
 
-		//name := strings.SplitN(prov, " (<|>|=)", 2)
 		ret = append(ret, name[0])
 	}
 
