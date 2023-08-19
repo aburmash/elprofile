@@ -50,7 +50,7 @@ var (
 
 func init() {
 	rootCmd.PersistentFlags().BoolVarP(&ArgGenerate, "generate", "g", false, "Generate Profile")
-	rootCmd.PersistentFlags().BoolVarP(&ArgAll, "all", "a", false, "Run all comparasions")
+	rootCmd.PersistentFlags().BoolVarP(&ArgAll, "all", "a", false, "Run all comparasions (except version)")
 
 	rootCmd.PersistentFlags().BoolVarP(&ArgRequires, "requires", "r", false, "Only compare requires")
 	rootCmd.PersistentFlags().BoolVarP(&ArgProvides, "provides", "p", false, "Only compare provides")
@@ -84,7 +84,6 @@ func CobraRunE(cmd *cobra.Command, args []string) (err error) {
 		ArgRequires = true
 		ArgProvides = true
 		ArgFiles = true
-		ArgVersion = true
 		ArgSize = true
 	}
 
