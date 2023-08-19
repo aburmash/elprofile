@@ -2,6 +2,7 @@
 all: elprofile
 
 elprofile:
+	go mod tidy
 	CGO_ENABLED=0 GOOS=linux go build -ldflags "-extldflags -static" -o elprofile cmd/elprofile/main.go
 
 ubi-profiles: ubi90.profile ubi91.profile ubi92.profile
@@ -18,23 +19,23 @@ ubi92.profile: elprofile
 
 
 test-rocky88-container: ubi88.profile
-	apptainer exec docker://rockylinux:8.8 ./elprofile -q ubi88.profile 
+	apptainer exec docker://rockylinux:8.8 ./elprofile -qa ubi88.profile 
 
 test-rocky91-container: ubi91.profile
-	apptainer exec docker://rockylinux:9.1 ./elprofile -q ubi92.profile 
+	apptainer exec docker://rockylinux:9.1 ./elprofile -qa ubi92.profile 
 
 test-rocky92-container: ubi92.profile
-	apptainer exec docker://rockylinux:9.2 ./elprofile -q ubi92.profile 
+	apptainer exec docker://rockylinux:9.2 ./elprofile -qa ubi92.profile 
 
 
 test-alma88-container: ubi88.profile
-	apptainer exec docker://almalinux:8.8 ./elprofile -q ubi88.profile 
+	apptainer exec docker://almalinux:8.8 ./elprofile -qa ubi88.profile 
 
 test-alma91-container: ubi91.profile
-	apptainer exec docker://almalinux:9.1 ./elprofile -q ubi92.profile 
+	apptainer exec docker://almalinux:9.1 ./elprofile -qa ubi91.profile 
 
 test-alma92-container: ubi92.profile
-	apptainer exec docker://almalinux:9.2 ./elprofile -q ubi92.profile 
+	apptainer exec docker://almalinux:9.2 ./elprofile -qa ubi92.profile 
 
 
 clean:
