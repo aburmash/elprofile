@@ -1,5 +1,7 @@
 rpms:
     acl-2.3.1.x86_64:
+        version: 2.3.1-3.el9
+        size: 214167
         provides:
             - acl
             - acl(x86-64)
@@ -14,22 +16,16 @@ rpms:
             - libc.so.6(GLIBC_2.33)(64bit)
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/chacl
             - /usr/bin/getfacl
             - /usr/bin/setfacl
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/0f
-            - /usr/lib/.build-id/0f/2d6e4a5d9b2bd09ff1c0deceaf738733524536
-            - /usr/lib/.build-id/ea
-            - /usr/lib/.build-id/ea/1e49b9b901f293de02dfc6081faac5620e1a60
-            - /usr/lib/.build-id/ed
-            - /usr/lib/.build-id/ed/b2376066fa3674a588ce7d2c51a6ed7feb53b5
             - /usr/share/licenses/acl
             - /usr/share/licenses/acl/COPYING
             - /usr/share/licenses/acl/COPYING.LGPL
@@ -46,6 +42,8 @@ rpms:
             - /usr/share/man/man1/setfacl.1.gz
             - /usr/share/man/man5/acl.5.gz
     alternatives-1.20.x86_64:
+        version: 1.20-2.el9
+        size: 63864
         provides:
             - alternatives
             - alternatives(x86-64)
@@ -59,16 +57,14 @@ rpms:
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/alternatives
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/17
-            - /usr/lib/.build-id/17/ab1a0b8548c871de658ade118c40d4022379b3
             - /usr/sbin/alternatives
             - /usr/sbin/update-alternatives
             - /usr/share/licenses/alternatives
@@ -77,6 +73,8 @@ rpms:
             - /usr/share/man/man8/update-alternatives.8.gz
             - /var/lib/alternatives
     audit-libs-3.0.7.x86_64:
+        version: 3.0.7-103.el9
+        size: 307409
         provides:
             - audit-libs
             - audit-libs(x86-64)
@@ -98,18 +96,14 @@ rpms:
             - libc.so.6(GLIBC_2.7)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
             - libcap-ng.so.0()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/libaudit.conf
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/19
-            - /usr/lib/.build-id/19/9420e5d951d173a9975ba0b2b7c5d3d8e5c68d
-            - /usr/lib/.build-id/36
-            - /usr/lib/.build-id/36/c515b3aa78939593c9458d85d064fe013f9cb2
             - /usr/lib64/libaudit.so.1
             - /usr/lib64/libaudit.so.1.0.0
             - /usr/lib64/libauparse.so
@@ -119,18 +113,22 @@ rpms:
             - /usr/share/licenses/audit-libs/lgpl-2.1.txt
             - /usr/share/man/man5/libaudit.conf.5.gz
     basesystem-11.noarch:
+        version: 11-13.el9
+        size: 0
         provides:
             - basesystem
         requires:
             - filesystem
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - setup
         files:
             - (contains no files)
     bash-5.1.8.x86_64:
+        version: 5.1.8-6.el9_1
+        size: 7738610
         provides:
             - /bin/bash
             - /bin/sh
@@ -140,7 +138,7 @@ rpms:
         requires:
             - /usr/bin/sh
             - config(bash)
-            - filesystem >= 3
+            - filesystem
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.11)(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -154,11 +152,11 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
             - libtinfo.so.6()(64bit)
-            - rpmlib(BuiltinLuaScripts) <= 4.2.2-1
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(BuiltinLuaScripts)
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/skel/.bash_logout
@@ -184,8 +182,6 @@ rpms:
             - /usr/bin/unalias
             - /usr/bin/wait
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/5d
-            - /usr/lib/.build-id/5d/82a44f2a4466ff21f763af86b004d1fcb3a8f1
             - /usr/share/doc/bash
             - /usr/share/doc/bash/FAQ
             - /usr/share/doc/bash/INTRO
@@ -294,6 +290,8 @@ rpms:
             - /usr/share/man/man1/unset.1.gz
             - /usr/share/man/man1/wait.1.gz
     bzip2-libs-1.0.8.x86_64:
+        version: 1.0.8-8.el9
+        size: 78740
         provides:
             - bzip2-libs
             - bzip2-libs(x86-64)
@@ -304,20 +302,20 @@ rpms:
             - libc.so.6(GLIBC_2.3)(64bit)
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/dc
-            - /usr/lib/.build-id/dc/9cd83a2cf3038bd3f04cc111c32e2c5698b5d3
             - /usr/lib64/libbz2.so.1
             - /usr/lib64/libbz2.so.1.0.8
             - /usr/share/licenses/bzip2-libs
             - /usr/share/licenses/bzip2-libs/LICENSE
     ca-certificates-2022.2.54.noarch:
+        version: 2022.2.54-90.2.el9_0
+        size: 2343285
         provides:
             - ca-certificates
             - config(ca-certificates)
@@ -332,14 +330,14 @@ rpms:
             - coreutils
             - grep
             - grep
-            - p11-kit >= 0.24
-            - p11-kit >= 0.24
-            - p11-kit-trust >= 0.24
-            - p11-kit-trust >= 0.24
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - p11-kit
+            - p11-kit
+            - p11-kit-trust
+            - p11-kit-trust
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - sed
             - sed
         files:
@@ -392,6 +390,8 @@ rpms:
             - /usr/share/pki/ca-trust-source/blocklist
             - /usr/share/pki/ca-trust-source/ca-bundle.trust.p11-kit
     coreutils-single-8.32.x86_64:
+        version: 8.32-32.el9
+        size: 1408905
         provides:
             - /bin/cat
             - /bin/chmod
@@ -431,10 +431,10 @@ rpms:
             - libcap.so.2()(64bit)
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/[
@@ -543,15 +543,14 @@ rpms:
             - /usr/bin/whoami
             - /usr/bin/yes
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/24
-            - /usr/lib/.build-id/24/443a39072c7f86c4558ac195fa06ab71badc5b
-            - /usr/lib/.build-id/7c/6dd1338afadeef9723df542ec786cc81df47a5
             - /usr/libexec/coreutils
             - /usr/libexec/coreutils/libstdbuf.so
             - /usr/sbin/chroot
             - /usr/share/licenses/coreutils-single
             - /usr/share/licenses/coreutils-single/COPYING
     cracklib-2.9.6.x86_64:
+        version: 2.9.6-27.el9
+        size: 251850
         provides:
             - cracklib
             - cracklib(x86-64)
@@ -568,21 +567,13 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libcrack.so.2()(64bit)
             - libz.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/45
-            - /usr/lib/.build-id/45/00dde1d2c8968ed19a7a39278e7a11292a2945
-            - /usr/lib/.build-id/8b
-            - /usr/lib/.build-id/8b/42721f76cd754eb8f32628f227983835dcb222
-            - /usr/lib/.build-id/9c
-            - /usr/lib/.build-id/9c/9093df2183bf3294ddc51302b17aa0a6e342a4
-            - /usr/lib/.build-id/f9
-            - /usr/lib/.build-id/f9/1f8ca0db0a78ec1cbb5fbea29c2c840a4d604f
             - /usr/lib64/libcrack.so.2
             - /usr/lib64/libcrack.so.2.9.0
             - /usr/sbin/cracklib-check
@@ -650,15 +641,17 @@ rpms:
             - /usr/share/man/man8/create-cracklib-dict.8.gz
             - /usr/share/man/man8/update-cracklib.8.gz
     cracklib-dicts-2.9.6.x86_64:
+        version: 2.9.6-27.el9
+        size: 9815154
         provides:
             - cracklib-dicts
             - cracklib-dicts(x86-64)
         requires:
             - cracklib
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/lib64/cracklib_dict.hwm
             - /usr/lib64/cracklib_dict.pwd
@@ -672,17 +665,19 @@ rpms:
             - /usr/share/cracklib/pw_dict.pwd
             - /usr/share/cracklib/pw_dict.pwi
     crypto-policies-20220815.noarch:
+        version: 20220815-1.git0fbe86f.el9
+        size: 84558
         provides:
             - config(crypto-policies)
             - crypto-policies
         requires:
             - config(crypto-policies)
-            - rpmlib(BuiltinLuaScripts) <= 4.2.2-1
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(BuiltinLuaScripts)
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /etc/crypto-policies
             - /etc/crypto-policies/back-ends
@@ -830,6 +825,8 @@ rpms:
             - /usr/share/licenses/crypto-policies/COPYING.LESSER
             - /usr/share/man/man7/crypto-policies.7.gz
     crypto-policies-scripts-20220815.noarch:
+        version: 20220815-1.git0fbe86f.el9
+        size: 228875
         provides:
             - crypto-policies-scripts
             - fips-mode-setup
@@ -839,12 +836,12 @@ rpms:
             - /usr/bin/python3
             - /usr/bin/sh
             - crypto-policies
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
-            - rpmlib(RichDependencies) <= 4.12.0-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
+            - rpmlib(RichDependencies)
         files:
             - /usr/bin/fips-finish-install
             - /usr/bin/fips-mode-setup
@@ -924,6 +921,8 @@ rpms:
             - /usr/share/man/man8/fips-mode-setup.8.gz
             - /usr/share/man/man8/update-crypto-policies.8.gz
     cryptsetup-libs-2.4.3.x86_64:
+        version: 2.4.3-5.el9_1.1
+        size: 1940909
         provides:
             - cryptsetup-libs
             - cryptsetup-libs(x86-64)
@@ -957,16 +956,14 @@ rpms:
             - libssl.so.3()(64bit)
             - libuuid.so.1()(64bit)
             - libuuid.so.1(UUID_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /run/cryptsetup
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/4d
-            - /usr/lib/.build-id/4d/0ef1e20f3fbbb2d36ad0bd46789b89911d55d5
             - /usr/lib/tmpfiles.d/cryptsetup.conf
             - /usr/lib64/cryptsetup
             - /usr/lib64/libcryptsetup.so.12
@@ -993,6 +990,8 @@ rpms:
             - /usr/share/locale/vi/LC_MESSAGES/cryptsetup.mo
             - /usr/share/locale/zh_CN/LC_MESSAGES/cryptsetup.mo
     curl-minimal-7.76.1.x86_64:
+        version: 7.76.1-19.el9_1.2
+        size: 245097
         provides:
             - curl
             - curl-minimal
@@ -1008,20 +1007,20 @@ rpms:
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
-            - libcurl(x86-64) >= 7.76.1-19.el9_1.2
+            - libcurl(x86-64)
             - libcurl.so.4()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/curl
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/4b
-            - /usr/lib/.build-id/4b/f3cf952689f40b315e73434b0c18141832829c
             - /usr/share/man/man1/curl.1.gz
     cyrus-sasl-lib-2.1.27.x86_64:
+        version: 2.1.27-20.el9
+        size: 2385560
         provides:
             - cyrus-sasl-lib
             - cyrus-sasl-lib(x86-64)
@@ -1051,26 +1050,15 @@ rpms:
             - libresolv.so.2()(64bit)
             - libsasl2.so.3()(64bit)
             - libsasldb.so.3()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/sasl2
             - /usr/bin/cyrusbdb2current
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/2a
-            - /usr/lib/.build-id/2a/59e26dbdad7b0d8263a9b128d6c0c6f5338045
-            - /usr/lib/.build-id/4f
-            - /usr/lib/.build-id/4f/6268f9073967ab6b4eca3f944c015c16419ded
-            - /usr/lib/.build-id/6f
-            - /usr/lib/.build-id/6f/0c4a39e845c09cb1141a09bbff3e7143503cbd
-            - /usr/lib/.build-id/78
-            - /usr/lib/.build-id/78/a77f792072693b0a303f6d8924eeee033fb498
-            - /usr/lib/.build-id/7c/734b6749a937f88df3a00ab34dc0ab1b14d856
-            - /usr/lib/.build-id/7f
-            - /usr/lib/.build-id/7f/846315d90de64a61ea233d4c59e12bb3eaf3e6
             - /usr/lib64/libsasl2.so.3
             - /usr/lib64/libsasl2.so.3.0.0
             - /usr/lib64/sasl2
@@ -1097,18 +1085,22 @@ rpms:
             - /usr/share/licenses/cyrus-sasl-lib
             - /usr/share/licenses/cyrus-sasl-lib/COPYING
     dbus-1.12.20.x86_64:
+        version: 1.12.20-7.el9_1
+        size: 0
         provides:
             - dbus
             - dbus(x86-64)
         requires:
-            - dbus-broker >= 16-4
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - dbus-broker
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - (contains no files)
     dbus-broker-28.x86_64:
+        version: 28-7.el9
+        size: 393994
         provides:
             - dbus-broker
             - dbus-broker(x86-64)
@@ -1150,10 +1142,10 @@ rpms:
             - libsystemd.so.0(LIBSYSTEMD_221)(64bit)
             - libsystemd.so.0(LIBSYSTEMD_237)(64bit)
             - libsystemd.so.0(LIBSYSTEMD_243)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - shadow-utils
             - systemd
@@ -1163,10 +1155,6 @@ rpms:
             - /usr/bin/dbus-broker
             - /usr/bin/dbus-broker-launch
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/45
-            - /usr/lib/.build-id/45/655628d53c5b0774adc806e75c9fe3a60d01b8
-            - /usr/lib/.build-id/b8
-            - /usr/lib/.build-id/b8/6e20287193e3053555c81b9dcaf9c57ebefd74
             - /usr/lib/systemd/catalog/dbus-broker-launch.catalog
             - /usr/lib/systemd/catalog/dbus-broker.catalog
             - /usr/lib/systemd/system/dbus-broker.service
@@ -1177,6 +1165,8 @@ rpms:
             - /usr/share/man/man1/dbus-broker-launch.1.gz
             - /usr/share/man/man1/dbus-broker.1.gz
     dbus-common-1.12.20.noarch:
+        version: 1.12.20-7.el9_1
+        size: 11394
         provides:
             - config(dbus-common)
             - dbus-common
@@ -1189,10 +1179,10 @@ rpms:
             - /bin/sh
             - /usr/bin/systemctl
             - config(dbus-common)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - systemd
             - systemd
             - systemd
@@ -1214,6 +1204,8 @@ rpms:
             - /usr/share/dbus-1/system.conf
             - /usr/share/dbus-1/system.d
     dbus-libs-1.12.20.x86_64:
+        version: 1.12.20-7.el9_1
+        size: 372998
         provides:
             - dbus-libs
             - dbus-libs(x86-64)
@@ -1233,20 +1225,20 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libsystemd.so.0()(64bit)
             - libsystemd.so.0(LIBSYSTEMD_209)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/23
-            - /usr/lib/.build-id/23/a44cccd2d4610ad0cca3d56496d3587ae25e3b
             - /usr/lib64/libdbus-1.so.3
             - /usr/lib64/libdbus-1.so.3.19.13
             - /usr/share/licenses/dbus-libs
             - /usr/share/licenses/dbus-libs/COPYING
     dejavu-sans-fonts-2.37.noarch:
+        version: 2.37-18.el9
+        size: 5930958
         provides:
             - config(dejavu-sans-fonts)
             - dejavu-sans-fonts
@@ -1258,10 +1250,10 @@ rpms:
         requires:
             - config(dejavu-sans-fonts)
             - fontpackages-filesystem
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /etc/fonts/conf.d/20-unhint-small-dejavu-sans.conf
             - /etc/fonts/conf.d/57-dejavu-sans-fonts.conf
@@ -1286,6 +1278,8 @@ rpms:
             - /usr/share/licenses/dejavu-sans-fonts/LICENSE
             - /usr/share/metainfo/org.fedoraproject.dejavu-sans-fonts.metainfo.xml
     device-mapper-1.02.185.x86_64:
+        version: 1.02.185-3.el9
+        size: 359846
         provides:
             - device-mapper
             - device-mapper(x86-64)
@@ -1315,19 +1309,15 @@ rpms:
             - libdevmapper.so.1.02(DM_1_02_138)(64bit)
             - libdevmapper.so.1.02(DM_1_02_181)(64bit)
             - libdevmapper.so.1.02(DM_1_02_97)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
-            - systemd >= 247-1
-            - util-linux >= 2.24
+            - systemd
+            - util-linux
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/c5
-            - /usr/lib/.build-id/c5/1122944ee711ad7ff9f05bc703361986a6d47e
-            - /usr/lib/.build-id/f0
-            - /usr/lib/.build-id/f0/aab173b3ad9e36a768f7fb1278611972e93d1d
             - /usr/lib/udev/rules.d/10-dm.rules
             - /usr/lib/udev/rules.d/13-dm-disk.rules
             - /usr/lib/udev/rules.d/95-dm-notify.rules
@@ -1348,6 +1338,8 @@ rpms:
             - /usr/share/man/man8/dmsetup.8.gz
             - /usr/share/man/man8/dmstats.8.gz
     device-mapper-libs-1.02.185.x86_64:
+        version: 1.02.185-3.el9
+        size: 428993
         provides:
             - device-mapper-libs
             - device-mapper-libs(x86-64)
@@ -1395,20 +1387,20 @@ rpms:
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
             - libudev.so.1()(64bit)
             - libudev.so.1(LIBUDEV_183)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/fa
-            - /usr/lib/.build-id/fa/6f70c4a9d7373284ea057769653c3765a860d7
             - /usr/lib64/libdevmapper.so.1.02
             - /usr/share/licenses/device-mapper-libs
             - /usr/share/licenses/device-mapper-libs/COPYING
             - /usr/share/licenses/device-mapper-libs/COPYING.LIB
     dmidecode-3.3.x86_64:
+        version: 3.3-7.el9
+        size: 231883
         provides:
             - dmidecode
             - dmidecode(x86-64)
@@ -1420,21 +1412,13 @@ rpms:
             - libc.so.6(GLIBC_2.33)(64bit)
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/1e
-            - /usr/lib/.build-id/1e/dcd1fa16eb5d3d8ca0cf537f6729b11d569ddc
-            - /usr/lib/.build-id/8e
-            - /usr/lib/.build-id/8e/f7b424d91ff1f47f9e7c21bef5611978c9557d
-            - /usr/lib/.build-id/b4
-            - /usr/lib/.build-id/b4/0b239e23a2751b0789f09773c041566779e048
-            - /usr/lib/.build-id/c3
-            - /usr/lib/.build-id/c3/7d4fd438b1a21c4c075f0edbfadd83b8f8c59e
             - /usr/sbin/biosdecode
             - /usr/sbin/dmidecode
             - /usr/sbin/ownership
@@ -1450,6 +1434,8 @@ rpms:
             - /usr/share/man/man8/ownership.8.gz
             - /usr/share/man/man8/vpddecode.8.gz
     dnf-4.12.0.noarch:
+        version: 4.12.0-4.el9
+        size: 2272124
         provides:
             - dnf
             - dnf-command(alias)
@@ -1480,11 +1466,11 @@ rpms:
             - /bin/sh
             - /bin/sh
             - python3-dnf
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
-            - rpmlib(RichDependencies) <= 4.12.0-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
+            - rpmlib(RichDependencies)
         files:
             - /usr/bin/dnf
             - /usr/lib/systemd/system/dnf-makecache.service
@@ -1552,6 +1538,8 @@ rpms:
             - /usr/share/man/man8/yum2dnf.8.gz
             - /var/cache/dnf
     dnf-data-4.12.0.noarch:
+        version: 4.12.0-4.el9
+        size: 38843
         provides:
             - config(dnf-data)
             - dnf-conf
@@ -1559,10 +1547,10 @@ rpms:
         requires:
             - config(dnf-data)
             - libreport-filesystem
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /etc/dnf
             - /etc/dnf/aliases.d
@@ -1593,18 +1581,22 @@ rpms:
             - /var/log/dnf.rpm.log
             - /var/log/hawkey.log
     elfutils-default-yama-scope-0.187.noarch:
+        version: 0.187-5.el9
+        size: 1810
         provides:
             - default-yama-scope
             - elfutils-default-yama-scope
         requires:
             - /bin/sh
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/lib/sysctl.d/10-default-yama-scope.conf
     elfutils-libelf-0.187.x86_64:
+        version: 0.187-5.el9
+        size: 1027257
         provides:
             - elfutils-libelf
             - elfutils-libelf(x86-64)
@@ -1628,15 +1620,13 @@ rpms:
             - libc.so.6(GLIBC_2.33)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libz.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/cb
-            - /usr/lib/.build-id/cb/51737a2f64ad3e2ae7a8d329898df3cfb5ef05
             - /usr/lib64/libelf-0.187.so
             - /usr/lib64/libelf.so.1
             - /usr/share/licenses/elfutils-libelf
@@ -1650,6 +1640,8 @@ rpms:
             - /usr/share/locale/pl/LC_MESSAGES/elfutils.mo
             - /usr/share/locale/uk/LC_MESSAGES/elfutils.mo
     elfutils-libs-0.187.x86_64:
+        version: 0.187-5.el9
+        size: 682653
         provides:
             - elfutils-libs
             - elfutils-libs(x86-64)
@@ -1715,17 +1707,13 @@ rpms:
             - libz.so.1()(64bit)
             - libz.so.1(ZLIB_1.2.2.3)(64bit)
             - libzstd.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/51
-            - /usr/lib/.build-id/51/dc9c0c5ebd88c2a385bbc688c2df062943fcb9
-            - /usr/lib/.build-id/9e
-            - /usr/lib/.build-id/9e/9cb63d58c766d528930eef27498e4200b075d7
             - /usr/lib64/libasm-0.187.so
             - /usr/lib64/libasm.so.1
             - /usr/lib64/libdw-0.187.so
@@ -1734,6 +1722,8 @@ rpms:
             - /usr/share/licenses/elfutils-libs/COPYING-GPLV2
             - /usr/share/licenses/elfutils-libs/COPYING-LGPLV3
     expat-2.4.9.x86_64:
+        version: 2.4.9-1.el9_1.1
+        size: 307643
         provides:
             - expat
             - expat(x86-64)
@@ -1749,18 +1739,14 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libexpat.so.1()(64bit)
             - libm.so.6()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/xmlwf
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/a3
-            - /usr/lib/.build-id/a3/9369509da8bfca6fd2a1a5c669441f12199b34
-            - /usr/lib/.build-id/f3
-            - /usr/lib/.build-id/f3/74f6596ea50be15b9f1f104c1f8da318bc1e9e
             - /usr/lib64/libexpat.so.1
             - /usr/lib64/libexpat.so.1.8.9
             - /usr/share/doc/expat
@@ -1770,6 +1756,8 @@ rpms:
             - /usr/share/licenses/expat/COPYING
             - /usr/share/man/man1/xmlwf.1.gz
     file-libs-5.39.x86_64:
+        version: 5.39-10.el9
+        size: 8086635
         provides:
             - file-libs
             - file-libs(x86-64)
@@ -1788,15 +1776,13 @@ rpms:
             - libc.so.6(GLIBC_2.8)(64bit)
             - libc.so.6(GLIBC_2.9)(64bit)
             - libz.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/98
-            - /usr/lib/.build-id/98/e8c8a18892f10080cf2e6feb8c10693cad4dc7
             - /usr/lib64/libmagic.so.1
             - /usr/lib64/libmagic.so.1.0.0
             - /usr/share/doc/file-libs
@@ -1811,17 +1797,19 @@ rpms:
             - /usr/share/misc/magic
             - /usr/share/misc/magic.mgc
     filesystem-3.16.x86_64:
+        version: 3.16-2.el9
+        size: 106
         provides:
             - filesystem
             - filesystem(x86-64)
             - filesystem-afs
         requires:
             - /bin/sh
-            - rpmlib(BuiltinLuaScripts) <= 4.2.2-1
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(BuiltinLuaScripts)
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - setup
         files:
             - /
@@ -19087,6 +19075,8 @@ rpms:
             - /var/tmp
             - /var/yp
     findutils-4.8.0.x86_64:
+        version: 4.8.0-5.el9
+        size: 1758430
         provides:
             - /bin/find
             - bundled(gnulib)
@@ -19105,19 +19095,15 @@ rpms:
             - libc.so.6(GLIBC_2.7)(64bit)
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/find
             - /usr/bin/xargs
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/ad
-            - /usr/lib/.build-id/ad/9e068771dd58925c98728ee5e11533c84378b0
-            - /usr/lib/.build-id/e8
-            - /usr/lib/.build-id/e8/e3edbd12f3f216cc033fc15f26d76470321730
             - /usr/share/doc/findutils
             - /usr/share/doc/findutils/AUTHORS
             - /usr/share/doc/findutils/NEWS
@@ -19172,14 +19158,16 @@ rpms:
             - /usr/share/man/man1/find.1.gz
             - /usr/share/man/man1/xargs.1.gz
     fonts-filesystem-2.0.5.noarch:
+        version: 2.0.5-7.el9.1
+        size: 0
         provides:
             - fontpackages-filesystem
             - fonts-filesystem
         requires:
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /etc/fonts
             - /etc/fonts/conf.d
@@ -19187,6 +19175,8 @@ rpms:
             - /usr/share/fontconfig/conf.avail
             - /usr/share/fonts
     gawk-5.1.0.x86_64:
+        version: 5.1.0-6.el9
+        size: 1685726
         provides:
             - /bin/awk
             - /bin/gawk
@@ -19194,7 +19184,7 @@ rpms:
             - gawk(abi)
             - gawk(x86-64)
         requires:
-            - filesystem >= 3
+            - filesystem
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.11)(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
@@ -19213,10 +19203,10 @@ rpms:
             - libmpfr.so.6()(64bit)
             - libreadline.so.8()(64bit)
             - libsigsegv.so.2()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/profile.d/gawk.csh
@@ -19224,36 +19214,6 @@ rpms:
             - /usr/bin/awk
             - /usr/bin/gawk
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/00
-            - /usr/lib/.build-id/00/88e2aaec60fb0cada960d63884cd284bde2404
-            - /usr/lib/.build-id/23
-            - /usr/lib/.build-id/23/c5e47042ee6b004cd61d03a46cc0cd51f2fb13
-            - /usr/lib/.build-id/25
-            - /usr/lib/.build-id/25/78ca61a90ebb976e5c90fbd3b0ef2c99534c38
-            - /usr/lib/.build-id/27
-            - /usr/lib/.build-id/27/77ec90af5e2c2adbb5cc768c09e8ec798dc600
-            - /usr/lib/.build-id/3f
-            - /usr/lib/.build-id/3f/1d67a2f8562df3c3c089ed843875e793fa7e62
-            - /usr/lib/.build-id/44
-            - /usr/lib/.build-id/44/8d0cd66c19fd6b0a1d4c278b408d8a45e747bd
-            - /usr/lib/.build-id/4e
-            - /usr/lib/.build-id/4e/782fc33a8ef7bd9135652792771e43690ba58a
-            - /usr/lib/.build-id/54
-            - /usr/lib/.build-id/54/9c9f48e3c63acc7c814d8b6123b805b0228592
-            - /usr/lib/.build-id/5d
-            - /usr/lib/.build-id/5d/34cf0c44134183546c95c0a3b8bfe5d6e9dd79
-            - /usr/lib/.build-id/61
-            - /usr/lib/.build-id/61/041d79b03234dd3d3a4fffb5060e3ebcffedab
-            - /usr/lib/.build-id/6e
-            - /usr/lib/.build-id/6e/f9ecfdcc9e2ff1b7d11f687ffbb914aa4ecc25
-            - /usr/lib/.build-id/88
-            - /usr/lib/.build-id/88/36431c525496c34b770c24706792c3badcef05
-            - /usr/lib/.build-id/94
-            - /usr/lib/.build-id/94/952470ec5c07fe50d493fdd51385bd232570c6
-            - /usr/lib/.build-id/98
-            - /usr/lib/.build-id/98/a83682c74811a072e7e30aa46f038d56646677
-            - /usr/lib/.build-id/fe
-            - /usr/lib/.build-id/fe/5e8a59f56ef899bbccffe5d88362551b814670
             - /usr/lib64/gawk
             - /usr/lib64/gawk/filefuncs.so
             - /usr/lib64/gawk/fnmatch.so
@@ -19327,6 +19287,8 @@ rpms:
             - /usr/share/man/man3/rwarray.3am.gz
             - /usr/share/man/man3/time.3am.gz
     gdb-gdbserver-10.2.x86_64:
+        version: 10.2-10.el9
+        size: 715352
         provides:
             - gdb-gdbserver
             - gdb-gdbserver(x86-64)
@@ -19359,21 +19321,19 @@ rpms:
             - libstdc++.so.6(GLIBCXX_3.4.20)(64bit)
             - libstdc++.so.6(GLIBCXX_3.4.29)(64bit)
             - libstdc++.so.6(GLIBCXX_3.4.9)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/gdbserver
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/40
-            - /usr/lib/.build-id/40/470277c8cc6e3df4c9775cb9ad122d2365906d
-            - /usr/lib/.build-id/6a
-            - /usr/lib/.build-id/6a/d7b6fb004a8751916eecf650d8e1258e83783f
             - /usr/lib64/libinproctrace.so
             - /usr/share/man/man1/gdbserver.1.gz
     gdbm-libs-1.19.x86_64:
+        version: 1.19-4.el9
+        size: 116306
         provides:
             - gdbm-libs
             - gdbm-libs(x86-64)
@@ -19390,17 +19350,13 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
             - libgdbm.so.6()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/c5
-            - /usr/lib/.build-id/c5/13148fe3171d0fc17a2bef1e8d00cd7ed25e63
-            - /usr/lib/.build-id/f4
-            - /usr/lib/.build-id/f4/fec25ab496cde15261c1459fc2618ee1fcb3bb
             - /usr/lib64/libgdbm.so.6
             - /usr/lib64/libgdbm.so.6.0.0
             - /usr/lib64/libgdbm_compat.so.4
@@ -19408,6 +19364,8 @@ rpms:
             - /usr/share/licenses/gdbm-libs
             - /usr/share/licenses/gdbm-libs/COPYING
     glib2-2.68.4.x86_64:
+        version: 2.68.4-5.el9
+        size: 13445542
         provides:
             - bundled(gnulib)
             - bundled(gvdb)
@@ -19459,10 +19417,10 @@ rpms:
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
             - libz.so.1()(64bit)
             - libz.so.1(ZLIB_1.2.2)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/gapplication
@@ -19472,28 +19430,6 @@ rpms:
             - /usr/bin/glib-compile-schemas
             - /usr/bin/gsettings
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/12
-            - /usr/lib/.build-id/12/7aed08cd00ecaea1b82ef46639d1c2a72c6588
-            - /usr/lib/.build-id/28
-            - /usr/lib/.build-id/28/2a36a27a7f6c0f81c685678af2415ca5658498
-            - /usr/lib/.build-id/2d
-            - /usr/lib/.build-id/2d/2e543fae28d29cf894329d13c1892818030bd4
-            - /usr/lib/.build-id/36
-            - /usr/lib/.build-id/36/60c73a64acc77ff331214def5445eea77a42df
-            - /usr/lib/.build-id/3f
-            - /usr/lib/.build-id/3f/6a3ec5b43ff9a896b2d10ce8df57a53d09ec63
-            - /usr/lib/.build-id/43
-            - /usr/lib/.build-id/43/f921eaa79b641089c8b440e1506a254c3986ae
-            - /usr/lib/.build-id/4c
-            - /usr/lib/.build-id/4c/a06c9e534307eed620fee0922dc567afeb00c0
-            - /usr/lib/.build-id/65
-            - /usr/lib/.build-id/65/2e194675dc62bdf65232efc25333b10091f017
-            - /usr/lib/.build-id/9a
-            - /usr/lib/.build-id/9a/512bde616470c31055d75b4ff423d35d94570a
-            - /usr/lib/.build-id/ad
-            - /usr/lib/.build-id/ad/db8fcb7df102ae4897fec40e395bcfb4f4ca59
-            - /usr/lib/.build-id/d7
-            - /usr/lib/.build-id/d7/266013cb445da4f690de1c105190c3df93df1c
             - /usr/lib64/gio
             - /usr/lib64/gio/modules
             - /usr/lib64/gio/modules/giomodule.cache
@@ -19626,6 +19562,8 @@ rpms:
             - /usr/share/man/man1/glib-compile-schemas.1.gz
             - /usr/share/man/man1/gsettings.1.gz
     glibc-2.34.x86_64:
+        version: 2.34-40.el9_1.1
+        size: 6276035
         provides:
             - bundled(gnulib)
             - config(glibc)
@@ -19757,13 +19695,13 @@ rpms:
             - libm.so.6(GLIBC_2.27)(64bit)
             - libm.so.6(GLIBC_2.29)(64bit)
             - libresolv.so.2()(64bit)
-            - rpmlib(BuiltinLuaScripts) <= 4.2.2-1
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
-            - rpmlib(RichDependencies) <= 4.12.0-1
+            - rpmlib(BuiltinLuaScripts)
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
+            - rpmlib(RichDependencies)
             - rtld(GNU_HASH)
         files:
             - /etc/gai.conf
@@ -19791,67 +19729,6 @@ rpms:
             - /lib64/libutil.so.1
             - /sbin/ldconfig
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/21
-            - /usr/lib/.build-id/21/8bdb18c689e66e9d86a2a808cc3844d894d48c
-            - /usr/lib/.build-id/2d
-            - /usr/lib/.build-id/2d/a844464181264507602b119382ff73db5104d8
-            - /usr/lib/.build-id/40
-            - /usr/lib/.build-id/40/0a3e6aa74a0d874d86923df7a9bd888782d424
-            - /usr/lib/.build-id/41
-            - /usr/lib/.build-id/41/2a72ee4f700c785bf1fae75f26e64d40c7ead8
-            - /usr/lib/.build-id/45
-            - /usr/lib/.build-id/45/94cca2558a7247b5744fce93de2f5ca97ce4ac
-            - /usr/lib/.build-id/55
-            - /usr/lib/.build-id/55/57991db4292af9392e86075bb3a723b93955e0
-            - /usr/lib/.build-id/57
-            - /usr/lib/.build-id/57/0abdea6966c1ce3b2486ab3029f0e56b522a68
-            - /usr/lib/.build-id/5c
-            - /usr/lib/.build-id/5c/b21f5e41b0b61577ab5382dbe38e5514f0b7f7
-            - /usr/lib/.build-id/5f
-            - /usr/lib/.build-id/5f/d060a85677e20de299102d2a7e28719966e6d9
-            - /usr/lib/.build-id/6c
-            - /usr/lib/.build-id/6c/16dc61ca96dd387c0c29b9bc2b26280c56f6e9
-            - /usr/lib/.build-id/76
-            - /usr/lib/.build-id/76/0e3409dc94a00b03b4ab9e7c610ad79699a7bd
-            - /usr/lib/.build-id/76/0e3409dc94a00b03b4ab9e7c610ad79699a7bd.1
-            - /usr/lib/.build-id/76/0e3409dc94a00b03b4ab9e7c610ad79699a7bd.2
-            - /usr/lib/.build-id/7e
-            - /usr/lib/.build-id/7e/b29b56d3df4f4e6b0d850915affb7e7a300743
-            - /usr/lib/.build-id/82
-            - /usr/lib/.build-id/82/f7ae28e16376aa97cc3bf50b40ab2d1043924a
-            - /usr/lib/.build-id/8b
-            - /usr/lib/.build-id/8b/f6a594b2bd0b8fde9855643347694afa9a2e3d
-            - /usr/lib/.build-id/8e
-            - /usr/lib/.build-id/8e/1aa37922d4ac8be13facce411f577bbf6fbb80
-            - /usr/lib/.build-id/9d
-            - /usr/lib/.build-id/9d/bc60fe87d9b9aef53c1fe1e7a6e9cd6ce704dc
-            - /usr/lib/.build-id/a3
-            - /usr/lib/.build-id/a3/f94662001b6dc436f298bcc5425c4ee1182350
-            - /usr/lib/.build-id/ad
-            - /usr/lib/.build-id/ad/552963cfe33f7f818d341188ea72a5d77f406b
-            - /usr/lib/.build-id/b9
-            - /usr/lib/.build-id/b9/4f54be28468783aedea0cf062ec88e68ee7465
-            - /usr/lib/.build-id/ba
-            - /usr/lib/.build-id/ba/fc50d986f147dc8c03bfe06da8b9c34822ac8c
-            - /usr/lib/.build-id/c0
-            - /usr/lib/.build-id/c0/eb573a2171d96b1aa970edb07f3368573bf845
-            - /usr/lib/.build-id/c4
-            - /usr/lib/.build-id/c4/b913814395eee4028266b32fa3f42f4c80d308
-            - /usr/lib/.build-id/c4/d8b32b92fcc900ca9c76934cd60fecee26fb17
-            - /usr/lib/.build-id/cd
-            - /usr/lib/.build-id/cd/a0edec39b062d33840d60f0a74cf1bae0276f5
-            - /usr/lib/.build-id/dd
-            - /usr/lib/.build-id/dd/26798426928fb454335411ecfeb883030b1f6c
-            - /usr/lib/.build-id/df
-            - /usr/lib/.build-id/df/9c6b298bf5e3c1d0eb6a0911f3f561908a704d
-            - /usr/lib/.build-id/df/c80ad6bc6d2756b1c2f080891c70d073aded66
-            - /usr/lib/.build-id/e0
-            - /usr/lib/.build-id/e0/05dd1a0648376778a1364fda38cd15db46cd9b
-            - /usr/lib/.build-id/e3
-            - /usr/lib/.build-id/e3/1755d3b28903bb56d623f0bd75d842367b9236
-            - /usr/lib/.build-id/e3/8c1fb9d8a4f4ce3a1e428fde5d96e32d8bcd99
-            - /usr/lib/.build-id/e5
-            - /usr/lib/.build-id/e5/bba712202b322f3d81ee39bb83af63a9b14bf9
             - /usr/lib64/audit
             - /usr/lib64/audit/sotruss-lib.so
             - /usr/lib64/gconv
@@ -19880,6 +19757,8 @@ rpms:
             - /var/cache/ldconfig
             - /var/cache/ldconfig/aux-cache
     glibc-common-2.34.x86_64:
+        version: 2.34-40.el9_1.1
+        size: 1081361
         provides:
             - glibc-common
             - glibc-common(x86-64)
@@ -19899,11 +19778,11 @@ rpms:
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
-            - tzdata >= 2003a
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
+            - tzdata
         files:
             - /usr/bin/catchsegv
             - /usr/bin/gencat
@@ -19920,24 +19799,6 @@ rpms:
             - /usr/bin/tzselect
             - /usr/bin/zdump
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/2f
-            - /usr/lib/.build-id/2f/119b09842482c8d33f787b2ef464d617b9a670
-            - /usr/lib/.build-id/47
-            - /usr/lib/.build-id/47/4c96385e64e677c539e3ba2f92bef33198c1f3
-            - /usr/lib/.build-id/67
-            - /usr/lib/.build-id/67/dd5866553dafcb51abc49c9a6172b964494184
-            - /usr/lib/.build-id/6f
-            - /usr/lib/.build-id/6f/c0842b0530ae0d71db8dbc74b92c5ad567e243
-            - /usr/lib/.build-id/76/0e3409dc94a00b03b4ab9e7c610ad79699a7bd.3
-            - /usr/lib/.build-id/88
-            - /usr/lib/.build-id/88/87347f9d6b1d96c6df1e2bdb715bbffe4055eb
-            - /usr/lib/.build-id/a6
-            - /usr/lib/.build-id/a6/1c9113b170a3a5d2e5345cc99f18c74e5a50c5
-            - /usr/lib/.build-id/ad/cb3ceffa53fd3f3a087ca68793dd577aa7cbdf
-            - /usr/lib/.build-id/d3
-            - /usr/lib/.build-id/d3/025c9ab98de36a61ed63b218ac1a3431a41db7
-            - /usr/lib/.build-id/eb
-            - /usr/lib/.build-id/eb/7b69cb611620e88deb19db2273c082e0df15f6
             - /usr/lib/locale
             - /usr/lib/locale/C.utf8
             - /usr/lib/locale/C.utf8/LC_ADDRESS
@@ -19959,6 +19820,8 @@ rpms:
             - /usr/share/i18n/locales
             - /usr/share/locale/locale.alias
     glibc-minimal-langpack-2.34.x86_64:
+        version: 2.34-40.el9_1.1
+        size: 0
         provides:
             - glibc-langpack
             - glibc-minimal-langpack
@@ -19966,13 +19829,15 @@ rpms:
         requires:
             - glibc
             - glibc-common
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - (contains no files)
     gmp-6.2.0.x86_64:
+        version: 6.2.0-10.el9
+        size: 818100
         provides:
             - gmp
             - gmp(x86-64)
@@ -19985,15 +19850,13 @@ rpms:
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/75
-            - /usr/lib/.build-id/75/4b87178e725c166a68353f043ba7638e0723e1
             - /usr/lib64/.libgmp.so.10.4.0.hmac
             - /usr/lib64/.libgmp.so.10.hmac
             - /usr/lib64/fipscheck/libgmp.so.10.4.0.hmac
@@ -20009,6 +19872,8 @@ rpms:
             - /usr/share/licenses/gmp/COPYINGv2
             - /usr/share/licenses/gmp/COPYINGv3
     gnupg2-2.3.3.x86_64:
+        version: 2.3.3-2.el9_0
+        size: 9247709
         provides:
             - config(gnupg2)
             - dirmngr
@@ -20036,12 +19901,12 @@ rpms:
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
-            - libgcrypt >= 1.7.0
+            - libgcrypt
             - libgcrypt.so.20()(64bit)
             - libgcrypt.so.20(GCRYPT_1.6)(64bit)
             - libgnutls.so.30()(64bit)
             - libgnutls.so.30(GNUTLS_3_4)(64bit)
-            - libgpg-error >= 1.38
+            - libgpg-error
             - libgpg-error.so.0()(64bit)
             - libgpg-error.so.0(GPG_ERROR_1.0)(64bit)
             - libksba.so.8()(64bit)
@@ -20053,10 +19918,10 @@ rpms:
             - libreadline.so.8()(64bit)
             - libsqlite3.so.0()(64bit)
             - libz.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/gnupg
@@ -20079,51 +19944,6 @@ rpms:
             - /usr/bin/gpgv2
             - /usr/bin/watchgnupg
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/05
-            - /usr/lib/.build-id/05/5675dec84d25989edfe9dddb309dc78f575513
-            - /usr/lib/.build-id/1b
-            - /usr/lib/.build-id/1b/3acd16bb5149801405fc97438bf5c7a247c2a9
-            - /usr/lib/.build-id/1f
-            - /usr/lib/.build-id/1f/5472c75ba2d263fe67fb0b2d1d4b4897b59364
-            - /usr/lib/.build-id/2b
-            - /usr/lib/.build-id/2b/01fa564ab31c40fcddc95ef9d41ea796228f64
-            - /usr/lib/.build-id/31
-            - /usr/lib/.build-id/31/342b1ae6f6802bbbec04f2319bd879c439ca5e
-            - /usr/lib/.build-id/49
-            - /usr/lib/.build-id/49/0739a4e8daa254557688fa9fe87ef932124901
-            - /usr/lib/.build-id/58
-            - /usr/lib/.build-id/58/9d4af7d59e5939e553fa4fabf29e0187ab42e2
-            - /usr/lib/.build-id/66
-            - /usr/lib/.build-id/66/e26d4421fa26546e13e8b0023dd1ad28032b73
-            - /usr/lib/.build-id/77
-            - /usr/lib/.build-id/77/1fac5be0741e893d55def8135399a569c9563c
-            - /usr/lib/.build-id/9a
-            - /usr/lib/.build-id/9a/18de969dd9ac57f8a63c0facf1168419aa6142
-            - /usr/lib/.build-id/9a/4ef1b3bbf564f5efbfbd93b62301699914c360
-            - /usr/lib/.build-id/aa
-            - /usr/lib/.build-id/aa/6cda849c8e416444cd25cf441980a863bc8b49
-            - /usr/lib/.build-id/b4
-            - /usr/lib/.build-id/b4/8eaff1a039e4ae209d69d9f9c288b3d8474cbb
-            - /usr/lib/.build-id/b9
-            - /usr/lib/.build-id/b9/15b3e25d4e033dd822a9685a0fe59f6fee72f2
-            - /usr/lib/.build-id/ba
-            - /usr/lib/.build-id/ba/ccc9026f24097dd388e651aab7de8eebeda487
-            - /usr/lib/.build-id/c7
-            - /usr/lib/.build-id/c7/ef70adeab7cd96ef44754907a2771e5ec339c0
-            - /usr/lib/.build-id/d3
-            - /usr/lib/.build-id/d3/b10251c354410532f471133e2d0b4ce3f51c2a
-            - /usr/lib/.build-id/d6
-            - /usr/lib/.build-id/d6/eeef4dd89572b8abcfea2bee755d9c6960fdd5
-            - /usr/lib/.build-id/f1
-            - /usr/lib/.build-id/f1/60d7e7648d158a35b00b6a37fee7c50677c828
-            - /usr/lib/.build-id/fa
-            - /usr/lib/.build-id/fa/1035d01ba05fb5dda7fd1f06cb010990467d70
-            - /usr/lib/.build-id/fc
-            - /usr/lib/.build-id/fc/557724f2c026bb4de29e716bcd03f61f0711aa
-            - /usr/lib/.build-id/fd
-            - /usr/lib/.build-id/fd/b5f28f7075b16a2b299eb85d285c0b035ba2d2
-            - /usr/lib/.build-id/ff
-            - /usr/lib/.build-id/ff/c33175ade179aab43b2bb29a376e599a919c75
             - /usr/lib/systemd/user/dirmngr.service
             - /usr/lib/systemd/user/dirmngr.socket
             - /usr/lib/systemd/user/gpg-agent-browser.socket
@@ -20256,6 +20076,8 @@ rpms:
             - /usr/share/man/man8/applygnupgdefaults.8.gz
             - /usr/share/man/man8/dirmngr.8.gz
     gnutls-3.7.6.x86_64:
+        version: 3.7.6-18.el9_1
+        size: 3287427
         provides:
             - bundled(gnulib)
             - gnutls
@@ -20306,21 +20128,19 @@ rpms:
             - libnettle.so.8(NETTLE_8)(64bit)
             - libp11-kit.so.0()(64bit)
             - libp11-kit.so.0(LIBP11_KIT_1.0)(64bit)
-            - libtasn1 >= 4.3
+            - libtasn1
             - libtasn1.so.6()(64bit)
             - libtasn1.so.6(LIBTASN1_0_3)(64bit)
             - libunistring.so.2()(64bit)
-            - nettle >= 3.4.1
+            - nettle
             - p11-kit-trust
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/e6
-            - /usr/lib/.build-id/e6/b8038cc9cb0472e73b854ffb97f983eabaeec4
             - /usr/lib64/.libgnutls.so.30.33.1.hmac
             - /usr/lib64/.libgnutls.so.30.hmac
             - /usr/lib64/libgnutls.so.30
@@ -20351,12 +20171,14 @@ rpms:
             - /usr/share/locale/vi/LC_MESSAGES/gnutls.mo
             - /usr/share/locale/zh_CN/LC_MESSAGES/gnutls.mo
     gobject-introspection-1.68.0.x86_64:
+        version: 1.68.0-10.el9
+        size: 937777
         provides:
             - gobject-introspection
             - gobject-introspection(x86-64)
             - libgirepository-1.0.so.1()(64bit)
         requires:
-            - glib2(x86-64) >= 2.58.0
+            - glib2(x86-64)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
@@ -20369,15 +20191,13 @@ rpms:
             - libgobject-2.0.so.0()(64bit)
             - libm.so.6()(64bit)
             - libm.so.6(GLIBC_2.29)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/93
-            - /usr/lib/.build-id/93/1e0b1eb7d5f8acec8306f143400c0a06d5362a
             - /usr/lib64/girepository-1.0
             - /usr/lib64/girepository-1.0/DBus-1.0.typelib
             - /usr/lib64/girepository-1.0/DBusGLib-1.0.typelib
@@ -20406,15 +20226,9 @@ rpms:
             - /usr/share/licenses/gobject-introspection/COPYING
             - /usr/share/licenses/gobject-introspection/COPYING.GPL
             - /usr/share/licenses/gobject-introspection/COPYING.LGPL
-    gpg-pubkey-5a6340b3.(none):
-        provides: []
-        requires: []
-        files: []
-    gpg-pubkey-fd431d51.(none):
-        provides: []
-        requires: []
-        files: []
     gpgme-1.15.1.x86_64:
+        version: 1.15.1-6.el9
+        size: 576065
         provides:
             - gpgme
             - gpgme(x86-64)
@@ -20422,7 +20236,7 @@ rpms:
             - libgpgme.so.11(GPGME_1.0)(64bit)
             - libgpgme.so.11(GPGME_1.1)(64bit)
         requires:
-            - gnupg2 >= 2.2.24
+            - gnupg2
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
             - libassuan.so.0()(64bit)
@@ -20443,18 +20257,14 @@ rpms:
             - libgpgme.so.11(GPGME_1.1)(64bit)
             - libm.so.6()(64bit)
             - libm.so.6(GLIBC_2.29)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/gpgme-json
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/7e
-            - /usr/lib/.build-id/7e/2df7a9edcdf1100f91c90ab38bb16abab98aa9
-            - /usr/lib/.build-id/ed
-            - /usr/lib/.build-id/ed/825fcc588d1461e10b5509beaa5108e72572d0
             - /usr/lib64/libgpgme.so.11
             - /usr/lib64/libgpgme.so.11.24.1
             - /usr/share/doc/gpgme
@@ -20466,6 +20276,8 @@ rpms:
             - /usr/share/licenses/gpgme/COPYING.LESSER
             - /usr/share/licenses/gpgme/LICENSES
     grep-3.6.x86_64:
+        version: 3.6-5.el9
+        size: 857840
         provides:
             - /bin/egrep
             - /bin/fgrep
@@ -20488,10 +20300,10 @@ rpms:
             - libc.so.6(GLIBC_2.5)(64bit)
             - libpcre.so.1()(64bit)
             - libsigsegv.so.2()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/GREP_COLORS
@@ -20501,8 +20313,6 @@ rpms:
             - /usr/bin/fgrep
             - /usr/bin/grep
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/df
-            - /usr/lib/.build-id/df/8af191ebae60075335f573b7617e3ef238ce2e
             - /usr/libexec/grepconf.sh
             - /usr/share/doc/grep
             - /usr/share/doc/grep/AUTHORS
@@ -20560,6 +20370,8 @@ rpms:
             - /usr/share/man/man1/fgrep.1.gz
             - /usr/share/man/man1/grep.1.gz
     gzip-1.12.x86_64:
+        version: 1.12-1.el9
+        size: 377013
         provides:
             - /bin/gunzip
             - /bin/gzip
@@ -20580,10 +20392,10 @@ rpms:
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.6)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/profile.d/colorzgrep.csh
@@ -20602,8 +20414,6 @@ rpms:
             - /usr/bin/zmore
             - /usr/bin/znew
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/fb
-            - /usr/lib/.build-id/fb/8f78b9995c4188e94b9cab7d9401edb2adbb12
             - /usr/share/doc/gzip
             - /usr/share/doc/gzip/AUTHORS
             - /usr/share/doc/gzip/ChangeLog
@@ -20627,6 +20437,8 @@ rpms:
             - /usr/share/man/man1/zmore.1.gz
             - /usr/share/man/man1/znew.1.gz
     ima-evm-utils-1.4.x86_64:
+        version: 1.4-4.el9
+        size: 151135
         provides:
             - ima-evm-utils
             - ima-evm-utils(x86-64)
@@ -20649,18 +20461,14 @@ rpms:
             - libkeyutils.so.1(KEYUTILS_0.3)(64bit)
             - libtss2-esys.so.0()(64bit)
             - libtss2-rc.so.0()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/evmctl
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/09
-            - /usr/lib/.build-id/09/21e4a6cadeed11350661a5c553d46992057fd8
-            - /usr/lib/.build-id/46
-            - /usr/lib/.build-id/46/9fac85161cb989a1bd4a39c6b5e225a07ad8b4
             - /usr/lib64/libimaevm.so.3
             - /usr/lib64/libimaevm.so.3.0.0
             - /usr/share/doc/ima-evm-utils
@@ -20671,6 +20479,8 @@ rpms:
             - /usr/share/licenses/ima-evm-utils/COPYING
             - /usr/share/man/man1/evmctl.1.gz
     json-c-0.14.x86_64:
+        version: 0.14-11.el9
+        size: 79282
         provides:
             - json-c
             - json-c(x86-64)
@@ -20688,43 +20498,41 @@ rpms:
             - libc.so.6(GLIBC_2.33)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/29
-            - /usr/lib/.build-id/29/53874ba1de297845dad474bd6519ea8a407c30
             - /usr/lib64/libjson-c.so.5
             - /usr/lib64/libjson-c.so.5.0.0
             - /usr/share/licenses/json-c
             - /usr/share/licenses/json-c/AUTHORS
             - /usr/share/licenses/json-c/COPYING
     json-glib-1.6.6.x86_64:
+        version: 1.6.6-1.el9
+        size: 555868
         provides:
             - json-glib
             - json-glib(x86-64)
             - libjson-glib-1.0.so.0()(64bit)
             - libjson-glib-1.0.so.0(libjson-glib-1.0.so.0)(64bit)
         requires:
-            - glib2(x86-64) >= 2.54.0
+            - glib2(x86-64)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libgio-2.0.so.0()(64bit)
             - libglib-2.0.so.0()(64bit)
             - libgobject-2.0.so.0()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/7d
-            - /usr/lib/.build-id/7d/1eaaa834bd1f011448ad532f12960c0c4cde25
             - /usr/lib64/girepository-1.0/Json-1.0.typelib
             - /usr/lib64/libjson-glib-1.0.so.0
             - /usr/lib64/libjson-glib-1.0.so.0.600.6
@@ -20790,6 +20598,8 @@ rpms:
             - /usr/share/locale/zh_HK/LC_MESSAGES/json-glib-1.0.mo
             - /usr/share/locale/zh_TW/LC_MESSAGES/json-glib-1.0.mo
     keyutils-libs-1.6.1.x86_64:
+        version: 1.6.1-4.el9
+        size: 55889
         provides:
             - keyutils-libs
             - keyutils-libs(x86-64)
@@ -20810,15 +20620,13 @@ rpms:
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/83
-            - /usr/lib/.build-id/83/c6539bd0d3140678ba836b8baa1b215efa2632
             - /usr/lib64/libkeyutils.so.1
             - /usr/lib64/libkeyutils.so.1.9
             - /usr/share/licenses/keyutils-libs
@@ -20826,6 +20634,8 @@ rpms:
             - /usr/share/man/man7/asymmetric-key.7.gz
             - /usr/share/man/man7/keyutils.7.gz
     kmod-libs-28.x86_64:
+        version: 28-7.el9
+        size: 134470
         provides:
             - kmod-libs
             - kmod-libs(x86-64)
@@ -20852,20 +20662,20 @@ rpms:
             - liblzma.so.5(XZ_5.0)(64bit)
             - libz.so.1()(64bit)
             - libzstd.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/72
-            - /usr/lib/.build-id/72/2d3027106c561018756766be8bed5215ed0f31
             - /usr/lib64/libkmod.so.2
             - /usr/lib64/libkmod.so.2.3.6
             - /usr/share/licenses/kmod-libs
             - /usr/share/licenses/kmod-libs/COPYING
     krb5-libs-1.19.1.x86_64:
+        version: 1.19.1-24.el9_1
+        size: 2195954
         provides:
             - config(krb5-libs)
             - krb5-libs
@@ -20898,7 +20708,7 @@ rpms:
             - coreutils
             - gawk
             - grep
-            - keyutils-libs >= 1.5.8
+            - keyutils-libs
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
             - libc.so.6()(64bit)
@@ -20939,11 +20749,11 @@ rpms:
             - libssl.so.3()(64bit)
             - libssl.so.3(OPENSSL_3.0.0)(64bit)
             - libverto.so.1()(64bit)
-            - openssl-libs >= 1:3.0.0
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - openssl-libs
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - sed
         files:
@@ -20953,24 +20763,6 @@ rpms:
             - /etc/krb5.conf.d
             - /etc/krb5.conf.d/crypto-policies
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/22
-            - /usr/lib/.build-id/22/c23607e8875f3b081adbc7fe9fbd612b7a57a5
-            - /usr/lib/.build-id/33
-            - /usr/lib/.build-id/33/062991d507df1fcbabf729735f47ae317bf856
-            - /usr/lib/.build-id/4d
-            - /usr/lib/.build-id/4d/ae28e73361fa8c8b216353852acd992e669a06
-            - /usr/lib/.build-id/6e
-            - /usr/lib/.build-id/6e/1c233cf2bb179da742bc2420cebde5f6b87ae1
-            - /usr/lib/.build-id/80
-            - /usr/lib/.build-id/80/7f43ad13ef59ba3be046c2d75e8435a64fea93
-            - /usr/lib/.build-id/8c
-            - /usr/lib/.build-id/8c/62715e7b422618177de85f20fbc3a89128f06c
-            - /usr/lib/.build-id/bd
-            - /usr/lib/.build-id/bd/537be81f12497f2d5b8a590665ce28c303b85c
-            - /usr/lib/.build-id/d1
-            - /usr/lib/.build-id/d1/3b0686d6c736ada3eb694b18b4601759b6f836
-            - /usr/lib/.build-id/ed
-            - /usr/lib/.build-id/ed/5b09b731d27dd87ee694e798d67fafd8195971
             - /usr/lib64/krb5
             - /usr/lib64/krb5/plugins
             - /usr/lib64/krb5/plugins/authdata
@@ -21011,19 +20803,23 @@ rpms:
             - /var/kerberos/krb5
             - /var/kerberos/krb5/user
     langpacks-core-en-3.0.noarch:
+        version: 3.0-16.el9
+        size: 398
         provides:
             - langpacks-core-en
             - metainfo()
             - metainfo(org.fedoraproject.LangPack-Core-en.metainfo.xml)
         requires:
             - langpacks-core-font-en
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/share/metainfo/org.fedoraproject.LangPack-Core-en.metainfo.xml
     langpacks-core-font-en-3.0.noarch:
+        version: 3.0-16.el9
+        size: 351
         provides:
             - font(:lang=en)
             - langpacks-core-font-en
@@ -21031,26 +20827,30 @@ rpms:
             - metainfo(org.fedoraproject.LangPack-Core-Font-en.metainfo.xml)
         requires:
             - dejavu-sans-fonts
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/share/metainfo/org.fedoraproject.LangPack-Core-Font-en.metainfo.xml
     langpacks-en-3.0.noarch:
+        version: 3.0-16.el9
+        size: 400
         provides:
             - langpacks-en
             - metainfo()
             - metainfo(org.fedoraproject.LangPack-en.metainfo.xml)
         requires:
             - langpacks-core-en
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/share/metainfo/org.fedoraproject.LangPack-en.metainfo.xml
     libacl-2.3.1.x86_64:
+        version: 2.3.1-3.el9
+        size: 41178
         provides:
             - libacl
             - libacl(x86-64)
@@ -21066,18 +20866,18 @@ rpms:
             - libc.so.6(GLIBC_2.3)(64bit)
             - libc.so.6(GLIBC_2.33)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/af
-            - /usr/lib/.build-id/af/d5611fa888ba30a62a2109d13bd3903d84c61c
             - /usr/lib64/libacl.so.1
             - /usr/lib64/libacl.so.1.1.2301
     libarchive-3.5.3.x86_64:
+        version: 3.5.3-3.el9
+        size: 907486
         provides:
             - libarchive
             - libarchive(x86-64)
@@ -21112,15 +20912,13 @@ rpms:
             - libxml2.so.2(LIBXML2_2.6.5)(64bit)
             - libz.so.1()(64bit)
             - libzstd.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/6e
-            - /usr/lib/.build-id/6e/414799ddc3b419724d31b9438858464d370ad1
             - /usr/lib64/libarchive.so.13
             - /usr/lib64/libarchive.so.13.5.3
             - /usr/share/doc/libarchive
@@ -21132,6 +20930,8 @@ rpms:
             - /usr/share/man/man5/mtree.5.gz
             - /usr/share/man/man5/tar.5.gz
     libassuan-2.5.5.x86_64:
+        version: 2.5.5-3.el9
+        size: 171165
         provides:
             - libassuan
             - libassuan(x86-64)
@@ -21148,15 +20948,13 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libgpg-error.so.0()(64bit)
             - libgpg-error.so.0(GPG_ERROR_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/fd
-            - /usr/lib/.build-id/fd/bc372db8a4df85644517159d8bc8bd75b9b2c7
             - /usr/lib64/libassuan.so.0
             - /usr/lib64/libassuan.so.0.8.5
             - /usr/share/doc/libassuan
@@ -21167,6 +20965,8 @@ rpms:
             - /usr/share/licenses/libassuan/COPYING
             - /usr/share/licenses/libassuan/COPYING.LIB
     libattr-2.5.1.x86_64:
+        version: 2.5.1-3.el9
+        size: 29429
         provides:
             - config(libattr)
             - libattr
@@ -21182,19 +20982,19 @@ rpms:
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.3)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/xattr.conf
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/e6
-            - /usr/lib/.build-id/e6/7f1fc89e8ac6a35f6fda914bcf6144b9ccb99c
             - /usr/lib64/libattr.so.1
             - /usr/lib64/libattr.so.1.1.2501
     libblkid-2.37.4.x86_64:
+        version: 2.37.4-9.el9
+        size: 229737
         provides:
             - libblkid
             - libblkid(x86-64)
@@ -21226,20 +21026,20 @@ rpms:
             - libc.so.6(GLIBC_2.7)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
             - libuuid
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/88
-            - /usr/lib/.build-id/88/4ee7a2564607e4d06d8616329de7c96b424c29
             - /usr/lib64/libblkid.so.1
             - /usr/lib64/libblkid.so.1.1.0
             - /usr/share/doc/libblkid
             - /usr/share/doc/libblkid/COPYING
     libcap-2.48.x86_64:
+        version: 2.48-8.el9
+        size: 181919
         provides:
             - libcap
             - libcap(x86-64)
@@ -21263,27 +21063,13 @@ rpms:
             - libgcc_s.so.1()(64bit)
             - libgcc_s.so.1(GCC_3.0)(64bit)
             - libgcc_s.so.1(GCC_3.3.1)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/12
-            - /usr/lib/.build-id/12/96461156217f7c9a3ddddde00ba4eb26c0eb3b
-            - /usr/lib/.build-id/2c
-            - /usr/lib/.build-id/2c/ec6ce86a6f87c3db6f95627a8932770fc43327
-            - /usr/lib/.build-id/70
-            - /usr/lib/.build-id/70/716d1c6881fdf89a6053676af9def7dff967df
-            - /usr/lib/.build-id/73
-            - /usr/lib/.build-id/73/6edac56949b6627441da6a1610382746400a78
-            - /usr/lib/.build-id/c7
-            - /usr/lib/.build-id/c7/625c8524a3d7756043555a1e7b1c3cb56fabbe
-            - /usr/lib/.build-id/d7
-            - /usr/lib/.build-id/d7/cba80b2e6e0c9c74ae215c1740768578e79667
-            - /usr/lib/.build-id/d9
-            - /usr/lib/.build-id/d9/ab5449a4c8596e7dc7b48a607c922e0d808a3f
             - /usr/lib64/libcap.so.2
             - /usr/lib64/libcap.so.2.48
             - /usr/lib64/libpsx.so.2
@@ -21302,6 +21088,8 @@ rpms:
             - /usr/share/man/man8/getpcaps.8.gz
             - /usr/share/man/man8/setcap.8.gz
     libcap-ng-0.8.2.x86_64:
+        version: 0.8.2-7.el9
+        size: 75196
         provides:
             - libcap-ng
             - libcap-ng(x86-64)
@@ -21319,17 +21107,13 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/29
-            - /usr/lib/.build-id/29/c012ed2dfe804628f974d605c8eb8d125d32f1
-            - /usr/lib/.build-id/fd
-            - /usr/lib/.build-id/fd/ca0a301667e15db99d726152b57feeb35e4dbe
             - /usr/lib64/libcap-ng.so.0
             - /usr/lib64/libcap-ng.so.0.0.0
             - /usr/lib64/libdrop_ambient.so.0
@@ -21338,6 +21122,8 @@ rpms:
             - /usr/share/licenses/libcap-ng/COPYING.LIB
             - /usr/share/man/man7/libdrop_ambient.7.gz
     libcom_err-1.46.5.x86_64:
+        version: 1.46.5-3.el9
+        size: 69041
         provides:
             - libcom_err
             - libcom_err(x86-64)
@@ -21350,20 +21136,20 @@ rpms:
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/ec
-            - /usr/lib/.build-id/ec/70fb11e14fe7dadde8353e95592eb7b8bd4b3a
             - /usr/lib64/libcom_err.so.2
             - /usr/lib64/libcom_err.so.2.1
             - /usr/share/licenses/libcom_err
             - /usr/share/licenses/libcom_err/NOTICE
     libcomps-0.1.18.x86_64:
+        version: 0.1.18-1.el9
+        size: 215151
         provides:
             - libcomps
             - libcomps(x86-64)
@@ -21385,21 +21171,21 @@ rpms:
             - libxml2.so.2(LIBXML2_2.6.0)(64bit)
             - libxml2.so.2(LIBXML2_2.6.23)(64bit)
             - libxml2.so.2(LIBXML2_2.6.3)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/e4
-            - /usr/lib/.build-id/e4/81931f9508776bf38e59083da7305318836d7f
             - /usr/lib64/libcomps.so.0
             - /usr/share/doc/libcomps
             - /usr/share/doc/libcomps/README.md
             - /usr/share/licenses/libcomps
             - /usr/share/licenses/libcomps/COPYING
     libcurl-minimal-7.76.1.x86_64:
+        version: 7.76.1-19.el9_1.2
+        size: 518158
         provides:
             - libcurl
             - libcurl(x86-64)
@@ -21429,21 +21215,21 @@ rpms:
             - libssl.so.3()(64bit)
             - libssl.so.3(OPENSSL_3.0.0)(64bit)
             - libz.so.1()(64bit)
-            - openssl-libs(x86-64) >= 1:3.0.1
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - openssl-libs(x86-64)
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/67
-            - /usr/lib/.build-id/67/b74a707903eb882521cfa1973f645f0cba7e3a
             - /usr/lib64/libcurl.so.4
             - /usr/lib64/libcurl.so.4.7.0
             - /usr/share/licenses/libcurl-minimal
             - /usr/share/licenses/libcurl-minimal/COPYING
     libdb-5.3.28.x86_64:
+        version: 5.3.28-53.el9
+        size: 1898038
         provides:
             - libdb
             - libdb(x86-64)
@@ -21461,15 +21247,13 @@ rpms:
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/0a
-            - /usr/lib/.build-id/0a/7a0aaf4e816c19dfc5666e44c27e1b1d56c318
             - /usr/lib64/libdb-5.3.so
             - /usr/lib64/libdb-5.so
             - /usr/share/doc/libdb
@@ -21478,6 +21262,8 @@ rpms:
             - /usr/share/licenses/libdb/LICENSE
             - /usr/share/licenses/libdb/lgpl-2.1.txt
     libdnf-0.67.0.x86_64:
+        version: 0.67.0-3.el9
+        size: 2115815
         provides:
             - libdnf
             - libdnf(x86-64)
@@ -21505,9 +21291,9 @@ rpms:
             - libgpgme.so.11(GPGME_1.1)(64bit)
             - libjson-c.so.5()(64bit)
             - libjson-c.so.5(JSONC_0.14)(64bit)
-            - libmodulemd(x86-64) >= 2.13.0
+            - libmodulemd(x86-64)
             - libmodulemd.so.2()(64bit)
-            - librepo(x86-64) >= 1.13.1
+            - librepo(x86-64)
             - librepo.so.0()(64bit)
             - librhsm.so.0()(64bit)
             - librpm.so.9()(64bit)
@@ -21517,7 +21303,7 @@ rpms:
             - libsmartcols.so.1(SMARTCOLS_2.28)(64bit)
             - libsmartcols.so.1(SMARTCOLS_2.29)(64bit)
             - libsmartcols.so.1(SMARTCOLS_2.30)(64bit)
-            - libsolv(x86-64) >= 0.7.21
+            - libsolv(x86-64)
             - libsolv.so.1()(64bit)
             - libsolv.so.1(SOLV_1.0)(64bit)
             - libsolv.so.1(SOLV_1.1)(64bit)
@@ -21538,15 +21324,13 @@ rpms:
             - libstdc++.so.6(GLIBCXX_3.4.26)(64bit)
             - libstdc++.so.6(GLIBCXX_3.4.29)(64bit)
             - libstdc++.so.6(GLIBCXX_3.4.9)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/61
-            - /usr/lib/.build-id/61/d3ac0078a481886a64d705a86af79a84a17c2a
             - /usr/lib64/libdnf
             - /usr/lib64/libdnf.so.2
             - /usr/lib64/libdnf/plugins
@@ -21607,11 +21391,13 @@ rpms:
             - /usr/share/locale/zh_CN/LC_MESSAGES/libdnf.mo
             - /usr/share/locale/zh_TW/LC_MESSAGES/libdnf.mo
     libdnf-plugin-subscription-manager-1.29.30.1.x86_64:
+        version: 1.29.30.1-1.el9_1
+        size: 64962
         provides:
             - libdnf-plugin-subscription-manager
             - libdnf-plugin-subscription-manager(x86-64)
         requires:
-            - dnf >= 1.0.0
+            - dnf
             - json-c
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
@@ -21619,7 +21405,7 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libcrypto.so.3()(64bit)
             - libcrypto.so.3(OPENSSL_3.0.0)(64bit)
-            - libdnf >= 0.22.5
+            - libdnf
             - libdnf.so.2()(64bit)
             - libgio-2.0.so.0()(64bit)
             - libglib-2.0.so.0()(64bit)
@@ -21628,17 +21414,17 @@ rpms:
             - libjson-c.so.5(JSONC_0.14)(64bit)
             - librepo.so.0()(64bit)
             - libz.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/84
-            - /usr/lib/.build-id/84/144ab60e7df72478590fb86d0d2c5f3eb25836
             - /usr/lib64/libdnf/plugins/product-id.so
     libeconf-0.4.1.x86_64:
+        version: 0.4.1-2.el9
+        size: 46347
         provides:
             - libeconf
             - libeconf(x86-64)
@@ -21655,15 +21441,13 @@ rpms:
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/cb
-            - /usr/lib/.build-id/cb/c97ad9626c64a49d712bdd3460812cc2d57027
             - /usr/lib64/libeconf.so.0
             - /usr/lib64/libeconf.so.0.4.1
             - /usr/share/doc/libeconf
@@ -21673,6 +21457,8 @@ rpms:
             - /usr/share/licenses/libeconf
             - /usr/share/licenses/libeconf/LICENSE
     libevent-2.1.12.x86_64:
+        version: 2.1.12-6.el9
+        size: 932210
         provides:
             - libevent
             - libevent(x86-64)
@@ -21702,23 +21488,13 @@ rpms:
             - libcrypto.so.3(OPENSSL_3.0.0)(64bit)
             - libssl.so.3()(64bit)
             - libssl.so.3(OPENSSL_3.0.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/69
-            - /usr/lib/.build-id/69/8b4d17081f62f891db6ac9b0c128b79b1cf965
-            - /usr/lib/.build-id/9b
-            - /usr/lib/.build-id/9b/790afd8b25df96ae2c35ad4022d3fb8dbcf210
-            - /usr/lib/.build-id/a8
-            - /usr/lib/.build-id/a8/9a0cb6d42a3ee0c00ae4642bcf3095ee75bffa
-            - /usr/lib/.build-id/af
-            - /usr/lib/.build-id/af/406c254338ff6ceff47360cba92cdcf233cf14
-            - /usr/lib/.build-id/eb
-            - /usr/lib/.build-id/eb/53a933202a9f90b03210a4c3d45fd8faea3401
             - /usr/lib64/libevent-2.1.so.7
             - /usr/lib64/libevent-2.1.so.7.0.1
             - /usr/lib64/libevent_core-2.1.so.7
@@ -21734,6 +21510,8 @@ rpms:
             - /usr/share/licenses/libevent
             - /usr/share/licenses/libevent/LICENSE
     libfdisk-2.37.4.x86_64:
+        version: 2.37.4-9.el9
+        size: 367763
         provides:
             - libfdisk
             - libfdisk(x86-64)
@@ -21770,20 +21548,21 @@ rpms:
             - libuuid
             - libuuid.so.1()(64bit)
             - libuuid.so.1(UUID_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/bf/9998ecb97b4266a4205a5bec01c0ced8e3125b
             - /usr/lib64/libfdisk.so.1
             - /usr/lib64/libfdisk.so.1.1.0
             - /usr/share/licenses/libfdisk
             - /usr/share/licenses/libfdisk/COPYING
             - /usr/share/licenses/libfdisk/COPYING.LGPL-2.1-or-later
     libffi-3.4.2.x86_64:
+        version: 3.4.2-7.el9
+        size: 66385
         provides:
             - libffi
             - libffi(x86-64)
@@ -21799,15 +21578,13 @@ rpms:
             - libc.so.6(GLIBC_2.27)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/48
-            - /usr/lib/.build-id/48/e3675db4765a2e42729140922e11a10016f7ab
             - /usr/lib64/libffi.so.8
             - /usr/lib64/libffi.so.8.1.0
             - /usr/share/doc/libffi
@@ -21815,6 +21592,8 @@ rpms:
             - /usr/share/licenses/libffi
             - /usr/share/licenses/libffi/LICENSE
     libgcc-11.3.1.x86_64:
+        version: 11.3.1-2.1.el9
+        size: 198764
         provides:
             - libgcc
             - libgcc(x86-64)
@@ -21832,17 +21611,15 @@ rpms:
             - libgcc_s.so.1(GCC_4.8.0)(64bit)
             - libgcc_s.so.1(GCC_7.0.0)(64bit)
         requires:
-            - rpmlib(BuiltinLuaScripts) <= 4.2.2-1
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(BuiltinLuaScripts)
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /lib64/libgcc_s-11-20220421.so.1
             - /lib64/libgcc_s.so.1
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/95
-            - /usr/lib/.build-id/95/26c65fed0e95fbb6b988476cc811ca19d5c9c9
             - /usr/share/licenses/libgcc
             - /usr/share/licenses/libgcc/COPYING
             - /usr/share/licenses/libgcc/COPYING.LIB
@@ -21850,6 +21627,8 @@ rpms:
             - /usr/share/licenses/libgcc/COPYING3
             - /usr/share/licenses/libgcc/COPYING3.LIB
     libgcrypt-1.10.0.x86_64:
+        version: 1.10.0-10.el9_1
+        size: 1382050
         provides:
             - libgcrypt
             - libgcrypt(x86-64)
@@ -21867,16 +21646,14 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libgpg-error.so.0()(64bit)
             - libgpg-error.so.0(GPG_ERROR_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/gcrypt
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/cb
-            - /usr/lib/.build-id/cb/bab6e60f90194157794b50f59e432520cfb351
             - /usr/lib64/libgcrypt.so.20
             - /usr/lib64/libgcrypt.so.20.4.0
             - /usr/share/doc/libgcrypt
@@ -21886,6 +21663,8 @@ rpms:
             - /usr/share/licenses/libgcrypt
             - /usr/share/licenses/libgcrypt/COPYING.LIB
     libgomp-11.3.1.x86_64:
+        version: 11.3.1-2.1.el9
+        size: 421224
         provides:
             - libgomp
             - libgomp(x86-64)
@@ -21928,15 +21707,13 @@ rpms:
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.6)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/d7
-            - /usr/lib/.build-id/d7/9e85e0063eac2e27ffeaac2b15426c8a61e551
             - /usr/lib64/libgomp.so.1
             - /usr/lib64/libgomp.so.1.0.0
             - /usr/share/doc/libgomp
@@ -21944,6 +21721,8 @@ rpms:
             - /usr/share/doc/libgomp/ChangeLog.graphite.bz2
             - /usr/share/info/libgomp.info.gz
     libgpg-error-1.42.x86_64:
+        version: 1.42-5.el9
+        size: 837088
         provides:
             - libgpg-error
             - libgpg-error(x86-64)
@@ -21959,18 +21738,14 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libgpg-error.so.0()(64bit)
             - libgpg-error.so.0(GPG_ERROR_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/gpg-error
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/9d
-            - /usr/lib/.build-id/9d/27198f0ca61c66cd921675219dffc0bad16a1a
-            - /usr/lib/.build-id/9e
-            - /usr/lib/.build-id/9e/3ca81b5f610e5f36c55158220044e8eb654fad
             - /usr/lib64/libgpg-error.so.0
             - /usr/lib64/libgpg-error.so.0.32.0
             - /usr/share/doc/libgpg-error
@@ -22003,6 +21778,8 @@ rpms:
             - /usr/share/locale/zh_CN/LC_MESSAGES/libgpg-error.mo
             - /usr/share/locale/zh_TW/LC_MESSAGES/libgpg-error.mo
     libidn2-2.3.0.x86_64:
+        version: 2.3.0-7.el9
+        size: 253460
         provides:
             - bundled(gnulib)
             - libidn2
@@ -22017,15 +21794,13 @@ rpms:
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libunistring.so.2()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/95
-            - /usr/lib/.build-id/95/8c50fc94ecb196b24f3619762e7ec3f28a5b40
             - /usr/lib64/libidn2.so.0
             - /usr/lib64/libidn2.so.0.3.7
             - /usr/share/doc/libidn2
@@ -22061,6 +21836,8 @@ rpms:
             - /usr/share/locale/vi/LC_MESSAGES/libidn2.mo
             - /usr/share/locale/zh_CN/LC_MESSAGES/libidn2.mo
     libksba-1.5.1.x86_64:
+        version: 1.5.1-6.el9_1
+        size: 394486
         provides:
             - libksba
             - libksba(x86-64)
@@ -22076,15 +21853,13 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libgpg-error.so.0()(64bit)
             - libgpg-error.so.0(GPG_ERROR_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/8e
-            - /usr/lib/.build-id/8e/b58f0db2e9766b9fe1148e14ae91f15b1536e9
             - /usr/lib64/libksba.so.8
             - /usr/lib64/libksba.so.8.13.1
             - /usr/share/doc/libksba
@@ -22100,6 +21875,8 @@ rpms:
             - /usr/share/licenses/libksba/COPYING.GPLv3
             - /usr/share/licenses/libksba/COPYING.LGPLv3
     libmodulemd-2.13.0.x86_64:
+        version: 2.13.0-2.el9
+        size: 733911
         provides:
             - libmodulemd
             - libmodulemd(x86-64)
@@ -22121,18 +21898,14 @@ rpms:
             - libmodulemd.so.2()(64bit)
             - librpmio.so.9()(64bit)
             - libyaml-0.so.2()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/modulemd-validator
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/2a
-            - /usr/lib/.build-id/2a/979739e8e87c899b7d1129d7469d77c3a87dd1
-            - /usr/lib/.build-id/2c
-            - /usr/lib/.build-id/2c/73d592a7ba687e84a03200a6d654d0b93a9129
             - /usr/lib64/girepository-1.0
             - /usr/lib64/girepository-1.0/Modulemd-2.0.typelib
             - /usr/lib64/libmodulemd.so.2
@@ -22144,6 +21917,8 @@ rpms:
             - /usr/share/licenses/libmodulemd/COPYING
             - /usr/share/man/man1/modulemd-validator.1.gz
     libmount-2.37.4.x86_64:
+        version: 2.37.4-9.el9
+        size: 310093
         provides:
             - libmount
             - libmount(x86-64)
@@ -22185,21 +21960,21 @@ rpms:
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
             - libuuid
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/c7
-            - /usr/lib/.build-id/c7/536a118f821e321157fe7a867c75b6d789cc65
             - /usr/lib64/libmount.so.1
             - /usr/lib64/libmount.so.1.1.0
             - /usr/share/licenses/libmount
             - /usr/share/licenses/libmount/COPYING
             - /usr/share/licenses/libmount/COPYING.LGPL-2.1-or-later
     libnghttp2-1.43.0.x86_64:
+        version: 1.43.0-5.el9
+        size: 170924
         provides:
             - libnghttp2
             - libnghttp2(x86-64)
@@ -22210,20 +21985,20 @@ rpms:
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/7e
-            - /usr/lib/.build-id/7e/adbd56a0e5bcd3d8a6b39b9bab2327e380283a
             - /usr/lib64/libnghttp2.so.14
             - /usr/lib64/libnghttp2.so.14.20.1
             - /usr/share/licenses/libnghttp2
             - /usr/share/licenses/libnghttp2/COPYING
     libnl3-3.7.0.x86_64:
+        version: 3.7.0-1.el9
+        size: 1080743
         provides:
             - config(libnl3)
             - libnl-3.so.200()(64bit)
@@ -22280,30 +22055,16 @@ rpms:
             - libnl-3.so.200(libnl_3_5)(64bit)
             - libnl-route-3.so.200()(64bit)
             - libnl-route-3.so.200(libnl_3)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/libnl
             - /etc/libnl/classid
             - /etc/libnl/pktloc
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/56
-            - /usr/lib/.build-id/56/cab521e14b48724309d081dba0d3a4b493ad47
-            - /usr/lib/.build-id/78
-            - /usr/lib/.build-id/78/d179711c07be4700748e295534de2f440b6558
-            - /usr/lib/.build-id/7d
-            - /usr/lib/.build-id/7d/7cbba6d34d7bc1170a99664a150ecfeef92ab6
-            - /usr/lib/.build-id/83
-            - /usr/lib/.build-id/83/2cd8b0b929e5f85a8e2a78fe5e1bf0925d1377
-            - /usr/lib/.build-id/c8
-            - /usr/lib/.build-id/c8/8f3c4c7b7ba0d0bd35422c3f19de9b40714bb0
-            - /usr/lib/.build-id/dd
-            - /usr/lib/.build-id/dd/f21b0603a1c37be4fada2fbc29cc55c7034a33
-            - /usr/lib/.build-id/e7
-            - /usr/lib/.build-id/e7/c4bcc44db8a436c3399490967dfb5ac59dcb48
             - /usr/lib64/libnl-3.so.200
             - /usr/lib64/libnl-3.so.200.26.0
             - /usr/lib64/libnl-genl-3.so.200
@@ -22319,6 +22080,8 @@ rpms:
             - /usr/share/doc/libnl3
             - /usr/share/doc/libnl3/COPYING
     libpwquality-1.4.4.x86_64:
+        version: 1.4.4-8.el9
+        size: 416376
         provides:
             - config(libpwquality)
             - libpwquality
@@ -22328,7 +22091,7 @@ rpms:
         requires:
             - config(libpwquality)
             - cracklib
-            - cracklib-dicts >= 2.8
+            - cracklib-dicts
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
@@ -22345,10 +22108,10 @@ rpms:
             - libpwquality.so.1()(64bit)
             - libpwquality.so.1(LIBPWQUALITY_1.0)(64bit)
             - pam(x86-64)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/security/pwquality.conf
@@ -22356,14 +22119,6 @@ rpms:
             - /usr/bin/pwmake
             - /usr/bin/pwscore
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/15
-            - /usr/lib/.build-id/15/2a2ebe0c623d60ef6228e73ba3098b9cce0a7a
-            - /usr/lib/.build-id/4c
-            - /usr/lib/.build-id/4c/0acfcee4bd45d6e9feb1d69242ca919dd3ff55
-            - /usr/lib/.build-id/a2
-            - /usr/lib/.build-id/a2/23f23002f64e7fbdc460b927be82bf93da2995
-            - /usr/lib/.build-id/fe
-            - /usr/lib/.build-id/fe/ff62c721e16e69c94d2e5f29694bb8f57b4a05
             - /usr/lib64/libpwquality.so.1
             - /usr/lib64/libpwquality.so.1.0.2
             - /usr/lib64/security/pam_pwquality.so
@@ -22429,6 +22184,8 @@ rpms:
             - /usr/share/man/man5/pwquality.conf.5.gz
             - /usr/share/man/man8/pam_pwquality.8.gz
     librepo-1.14.2.x86_64:
+        version: 1.14.2-3.el9
+        size: 220382
         provides:
             - librepo
             - librepo(x86-64)
@@ -22444,7 +22201,7 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libcrypto.so.3()(64bit)
             - libcrypto.so.3(OPENSSL_3.0.0)(64bit)
-            - libcurl(x86-64) >= 7.52.0
+            - libcurl(x86-64)
             - libcurl.so.4()(64bit)
             - libgcc_s.so.1()(64bit)
             - libgcc_s.so.1(GCC_3.0)(64bit)
@@ -22456,28 +22213,28 @@ rpms:
             - libxml2.so.2()(64bit)
             - libxml2.so.2(LIBXML2_2.4.30)(64bit)
             - libxml2.so.2(LIBXML2_2.6.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/6e
-            - /usr/lib/.build-id/6e/6679d292a3b2289b7004236bf13fe93048240f
             - /usr/lib64/librepo.so.0
             - /usr/share/doc/librepo
             - /usr/share/doc/librepo/README.md
             - /usr/share/licenses/librepo
             - /usr/share/licenses/librepo/COPYING
     libreport-filesystem-2.15.2.noarch:
+        version: 2.15.2-6.el9
+        size: 0
         provides:
             - libreport-filesystem
         requires:
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /etc/libreport
             - /etc/libreport/events
@@ -22490,6 +22247,8 @@ rpms:
             - /usr/share/libreport/events
             - /usr/share/libreport/workflows
     librhsm-0.0.3.x86_64:
+        version: 0.0.3-7.el9
+        size: 80066
         provides:
             - librhsm
             - librhsm(x86-64)
@@ -22508,21 +22267,21 @@ rpms:
             - libgobject-2.0.so.0()(64bit)
             - libjson-glib-1.0.so.0()(64bit)
             - libjson-glib-1.0.so.0(libjson-glib-1.0.so.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/24
-            - /usr/lib/.build-id/24/1f5c4a2700da28a395768cc5db1cd1087abb36
             - /usr/lib64/librhsm.so.0
             - /usr/share/doc/librhsm
             - /usr/share/doc/librhsm/README.md
             - /usr/share/licenses/librhsm
             - /usr/share/licenses/librhsm/COPYING
     libseccomp-2.5.2.x86_64:
+        version: 2.5.2-2.el9
+        size: 175293
         provides:
             - libseccomp
             - libseccomp(x86-64)
@@ -22532,15 +22291,13 @@ rpms:
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/5a
-            - /usr/lib/.build-id/5a/5b4ee3bb99ee0378bd937fdef7a7b7255d0428
             - /usr/lib64/libseccomp.so.2
             - /usr/lib64/libseccomp.so.2.5.2
             - /usr/share/doc/libseccomp
@@ -22551,6 +22308,8 @@ rpms:
             - /usr/share/licenses/libseccomp
             - /usr/share/licenses/libseccomp/LICENSE
     libselinux-3.4.x86_64:
+        version: 3.4-3.el9
+        size: 176661
         provides:
             - libselinux
             - libselinux(x86-64)
@@ -22573,23 +22332,23 @@ rpms:
             - libc.so.6(GLIBC_2.7)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
             - libpcre2-8.so.0()(64bit)
-            - libsepol(x86-64) >= 3.4-1
+            - libsepol(x86-64)
             - pcre2
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /run/setrans
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/32
-            - /usr/lib/.build-id/32/1a1f9b5537883ee8ec04c65a9edbaefcc7b5aa
             - /usr/lib/tmpfiles.d/libselinux.conf
             - /usr/lib64/libselinux.so.1
             - /usr/share/licenses/libselinux
             - /usr/share/licenses/libselinux/LICENSE
     libsemanage-3.4.x86_64:
+        version: 3.4-2.el9
+        size: 307110
         provides:
             - config(libsemanage)
             - libsemanage
@@ -22613,24 +22372,22 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
-            - libselinux(x86-64) >= 3.4-1
+            - libselinux(x86-64)
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
             - libsepol.so.2()(64bit)
             - libsepol.so.2(LIBSEPOL_1.0)(64bit)
             - libsepol.so.2(LIBSEPOL_1.1)(64bit)
             - libsepol.so.2(LIBSEPOL_3.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/selinux
             - /etc/selinux/semanage.conf
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/6c
-            - /usr/lib/.build-id/6c/b618ec2400530c5c7d4808083ab8315166a2d1
             - /usr/lib64/libsemanage.so.2
             - /usr/libexec/selinux
             - /usr/share/licenses/libsemanage
@@ -22640,6 +22397,8 @@ rpms:
             - /var/lib/selinux
             - /var/lib/selinux/tmp
     libsepol-3.4.x86_64:
+        version: 3.4-1.1.el9
+        size: 789099
         provides:
             - libsepol
             - libsepol(x86-64)
@@ -22658,19 +22417,19 @@ rpms:
             - libc.so.6(GLIBC_2.33)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/eb
-            - /usr/lib/.build-id/eb/36803c70648a62d4d1c5e017a76484e9ae446a
             - /usr/lib64/libsepol.so.2
             - /usr/share/licenses/libsepol
             - /usr/share/licenses/libsepol/COPYING
     libsigsegv-2.13.x86_64:
+        version: 2.13-4.el9
+        size: 50338
         provides:
             - libsigsegv
             - libsigsegv(x86-64)
@@ -22679,15 +22438,13 @@ rpms:
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/aa
-            - /usr/lib/.build-id/aa/50ef8ad2312df1077d9000206fa7796e568b7f
             - /usr/lib64/libsigsegv.so.2
             - /usr/lib64/libsigsegv.so.2.0.6
             - /usr/share/doc/libsigsegv
@@ -22697,6 +22454,8 @@ rpms:
             - /usr/share/licenses/libsigsegv
             - /usr/share/licenses/libsigsegv/COPYING
     libsmartcols-2.37.4.x86_64:
+        version: 2.37.4-9.el9
+        size: 134787
         provides:
             - libsmartcols
             - libsmartcols(x86-64)
@@ -22717,21 +22476,21 @@ rpms:
             - libc.so.6(GLIBC_2.3)(64bit)
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/38
-            - /usr/lib/.build-id/38/0bd8e3c7d4f9e492f1ddb1e868ac9bdab7049d
             - /usr/lib64/libsmartcols.so.1
             - /usr/lib64/libsmartcols.so.1.1.0
             - /usr/share/licenses/libsmartcols
             - /usr/share/licenses/libsmartcols/COPYING
             - /usr/share/licenses/libsmartcols/COPYING.LGPL-2.1-or-later
     libsolv-0.7.22.x86_64:
+        version: 0.7.22-1.el9
+        size: 886050
         provides:
             - libsolv
             - libsolv(x86-64)
@@ -22770,17 +22529,13 @@ rpms:
             - libz.so.1()(64bit)
             - libz.so.1(ZLIB_1.2.3.3)(64bit)
             - libzstd.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/0d
-            - /usr/lib/.build-id/0d/e16984652223aade7725ec61ad287580cbcb8a
-            - /usr/lib/.build-id/8c
-            - /usr/lib/.build-id/8c/f27e7e36dbacc78e404b18fc1a271de4af4853
             - /usr/lib64/libsolv.so.1
             - /usr/lib64/libsolvext.so.1
             - /usr/share/doc/libsolv
@@ -22788,6 +22543,8 @@ rpms:
             - /usr/share/licenses/libsolv
             - /usr/share/licenses/libsolv/LICENSE.BSD
     libstdc++-11.3.1.x86_64:
+        version: 11.3.1-2.1.el9
+        size: 2524361
         provides:
             - libstdc++
             - libstdc++(x86-64)
@@ -22839,7 +22596,7 @@ rpms:
             - libstdc++.so.6(GLIBCXX_3.4.8)(64bit)
             - libstdc++.so.6(GLIBCXX_3.4.9)(64bit)
         requires:
-            - glibc >= 2.10.90-7
+            - glibc
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
             - libc.so.6()(64bit)
@@ -22861,16 +22618,14 @@ rpms:
             - libgcc_s.so.1(GCC_4.2.0)(64bit)
             - libm.so.6()(64bit)
             - libm.so.6(GLIBC_2.2.5)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/ab
-            - /usr/lib/.build-id/ab/d5d7149726b0410af7af2e9a59491942605ddd
             - /usr/lib64/libstdc++.so.6
             - /usr/lib64/libstdc++.so.6.0.29
             - /usr/share/gcc-11
@@ -22900,6 +22655,8 @@ rpms:
             - /usr/share/gdb/auto-load/usr/lib64/__pycache__/libstdc++.so.6.0.29-gdb.cpython-39.pyc
             - /usr/share/gdb/auto-load/usr/lib64/libstdc++.so.6.0.29-gdb.py
     libtasn1-4.16.0.x86_64:
+        version: 4.16.0-8.el9_1
+        size: 183348
         provides:
             - bundled(gnulib)
             - libtasn1
@@ -22913,15 +22670,13 @@ rpms:
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/c1
-            - /usr/lib/.build-id/c1/7247c829f91e289fb9424e7a05b9946d8985d2
             - /usr/lib64/libtasn1.so.6
             - /usr/lib64/libtasn1.so.6.6.0
             - /usr/share/doc/libtasn1
@@ -22933,6 +22688,8 @@ rpms:
             - /usr/share/licenses/libtasn1/COPYING.LESSER
             - /usr/share/licenses/libtasn1/LICENSE
     libunistring-0.9.10.x86_64:
+        version: 0.9.10-15.el9
+        size: 1643051
         provides:
             - bundled(gnulib)
             - libunistring
@@ -22947,15 +22704,13 @@ rpms:
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/15
-            - /usr/lib/.build-id/15/e34cdfafa3547f9c700489b842ceb86f6fb73e
             - /usr/lib64/libunistring.so.2
             - /usr/lib64/libunistring.so.2.1.0
             - /usr/share/doc/libunistring
@@ -22966,6 +22721,8 @@ rpms:
             - /usr/share/licenses/libunistring/COPYING
             - /usr/share/licenses/libunistring/COPYING.LIB
     libuser-0.63.x86_64:
+        version: 0.63-11.el9
+        size: 1983175
         provides:
             - config(libuser)
             - libuser
@@ -23001,47 +22758,16 @@ rpms:
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
             - libuser.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/libuser.conf
             - /usr/bin/lchfn
             - /usr/bin/lchsh
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/04
-            - /usr/lib/.build-id/04/a83f55e29cbbee8c115c728d2015fe15464a31
-            - /usr/lib/.build-id/14
-            - /usr/lib/.build-id/14/cfd9b133d27cf7b6ae75a4971a6000da8793e9
-            - /usr/lib/.build-id/44
-            - /usr/lib/.build-id/44/a6cb4a64a3445699462e384122b9222af9bc70
-            - /usr/lib/.build-id/4b
-            - /usr/lib/.build-id/4b/95e2aa2a4aafd0817df847c147913bd2a6558b
-            - /usr/lib/.build-id/6a
-            - /usr/lib/.build-id/6a/ded37393d278bac6f88b55e389eb1a854aa7c5
-            - /usr/lib/.build-id/74
-            - /usr/lib/.build-id/74/636b8ec5294c86d6535050b6e23017aa7cd58c
-            - /usr/lib/.build-id/7e
-            - /usr/lib/.build-id/7e/59978252f253f0eadfcd433c1b183c8d4e8521
-            - /usr/lib/.build-id/9c
-            - /usr/lib/.build-id/9c/affdec2581459e9e331292776c7c970a854c69
-            - /usr/lib/.build-id/9f
-            - /usr/lib/.build-id/9f/cf77bc23e6acb7411cdea3d0435430c72d3b01
-            - /usr/lib/.build-id/a3
-            - /usr/lib/.build-id/a3/dd4cec48bb0f984c11f0fb9dcc5fbb6bb15616
-            - /usr/lib/.build-id/ab
-            - /usr/lib/.build-id/ab/9503dafc24cc9d79a12c0a7815c7b71496071b
-            - /usr/lib/.build-id/ad
-            - /usr/lib/.build-id/ad/1f2a7260011de73a815c72159be9d224b4a754
-            - /usr/lib/.build-id/b3
-            - /usr/lib/.build-id/b3/95c6dd7289b871e5498c79404633b0067c7156
-            - /usr/lib/.build-id/c0
-            - /usr/lib/.build-id/c0/927d1d87a530f5875adb35ab1da74c88a60e83
-            - /usr/lib/.build-id/f5
-            - /usr/lib/.build-id/f5/4b67968be03d6ef0cae7cc1c37287893792a6c
-            - /usr/lib/.build-id/f5/94b72fd90c70a563c788d86594f190025fa9ca
             - /usr/lib64/libuser
             - /usr/lib64/libuser.so.1
             - /usr/lib64/libuser.so.1.5.2
@@ -23139,6 +22865,8 @@ rpms:
             - /usr/share/man/man1/lusermod.1.gz
             - /usr/share/man/man5/libuser.conf.5.gz
     libutempter-1.2.1.x86_64:
+        version: 1.2.1-6.el9
+        size: 59409
         provides:
             - libutempter
             - libutempter(x86-64)
@@ -23153,18 +22881,14 @@ rpms:
             - libc.so.6(GLIBC_2.33)(64bit)
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - shadow-utils
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/50
-            - /usr/lib/.build-id/50/ee4e16ae62e0615cfdab55b9a5ba0ecc02bea9
-            - /usr/lib/.build-id/7e
-            - /usr/lib/.build-id/7e/6995ce97fef81f5415ca55eb0b712ae0ee7523
             - /usr/lib64/libutempter.so.0
             - /usr/lib64/libutempter.so.1.2.1
             - /usr/libexec/utempter
@@ -23174,6 +22898,8 @@ rpms:
             - /usr/share/licenses/libutempter
             - /usr/share/licenses/libutempter/COPYING
     libuuid-2.37.4.x86_64:
+        version: 2.37.4-9.el9
+        size: 33861
         provides:
             - libuuid
             - libuuid(x86-64)
@@ -23195,20 +22921,21 @@ rpms:
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/e5/ac307fae971e2efe180359ced41115ea02d0a1
             - /usr/lib64/libuuid.so.1
             - /usr/lib64/libuuid.so.1.3.0
             - /usr/share/licenses/libuuid
             - /usr/share/licenses/libuuid/COPYING
             - /usr/share/licenses/libuuid/COPYING.BSD-3-Clause
     libverto-0.3.2.x86_64:
+        version: 0.3.2-3.el9
+        size: 30365
         provides:
             - libverto
             - libverto(x86-64)
@@ -23219,15 +22946,13 @@ rpms:
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/8b
-            - /usr/lib/.build-id/8b/57fc54f83e2d9aa549b0cc6759210b44a583af
             - /usr/lib64/libverto.so.1
             - /usr/lib64/libverto.so.1.0.0
             - /usr/share/doc/libverto
@@ -23238,6 +22963,8 @@ rpms:
             - /usr/share/licenses/libverto
             - /usr/share/licenses/libverto/COPYING
     libxcrypt-4.4.18.x86_64:
+        version: 4.4.18-3.el9
+        size: 270692
         provides:
             - libcrypt
             - libcrypt(x86-64)
@@ -23251,22 +22978,20 @@ rpms:
             - libxcrypt(x86-64)
             - libxcrypt-common
         requires:
-            - glibc(x86-64) >= 2.27
+            - glibc(x86-64)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.25)(64bit)
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/6c
-            - /usr/lib/.build-id/6c/e4e5eb200e61d07398af52f8bcb316cf8466e0
             - /usr/lib64/fipscheck
             - /usr/lib64/fipscheck/libcrypt.so.2.0.0.hmac
             - /usr/lib64/fipscheck/libcrypt.so.2.hmac
@@ -23283,6 +23008,8 @@ rpms:
             - /usr/share/licenses/libxcrypt/LICENSING
             - /usr/share/man/man5/crypt.5.gz
     libxml2-2.9.13.x86_64:
+        version: 2.9.13-3.el9_1
+        size: 1955244
         provides:
             - libxml2
             - libxml2(x86-64)
@@ -23365,21 +23092,15 @@ rpms:
             - libz.so.1()(64bit)
             - libz.so.1(ZLIB_1.2.2.3)(64bit)
             - libz.so.1(ZLIB_1.2.3.3)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/xmlcatalog
             - /usr/bin/xmllint
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/19
-            - /usr/lib/.build-id/19/1eb7c87658db73d96c2fb7dc8e94175d1eb88c
-            - /usr/lib/.build-id/31
-            - /usr/lib/.build-id/31/75d5777b54e42141250543b6acc4794da1b104
-            - /usr/lib/.build-id/f4
-            - /usr/lib/.build-id/f4/787e60dd9f424f26995d2d8babc06c3d050b6e
             - /usr/lib64/libxml2.so.2
             - /usr/lib64/libxml2.so.2.9.13
             - /usr/share/doc/libxml2
@@ -23392,6 +23113,8 @@ rpms:
             - /usr/share/man/man1/xmllint.1.gz
             - /usr/share/man/man3/libxml.3.gz
     libyaml-0.2.5.x86_64:
+        version: 0.2.5-7.el9
+        size: 138283
         provides:
             - libyaml
             - libyaml(x86-64)
@@ -23402,15 +23125,13 @@ rpms:
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/b6
-            - /usr/lib/.build-id/b6/3afab9bfe8a249975629245ed1b47e4d425648
             - /usr/lib64/libyaml-0.so.2
             - /usr/lib64/libyaml-0.so.2.0.9
             - /usr/share/doc/libyaml
@@ -23418,6 +23139,8 @@ rpms:
             - /usr/share/licenses/libyaml
             - /usr/share/licenses/libyaml/License
     libzstd-1.5.1.x86_64:
+        version: 1.5.1-2.el9
+        size: 902051
         provides:
             - libzstd
             - libzstd(x86-64)
@@ -23430,21 +23153,21 @@ rpms:
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/f0
-            - /usr/lib/.build-id/f0/c68ad1b3f8941857af47c6887736d835317ccc
             - /usr/lib64/libzstd.so.1
             - /usr/lib64/libzstd.so.1.5.1
             - /usr/share/licenses/libzstd
             - /usr/share/licenses/libzstd/COPYING
             - /usr/share/licenses/libzstd/LICENSE
     lua-libs-5.4.4.x86_64:
+        version: 5.4.4-2.el9_1
+        size: 549438
         provides:
             - liblua-5.3.so()(64bit)
             - liblua-5.4.so()(64bit)
@@ -23463,16 +23186,13 @@ rpms:
             - libm.so.6()(64bit)
             - libm.so.6(GLIBC_2.2.5)(64bit)
             - libm.so.6(GLIBC_2.29)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/d2/cf37245acc6b21d214668c1bcd6b4fb847ec01
-            - /usr/lib/.build-id/f3
-            - /usr/lib/.build-id/f3/77d8841a2f5c37fa1e63023e37ebc92043bb9c
             - /usr/lib64/liblua-5.3.so
             - /usr/lib64/liblua-5.4.so
             - /usr/lib64/lua
@@ -23482,6 +23202,8 @@ rpms:
             - /usr/share/lua/5.3
             - /usr/share/lua/5.4
     lz4-libs-1.9.3.x86_64:
+        version: 1.9.3-5.el9
+        size: 145483
         provides:
             - liblz4.so.1()(64bit)
             - lz4-libs
@@ -23491,20 +23213,20 @@ rpms:
             - libc.so.6(GLIBC_2.14)(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/4d
-            - /usr/lib/.build-id/4d/32cb5fa39c86b05cc10cc380f3a8a0d6d9d648
             - /usr/lib64/liblz4.so.1
             - /usr/lib64/liblz4.so.1.9.3
             - /usr/share/doc/lz4-libs
             - /usr/share/doc/lz4-libs/LICENSE
     mpfr-4.1.0.x86_64:
+        version: 4.1.0-7.el9
+        size: 802539
         provides:
             - libmpfr.so.6()(64bit)
             - mpfr
@@ -23521,15 +23243,13 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.7)(64bit)
             - libgmp.so.10()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/b3
-            - /usr/lib/.build-id/b3/e45f041571b21e84fbea475e777c9e6d816fd5
             - /usr/lib64/libmpfr.so.6
             - /usr/lib64/libmpfr.so.6.1.0
             - /usr/share/doc/mpfr/BUGS
@@ -23540,14 +23260,16 @@ rpms:
             - /usr/share/licenses/mpfr/COPYING
             - /usr/share/licenses/mpfr/COPYING.LESSER
     ncurses-base-6.2.noarch:
+        version: 6.2-8.20210508.el9
+        size: 307293
         provides:
             - ncurses-base
         requires:
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /etc/terminfo
             - /usr/share/doc/ncurses-base
@@ -23725,6 +23447,8 @@ rpms:
             - /usr/share/terminfo/x/xterm-xi
             - /usr/share/terminfo/x/xterms
     ncurses-libs-6.2.x86_64:
+        version: 6.2-8.20210508.el9
+        size: 997335
         provides:
             - libform.so.6()(64bit)
             - libformw.so.6()(64bit)
@@ -23753,36 +23477,13 @@ rpms:
             - libncursesw.so.6()(64bit)
             - libtinfo.so.6()(64bit)
             - ncurses-base
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/09
-            - /usr/lib/.build-id/09/2a44c7dead4af89dd1c7e370108e5d9fddf6e3
-            - /usr/lib/.build-id/25
-            - /usr/lib/.build-id/25/554c31777f891c014487b5dd91b2d198aa1941
-            - /usr/lib/.build-id/6b
-            - /usr/lib/.build-id/6b/ea69f0b899facda71e7456c4c62f009be9541e
-            - /usr/lib/.build-id/77
-            - /usr/lib/.build-id/77/45adf36f8d068cdf99dc45bab9352ade38b6eb
-            - /usr/lib/.build-id/8a
-            - /usr/lib/.build-id/8a/48f2855dd6b1bd6667a2a99b07dc298994fb3b
-            - /usr/lib/.build-id/d2
-            - /usr/lib/.build-id/d2/526d10bcb9ec01ae19418687e6c68075986417
-            - /usr/lib/.build-id/d2/95a1b444c219cef156d084ece6b9b5d3473a38
-            - /usr/lib/.build-id/df
-            - /usr/lib/.build-id/df/abeccc4f7f4df15914c6c220121216428d2b30
-            - /usr/lib/.build-id/e5
-            - /usr/lib/.build-id/e5/232bce905f29d1977e07eb63d4be1e81fb1083
-            - /usr/lib/.build-id/f9
-            - /usr/lib/.build-id/f9/deef54a7ba054789fb4c29703f49bb0269919b
-            - /usr/lib/.build-id/fa
-            - /usr/lib/.build-id/fa/3802b3c0d4d35aef4f4193942920b3337d3784
-            - /usr/lib/.build-id/fb
-            - /usr/lib/.build-id/fb/7be2ece30c8f80f528b9cc49fe3582de7026b7
             - /usr/lib64/libform.so.6
             - /usr/lib64/libform.so.6.2
             - /usr/lib64/libformw.so.6
@@ -23804,6 +23505,8 @@ rpms:
             - /usr/lib64/libtinfo.so.6
             - /usr/lib64/libtinfo.so.6.2
     nettle-3.8.x86_64:
+        version: 3.8-3.el9_0
+        size: 1134302
         provides:
             - libhogweed.so.6()(64bit)
             - libhogweed.so.6(HOGWEED_6)(64bit)
@@ -23823,17 +23526,13 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libnettle.so.8()(64bit)
             - libnettle.so.8(NETTLE_8)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/97
-            - /usr/lib/.build-id/97/ce01a5c43483f58a364086c521ec45dc1d3a3a
-            - /usr/lib/.build-id/a5
-            - /usr/lib/.build-id/a5/e63d290dbce2f78dfdfde45b9865adbf312515
             - /usr/lib64/.libhogweed.so.6.5.hmac
             - /usr/lib64/.libhogweed.so.6.hmac
             - /usr/lib64/.libnettle.so.8.5.hmac
@@ -23851,6 +23550,8 @@ rpms:
             - /usr/share/licenses/nettle/COPYING.LESSERv3
             - /usr/share/licenses/nettle/COPYINGv2
     npth-1.6.x86_64:
+        version: 1.6-8.el9
+        size: 50619
         provides:
             - libnpth.so.0()(64bit)
             - libnpth.so.0(NPTH_1.0)(64bit)
@@ -23864,20 +23565,20 @@ rpms:
             - libc.so.6(GLIBC_2.32)(64bit)
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/95
-            - /usr/lib/.build-id/95/bfc2157abb9519b0171da1a94d02f60c0bf00a
             - /usr/lib64/libnpth.so.0
             - /usr/lib64/libnpth.so.0.1.2
             - /usr/share/licenses/npth
             - /usr/share/licenses/npth/COPYING.LIB
     openldap-2.6.2.x86_64:
+        version: 2.6.2-3.el9
+        size: 1078953
         provides:
             - config(openldap)
             - liblber.so.2()(64bit)
@@ -23907,94 +23608,16 @@ rpms:
             - libsasl2.so.3()(64bit)
             - libssl.so.3()(64bit)
             - libssl.so.3(OPENSSL_3.0.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/openldap
             - /etc/openldap/certs
             - /etc/openldap/ldap.conf
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/05
-            - /usr/lib/.build-id/05/bd10af86b4133b4c7de94a99e5ae3132f603fb
-            - /usr/lib/.build-id/09
-            - /usr/lib/.build-id/09/d1e34f7e4cd490ba377da9130c77dfc8f25c8a
-            - /usr/lib/.build-id/0a
-            - /usr/lib/.build-id/0a/8cd07c9667e3910c1cab034074819bc2b2ec14
-            - /usr/lib/.build-id/21
-            - /usr/lib/.build-id/21/32b3a3fc89ca8c6df81c934790ba9aa47d0f77
-            - /usr/lib/.build-id/2b
-            - /usr/lib/.build-id/2b/a174bb033d442df9e5bd5051b67ec5ed61b50d
-            - /usr/lib/.build-id/2f
-            - /usr/lib/.build-id/2f/87310c196ad8f62625f1016334a3170da571c7
-            - /usr/lib/.build-id/31
-            - /usr/lib/.build-id/31/478ef2edbde8c940c43f71a71de9e1dc4f7e3f
-            - /usr/lib/.build-id/45
-            - /usr/lib/.build-id/45/00da1c061ca2fa3b9a94e1be15e7fd1d493094
-            - /usr/lib/.build-id/45/c76a49f54d3c308b77a16aa3caa3d3ed235e67
-            - /usr/lib/.build-id/4c
-            - /usr/lib/.build-id/4c/b27327ccb21f61d740658e11352731c6a074f8
-            - /usr/lib/.build-id/66
-            - /usr/lib/.build-id/66/0f652572dd91078cd6a8f1e03c8ca788ec700d
-            - /usr/lib/.build-id/6e
-            - /usr/lib/.build-id/6e/8e63604f3d9c805227dc7a087f76dc1afeb606
-            - /usr/lib/.build-id/6f
-            - /usr/lib/.build-id/6f/f1f8ffe517dc5578b1f0551d6f5788d4e1efd1
-            - /usr/lib/.build-id/74
-            - /usr/lib/.build-id/74/f76d4e259de06a693b84ed14279afab9652ec9
-            - /usr/lib/.build-id/77
-            - /usr/lib/.build-id/77/544eb5113e4c2a608bca7665c18a3a594c7d63
-            - /usr/lib/.build-id/7c
-            - /usr/lib/.build-id/7c/d545bbf0e2c7c7e589115a56315daa0cb7322a
-            - /usr/lib/.build-id/7e
-            - /usr/lib/.build-id/7e/54aac41b996920e9857372fa1abb3186383881
-            - /usr/lib/.build-id/81
-            - /usr/lib/.build-id/81/6892d20c56b03f50b27bd9e979c9d7dfd80998
-            - /usr/lib/.build-id/8a
-            - /usr/lib/.build-id/8a/19ddd0a79331c5130fef2265c33677fda985eb
-            - /usr/lib/.build-id/8c
-            - /usr/lib/.build-id/8c/c9524ff255b7a0795c64bffaf2cfd483594f8f
-            - /usr/lib/.build-id/8f
-            - /usr/lib/.build-id/8f/70ec991e9d531571b1757f92d355773f832baf
-            - /usr/lib/.build-id/93
-            - /usr/lib/.build-id/93/6a9da1a5c605de66cc40f8cb188f6c4eb91f1a
-            - /usr/lib/.build-id/94
-            - /usr/lib/.build-id/94/459f7eca6b0d8473e626892bada0b16cfe2ba2
-            - /usr/lib/.build-id/97
-            - /usr/lib/.build-id/97/cd49f7ee9b5571c451c31c0363b9b6f2d597d2
-            - /usr/lib/.build-id/be
-            - /usr/lib/.build-id/be/4eaf614e8b629fb6ac66b7e9a11a002673c689
-            - /usr/lib/.build-id/c1
-            - /usr/lib/.build-id/c1/1b6ec65f264d64851eec6906494f2a4e4c9960
-            - /usr/lib/.build-id/c1/e02921bc4f1c71777ea43329d0774140483eac
-            - /usr/lib/.build-id/c2
-            - /usr/lib/.build-id/c2/4a5c9f33f66136a321ef341b672c51a245ac49
-            - /usr/lib/.build-id/c5
-            - /usr/lib/.build-id/c5/4b2030af0a07ae3889e9e3ba26dc81fef28426
-            - /usr/lib/.build-id/c9
-            - /usr/lib/.build-id/c9/1a291eb19b0d4f48b38e22026656515034637e
-            - /usr/lib/.build-id/ca
-            - /usr/lib/.build-id/ca/4e6e1daa7038023a8b0be84e7f0a128c169cb1
-            - /usr/lib/.build-id/cc
-            - /usr/lib/.build-id/cc/ff3195b5b67a9c7c40bc9466016a15bfccc4d5
-            - /usr/lib/.build-id/df
-            - /usr/lib/.build-id/df/84d8295a30bb763bcdeb82a25d86e131196428
-            - /usr/lib/.build-id/e1
-            - /usr/lib/.build-id/e1/933ca511c83af28f78b9eccf696e8b58c0c715
-            - /usr/lib/.build-id/e5
-            - /usr/lib/.build-id/e5/789d8a0d4496ad823721b3efaf55489e8a63d7
-            - /usr/lib/.build-id/eb
-            - /usr/lib/.build-id/eb/f885dcfd7b87f281525f019d760b284da4beac
-            - /usr/lib/.build-id/eb/f885dcfd7b87f281525f019d760b284da4beac.1
-            - /usr/lib/.build-id/ec
-            - /usr/lib/.build-id/ec/2afb66419d1e10956953f6959fb0fe47100714
-            - /usr/lib/.build-id/f3
-            - /usr/lib/.build-id/f3/bdfb57e9ec38ea1f86c2b8470932f0aafc4f26
-            - /usr/lib/.build-id/f7
-            - /usr/lib/.build-id/f7/45688405e0079d4274fa949b04520d620d7820
-            - /usr/lib/.build-id/f7/67dd84874f70db3bb4e5dc061ba679df9bc170
             - /usr/lib64/liblber.so.2
             - /usr/lib64/liblber.so.2.0.200
             - /usr/lib64/libldap.so.2
@@ -24014,6 +23637,8 @@ rpms:
             - /usr/share/man/man5/ldap.conf.5.gz
             - /usr/share/man/man5/ldif.5.gz
     openldap-compat-2.6.2.x86_64:
+        version: 2.6.2-3.el9
+        size: 60638
         provides:
             - liblber-2.4.so.2()(64bit)
             - liblber-2.4.so.2()(64bit)
@@ -24032,20 +23657,13 @@ rpms:
             - libldap.so.2()(64bit)
             - libslapi.so.2()(64bit)
             - openldap(x86-64)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/05/7844e0552b7f2880ca06e416a5f52cb3ae8934
-            - /usr/lib/.build-id/54
-            - /usr/lib/.build-id/54/3faeaa56fdb8ab6daba8c37e017eef54b5c7cc
-            - /usr/lib/.build-id/c7
-            - /usr/lib/.build-id/c7/284b41f126d3d2d3331cd36903ac0254669fb2
-            - /usr/lib/.build-id/d2
-            - /usr/lib/.build-id/d2/a7a0a06aaed71071737e9e0424a00dde3d6c72
             - /usr/lib64/liblber-2.4.so.2
             - /usr/lib64/liblber-2.4.so.2.0.200
             - /usr/lib64/libldap-2.4.so.2
@@ -24055,6 +23673,8 @@ rpms:
             - /usr/lib64/libslapi-2.4.so.2
             - /usr/lib64/libslapi-2.4.so.2.0.200
     openssl-3.0.1.x86_64:
+        version: 3.0.1-47.el9_1
+        size: 1881009
         provides:
             - openssl
             - openssl(x86-64)
@@ -24078,18 +23698,16 @@ rpms:
             - libssl.so.3()(64bit)
             - libssl.so.3(OPENSSL_3.0.0)(64bit)
             - openssl-libs(x86-64)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/make-dummy-cert
             - /usr/bin/openssl
             - /usr/bin/renew-dummy-cert
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/84
-            - /usr/lib/.build-id/84/1bf9c21ad5c7f2ec794159ff8ef2c11f78d498
             - /usr/share/doc/openssl
             - /usr/share/doc/openssl/Makefile.certificate
             - /usr/share/doc/openssl/NEWS.md
@@ -24369,6 +23987,8 @@ rpms:
             - /usr/share/man/man7/ssl.7ossl.gz
             - /usr/share/man/man7/x509.7ossl.gz
     openssl-libs-3.0.1.x86_64:
+        version: 3.0.1-47.el9_1
+        size: 6737178
         provides:
             - config(openssl-libs)
             - libcrypto.so.3()(64bit)
@@ -24379,9 +23999,9 @@ rpms:
             - openssl-libs
             - openssl-libs(x86-64)
         requires:
-            - ca-certificates >= 2008-5
+            - ca-certificates
             - config(openssl-libs)
-            - crypto-policies >= 20180730
+            - crypto-policies
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
             - libc.so.6(GLIBC_2.15)(64bit)
@@ -24400,10 +24020,10 @@ rpms:
             - libcrypto.so.3(OPENSSL_3.0.0)(64bit)
             - libcrypto.so.3(OPENSSL_3.0.1)(64bit)
             - libz.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/pki/tls
@@ -24413,22 +24033,6 @@ rpms:
             - /etc/pki/tls/openssl.cnf
             - /etc/pki/tls/private
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/5a
-            - /usr/lib/.build-id/5a/47668cb7ac23dbdfcce8a8a6923484fd67d8a5
-            - /usr/lib/.build-id/7f
-            - /usr/lib/.build-id/7f/bb918ce480235f24ee936e8701bed09fe8952b
-            - /usr/lib/.build-id/90
-            - /usr/lib/.build-id/90/099b2ab1dd6da39b1d81737299069b5e2b6020
-            - /usr/lib/.build-id/94
-            - /usr/lib/.build-id/94/c050efca35c63560b390aacb8fc506ccbbcbc3
-            - /usr/lib/.build-id/c7
-            - /usr/lib/.build-id/c7/f35edd4703269f4afe1d7d4a41376f8d04fc85
-            - /usr/lib/.build-id/ca
-            - /usr/lib/.build-id/ca/ee5a2902421e4fb02306f7a97824b22c02e884
-            - /usr/lib/.build-id/e2
-            - /usr/lib/.build-id/e2/5d446d0b66756f3ded229752d7c38ea3e92ccc
-            - /usr/lib/.build-id/e7
-            - /usr/lib/.build-id/e7/8932263e72c6d1fa0ab328ef1c1dd4bb128313
             - /usr/lib64/engines-3
             - /usr/lib64/engines-3/afalg.so
             - /usr/lib64/engines-3/capi.so
@@ -24444,6 +24048,8 @@ rpms:
             - /usr/share/licenses/openssl-libs
             - /usr/share/licenses/openssl-libs/LICENSE.txt
     p11-kit-0.24.1.x86_64:
+        version: 0.24.1-2.el9
+        size: 1664534
         provides:
             - libp11-kit.so.0()(64bit)
             - libp11-kit.so.0(LIBP11_KIT_1.0)(64bit)
@@ -24471,22 +24077,16 @@ rpms:
             - libffi.so.8(LIBFFI_CLOSURE_8.0)(64bit)
             - libp11-kit.so.0()(64bit)
             - libp11-kit.so.0(LIBP11_KIT_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/pkcs11
             - /etc/pkcs11/modules
             - /usr/bin/p11-kit
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/5e
-            - /usr/lib/.build-id/5e/20d86b92c9f913571338c18cb70f74da7d3c0e
-            - /usr/lib/.build-id/63
-            - /usr/lib/.build-id/63/bc3f99a3a0c5cb7d98e2f8e5bbf720a5aa947f
-            - /usr/lib/.build-id/75
-            - /usr/lib/.build-id/75/7dad639700be0a487ab47b907f8b7a1a507271
             - /usr/lib64/libp11-kit.so.0
             - /usr/lib64/libp11-kit.so.0.3.0
             - /usr/lib64/p11-kit-proxy.so
@@ -24576,6 +24176,8 @@ rpms:
             - /usr/share/p11-kit
             - /usr/share/p11-kit/modules
     p11-kit-trust-0.24.1.x86_64:
+        version: 0.24.1-2.el9
+        size: 450935
         provides:
             - p11-kit-trust
             - p11-kit-trust(x86-64)
@@ -24605,18 +24207,14 @@ rpms:
             - libtasn1.so.6()(64bit)
             - libtasn1.so.6(LIBTASN1_0_3)(64bit)
             - p11-kit(x86-64)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/trust
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/9d
-            - /usr/lib/.build-id/9d/a679f73ffbd983670cf11672b1b3354decff26
-            - /usr/lib/.build-id/cd
-            - /usr/lib/.build-id/cd/1cf11bba96f64cb907ec602a5a5b613963af1d
             - /usr/lib64/libnssckbi.so
             - /usr/lib64/pkcs11
             - /usr/lib64/pkcs11/p11-kit-trust.so
@@ -24624,6 +24222,8 @@ rpms:
             - /usr/share/bash-completion/completions/trust
             - /usr/share/p11-kit/modules/p11-kit-trust.module
     pam-1.5.1.x86_64:
+        version: 1.5.1-12.el9
+        size: 1929342
         provides:
             - config(pam)
             - libpam.so.0()(64bit)
@@ -24646,9 +24246,9 @@ rpms:
             - pam(x86-64)
         requires:
             - /usr/bin/sh
-            - audit-libs >= 1.0.8
+            - audit-libs
             - config(pam)
-            - glibc >= 2.3.90-37
+            - glibc
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
             - libaudit.so.1()(64bit)
@@ -24670,7 +24270,7 @@ rpms:
             - libcrypto.so.3()(64bit)
             - libcrypto.so.3(OPENSSL_3.0.0)(64bit)
             - libdb-5.3.so()(64bit)
-            - libeconf >= 0.3.5
+            - libeconf
             - libeconf.so.0()(64bit)
             - libeconf.so.0(LIBECONF_0.2)(64bit)
             - libm.so.6()(64bit)
@@ -24684,15 +24284,15 @@ rpms:
             - libpam.so.0(LIBPAM_MODUTIL_1.1.9)(64bit)
             - libpam.so.0(LIBPAM_MODUTIL_1.3.2)(64bit)
             - libpam.so.0(LIBPAM_MODUTIL_1.4.1)(64bit)
-            - libpwquality >= 0.9.9
-            - libselinux >= 1.33.2
+            - libpwquality
+            - libselinux
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
-            - openssl >= 3.0.0
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - openssl
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/motd.d
@@ -24724,116 +24324,6 @@ rpms:
             - /etc/security/time.conf
             - /run/motd.d
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/07
-            - /usr/lib/.build-id/07/07abd82cde974780143587409be63775c7a993
-            - /usr/lib/.build-id/07/41da8f1cf22791e337790291b65979c8767a5a
-            - /usr/lib/.build-id/0e
-            - /usr/lib/.build-id/0e/b491475ff0431c9fe9fbe7e06fc723a06d5987
-            - /usr/lib/.build-id/13
-            - /usr/lib/.build-id/13/b557b1bec30124743dd418db6a51c46422db39
-            - /usr/lib/.build-id/1c
-            - /usr/lib/.build-id/1c/4ec05b2d2d4943334a41f3cc6d0b3d04de21d6
-            - /usr/lib/.build-id/20
-            - /usr/lib/.build-id/20/bcdd2ad1db455144210250c2cfce2d1cc44bc5
-            - /usr/lib/.build-id/26
-            - /usr/lib/.build-id/26/0a8d4ef19174274ee0528356880d3458c7aac4
-            - /usr/lib/.build-id/27
-            - /usr/lib/.build-id/27/cb43ba1bf817b1f0ab8cb3b6e6e106f533c532
-            - /usr/lib/.build-id/3e
-            - /usr/lib/.build-id/3e/f3cb2586aabe823a3469ee4ed916e39751ded9
-            - /usr/lib/.build-id/42
-            - /usr/lib/.build-id/42/ad0ea95d3e26270bf564996a99331a28a45b23
-            - /usr/lib/.build-id/57
-            - /usr/lib/.build-id/57/154eff49fa69d6e762a0542e3d2730a80c73d4
-            - /usr/lib/.build-id/58
-            - /usr/lib/.build-id/58/2a614273e41923780297f5f1f5ffef5a3f357f
-            - /usr/lib/.build-id/5f
-            - /usr/lib/.build-id/5f/b4ffe2fcc16b82eec82f8e01d52a3bd3983385
-            - /usr/lib/.build-id/61
-            - /usr/lib/.build-id/61/aa81a4ff3496a6d3b6daa9afa440457c4ab31b
-            - /usr/lib/.build-id/62
-            - /usr/lib/.build-id/62/27da2233610cbe9712b6694dd74ce46fe263de
-            - /usr/lib/.build-id/64
-            - /usr/lib/.build-id/64/d5cc785314a02d7a5ca283ee3686d21f0b1522
-            - /usr/lib/.build-id/66
-            - /usr/lib/.build-id/66/550f7bdafd897d4ed72defe5e3bd426429e406
-            - /usr/lib/.build-id/6e
-            - /usr/lib/.build-id/6e/4359a7b3ff1694ca3a37bafcc37bb8acbc19bc
-            - /usr/lib/.build-id/70
-            - /usr/lib/.build-id/70/1eb05a6730dfc47318bc3a59462b0e03cc1308
-            - /usr/lib/.build-id/71
-            - /usr/lib/.build-id/71/5068c7dbbe8f885b0223de2ee182f31fe1af60
-            - /usr/lib/.build-id/71/e9bfce0f2c033ef2fabc118cbcb3d755c92bb5
-            - /usr/lib/.build-id/73
-            - /usr/lib/.build-id/73/da613fbdba4e66222814d8eb0dede1ec1ddfde
-            - /usr/lib/.build-id/76
-            - /usr/lib/.build-id/76/3a5df38e5fc1e505f194974f3728919f30185b
-            - /usr/lib/.build-id/77
-            - /usr/lib/.build-id/77/92f3a9086012ebbf2278a64bbde969464cbcf9
-            - /usr/lib/.build-id/7f
-            - /usr/lib/.build-id/7f/48bdb559eee2cf417fef05f86c284086f549a9
-            - /usr/lib/.build-id/82
-            - /usr/lib/.build-id/82/9e88736c1260e0f1c9e16f2f889c81e0b1fb75
-            - /usr/lib/.build-id/84
-            - /usr/lib/.build-id/84/383ca632562baf3b562866a68519ebce491861
-            - /usr/lib/.build-id/85
-            - /usr/lib/.build-id/85/77f54df8b3918fb28ed4351d48b26279c8d0f9
-            - /usr/lib/.build-id/8c
-            - /usr/lib/.build-id/8c/8405cba44e8b6d0000309bcd7c99f1cb2fb8cc
-            - /usr/lib/.build-id/8f
-            - /usr/lib/.build-id/8f/514a34ece06f58ad9a6398ad71d317a3341881
-            - /usr/lib/.build-id/93
-            - /usr/lib/.build-id/93/d85e89eab0076a94d148927d0fdc205da177cc
-            - /usr/lib/.build-id/97
-            - /usr/lib/.build-id/97/91768ed09a7592c6dd94af93ddde52f78c1c32
-            - /usr/lib/.build-id/9a
-            - /usr/lib/.build-id/9a/3ca00f14a53c887670f81591bb1970b9c5aaeb
-            - /usr/lib/.build-id/9e
-            - /usr/lib/.build-id/9e/759aa422c14f46d484d6aaecff4ad7ce31459a
-            - /usr/lib/.build-id/9e/b4719bfcabd5b22a539818769e251b26c1bd3f
-            - /usr/lib/.build-id/a2
-            - /usr/lib/.build-id/a2/c33557c21b47d3c7164f5f30aeb7b3acacce43
-            - /usr/lib/.build-id/a4
-            - /usr/lib/.build-id/a4/2aae235390ec203bbaafa09f3c044fdb65d52a
-            - /usr/lib/.build-id/a4/701ed95eaf8b99ec360c4faa2b472913f6daa0
-            - /usr/lib/.build-id/a8
-            - /usr/lib/.build-id/a8/45a9f3b57546df97b1f2bd4af1f3fe402de7c0
-            - /usr/lib/.build-id/ac
-            - /usr/lib/.build-id/ac/ebe85d6b86afb120ad022f5226fc2f9105fccb
-            - /usr/lib/.build-id/b5
-            - /usr/lib/.build-id/b5/331059c59de15ae39715bb2cbafe87851e2e2d
-            - /usr/lib/.build-id/c3
-            - /usr/lib/.build-id/c3/27e2b2fdef835a13bfc5c8cde86ad4c395860d
-            - /usr/lib/.build-id/c4
-            - /usr/lib/.build-id/c4/0abf3213b3bba3ebf73d9df3a0ae002378e27a
-            - /usr/lib/.build-id/c6
-            - /usr/lib/.build-id/c6/c0774c7c1344da6d3088d0963737b5410e2b15
-            - /usr/lib/.build-id/c7
-            - /usr/lib/.build-id/c7/8dbe1cb6c4a7a34568099d8946fc3ed8fb6e11
-            - /usr/lib/.build-id/cf
-            - /usr/lib/.build-id/cf/5d8bc79eb6d65638b99a5e43b757a69df3930b
-            - /usr/lib/.build-id/d2
-            - /usr/lib/.build-id/d2/d80a33ea691a0645bd228b265890e411fe1f2b
-            - /usr/lib/.build-id/df
-            - /usr/lib/.build-id/df/7fa95a2fbf59cdf19dfdab77f3a53da0b6b322
-            - /usr/lib/.build-id/e1
-            - /usr/lib/.build-id/e1/1076a8a7d3bdc5f3d15a19550b31e18683a2b7
-            - /usr/lib/.build-id/e6
-            - /usr/lib/.build-id/e6/06eb72d77416a5bc0e5e3ac2fa6b73d1391556
-            - /usr/lib/.build-id/e8
-            - /usr/lib/.build-id/e8/2e987ae83527cb4d128c6664ae80cdea47c3e6
-            - /usr/lib/.build-id/ed
-            - /usr/lib/.build-id/ed/68355ea1100a13b4e7b2839ed84e9819cffde7
-            - /usr/lib/.build-id/ef
-            - /usr/lib/.build-id/ef/1ab21857d565d835877760fe7fdd4c9f6ed00b
-            - /usr/lib/.build-id/ef/22299cf20b65753ca69c378d9aa2a0e5868121
-            - /usr/lib/.build-id/f7
-            - /usr/lib/.build-id/f7/dea3b71b9cc18d9a7cd7fe8fc833b870640dc4
-            - /usr/lib/.build-id/f8
-            - /usr/lib/.build-id/f8/a8ce31e4875a25bdef6f504835ec8f318cbc4c
-            - /usr/lib/.build-id/f8/de95dc4f6f12a32e1df8a3dc522476b17ed2c9
-            - /usr/lib/.build-id/fa
-            - /usr/lib/.build-id/fa/94bac054e7f9904d4d850d2b45c3e60dd89dd6
             - /usr/lib/motd.d
             - /usr/lib/systemd/system/pam_namespace.service
             - /usr/lib/tmpfiles.d/pam.conf
@@ -25072,13 +24562,15 @@ rpms:
             - /var/run/faillock
             - /var/run/sepermit
     passwd-0.80.x86_64:
+        version: 0.80-12.el9
+        size: 441719
         provides:
             - config(passwd)
             - passwd
             - passwd(x86-64)
         requires:
             - /etc/pam.d/system-auth
-            - audit-libs >= 2.4.5
+            - audit-libs
             - config(passwd)
             - libaudit.so.1()(64bit)
             - libc.so.6()(64bit)
@@ -25094,22 +24586,20 @@ rpms:
             - libpam_misc.so.0(LIBPAM_MISC_1.0)(64bit)
             - libpopt.so.0()(64bit)
             - libpopt.so.0(LIBPOPT_0)(64bit)
-            - libselinux >= 2.1.6-3
+            - libselinux
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
             - libuser.so.1()(64bit)
-            - pam >= 1.0.90
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - pam
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/pam.d/passwd
             - /usr/bin/passwd
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/a4
-            - /usr/lib/.build-id/a4/67cb9c8fa7306d41b96a820b0178f3a9c66055
             - /usr/share/doc/passwd
             - /usr/share/doc/passwd/AUTHORS
             - /usr/share/doc/passwd/ChangeLog
@@ -25187,6 +24677,8 @@ rpms:
             - /usr/share/man/ja/man1/passwd.1.gz
             - /usr/share/man/man1/passwd.1.gz
     pcre-8.44.x86_64:
+        version: 8.44-3.el9.3
+        size: 539272
         provides:
             - libpcre.so.1()(64bit)
             - libpcreposix.so.0()(64bit)
@@ -25200,17 +24692,13 @@ rpms:
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libpcre.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/72
-            - /usr/lib/.build-id/72/c60a998a520eb49520c67bac3f3ede11325163
-            - /usr/lib/.build-id/cf
-            - /usr/lib/.build-id/cf/fb947bcc416dca3cd249cdb0a1c6f614549c30
             - /usr/lib64/libpcre.so.1
             - /usr/lib64/libpcre.so.1.2.12
             - /usr/lib64/libpcreposix.so.0
@@ -25222,6 +24710,8 @@ rpms:
             - /usr/share/licenses/pcre/COPYING
             - /usr/share/licenses/pcre/LICENCE
     pcre2-10.40.x86_64:
+        version: 10.40-2.el9
+        size: 653842
         provides:
             - bundled(sljit)
             - libpcre2-8.so.0()(64bit)
@@ -25237,29 +24727,27 @@ rpms:
             - libc.so.6(GLIBC_2.4)(64bit)
             - libpcre2-8.so.0()(64bit)
             - pcre2-syntax
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/a1
-            - /usr/lib/.build-id/a1/98f7d35fea5de0bf4bd35b61fd7679714387df
-            - /usr/lib/.build-id/da
-            - /usr/lib/.build-id/da/c773591ff85ee4d18b00795d8bca123f3d5d66
             - /usr/lib64/libpcre2-8.so.0
             - /usr/lib64/libpcre2-8.so.0.11.0
             - /usr/lib64/libpcre2-posix.so.3
             - /usr/lib64/libpcre2-posix.so.3.0.2
     pcre2-syntax-10.40.noarch:
+        version: 10.40-2.el9
+        size: 234324
         provides:
             - pcre2-syntax
         requires:
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/share/doc/pcre2-syntax
             - /usr/share/doc/pcre2-syntax/AUTHORS
@@ -25278,6 +24766,8 @@ rpms:
             - /usr/share/man/man3/pcre2syntax.3.gz
             - /usr/share/man/man3/pcre2unicode.3.gz
     popt-1.18.x86_64:
+        version: 1.18-8.el9
+        size: 130360
         provides:
             - libpopt.so.0()(64bit)
             - libpopt.so.0(LIBPOPT_0)(64bit)
@@ -25294,16 +24784,14 @@ rpms:
             - libc.so.6(GLIBC_2.33)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.8)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/popt.d
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/19
-            - /usr/lib/.build-id/19/e11263645dffdb2cbcdcff0d731276c7f90e98
             - /usr/lib64/libpopt.so.0
             - /usr/lib64/libpopt.so.0.0.1
             - /usr/share/doc/popt
@@ -25343,6 +24831,8 @@ rpms:
             - /usr/share/locale/zh_CN/LC_MESSAGES/popt.mo
             - /usr/share/locale/zh_TW/LC_MESSAGES/popt.mo
     python3-3.9.14.x86_64:
+        version: 3.9.14-1.el9_1.2
+        size: 32632
         provides:
             - platform-python
             - platform-python(x86-64)
@@ -25359,10 +24849,10 @@ rpms:
             - libc.so.6(GLIBC_2.34)(64bit)
             - libpython3.9.so.1.0()(64bit)
             - python3-libs(x86-64)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/pydoc
@@ -25371,8 +24861,6 @@ rpms:
             - /usr/bin/python3
             - /usr/bin/python3.9
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/c9
-            - /usr/lib/.build-id/c9/0f40e67fdfa91dfa577777580aae529ca0892d
             - /usr/libexec/platform-python
             - /usr/libexec/platform-python3.9
             - /usr/share/doc/python3
@@ -25380,6 +24868,8 @@ rpms:
             - /usr/share/man/man1/python3.1.gz
             - /usr/share/man/man1/python3.9.1.gz
     python3-chardet-4.0.0.noarch:
+        version: 4.0.0-5.el9
+        size: 1480116
         provides:
             - python-chardet
             - python3-chardet
@@ -25389,11 +24879,11 @@ rpms:
         requires:
             - /usr/bin/python3
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/bin/chardetect
             - /usr/lib/python3.9/site-packages/chardet
@@ -25543,6 +25033,8 @@ rpms:
             - /usr/share/licenses/python3-chardet
             - /usr/share/licenses/python3-chardet/LICENSE
     python3-cloud-what-1.29.30.1.x86_64:
+        version: 1.29.30.1-1.el9_1
+        size: 74857
         provides:
             - python-cloud-what
             - python3-cloud-what
@@ -25552,11 +25044,11 @@ rpms:
             - dmidecode
             - python(abi)
             - python3-requests
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/lib64/python3.9/site-packages/cloud_what
             - /usr/lib64/python3.9/site-packages/cloud_what/__init__.py
@@ -25591,6 +25083,8 @@ rpms:
             - /usr/lib64/python3.9/site-packages/cloud_what/setup.py
             - /var/cache/cloud-what
     python3-dateutil-2.8.1.noarch:
+        version: 2.8.1-6.el9
+        size: 736672
         provides:
             - python-dateutil
             - python3-dateutil
@@ -25599,12 +25093,12 @@ rpms:
             - python3dist(python-dateutil)
         requires:
             - python(abi)
-            - python3.9dist(six) >= 1.5
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - python3.9dist(six)
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - tzdata
         files:
             - /usr/lib/python3.9/site-packages/dateutil
@@ -25683,6 +25177,8 @@ rpms:
             - /usr/share/licenses/python3-dateutil
             - /usr/share/licenses/python3-dateutil/LICENSE
     python3-dbus-1.2.18.x86_64:
+        version: 1.2.18-2.el9
+        size: 502880
         provides:
             - python-dbus
             - python3-dbus
@@ -25698,18 +25194,14 @@ rpms:
             - libdbus-1.so.3(LIBDBUS_1_3)(64bit)
             - libglib-2.0.so.0()(64bit)
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/99
-            - /usr/lib/.build-id/99/60476799f7fff17ae72212b92396d434b740a8
-            - /usr/lib/.build-id/ce
-            - /usr/lib/.build-id/ce/6e2bc7ad543c7a2435d284bfd5c90300dc0067
             - /usr/lib64/python3.9/site-packages/_dbus_bindings.so
             - /usr/lib64/python3.9/site-packages/_dbus_glib_bindings.so
             - /usr/lib64/python3.9/site-packages/dbus
@@ -25777,6 +25269,8 @@ rpms:
             - /usr/share/licenses/python3-dbus
             - /usr/share/licenses/python3-dbus/COPYING
     python3-decorator-4.4.2.noarch:
+        version: 4.4.2-6.el9
+        size: 62807
         provides:
             - python-decorator
             - python3-decorator
@@ -25785,10 +25279,10 @@ rpms:
             - python3dist(decorator)
         requires:
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/lib/python3.9/site-packages/__pycache__/decorator.cpython-39.opt-1.pyc
             - /usr/lib/python3.9/site-packages/__pycache__/decorator.cpython-39.pyc
@@ -25806,6 +25300,8 @@ rpms:
             - /usr/share/licenses/python3-decorator
             - /usr/share/licenses/python3-decorator/LICENSE.txt
     python3-dnf-4.12.0.noarch:
+        version: 4.12.0-4.el9
+        size: 1917325
         provides:
             - python-dnf
             - python3-dnf
@@ -25813,20 +25309,20 @@ rpms:
         requires:
             - /usr/bin/python3
             - dnf-data
-            - libmodulemd >= 2.9.3
+            - libmodulemd
             - python(abi)
             - python3-gpg
-            - python3-hawkey >= 0.66.0
-            - python3-libcomps >= 0.1.8
+            - python3-hawkey
+            - python3-libcomps
             - python3-libdnf
-            - python3-libdnf >= 0.66.0
-            - python3-rpm >= 4.14.0
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
-            - rpmlib(RichDependencies) <= 4.12.0-1
+            - python3-libdnf
+            - python3-rpm
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
+            - rpmlib(RichDependencies)
         files:
             - /usr/bin/dnf-3
             - /usr/lib/python3.9/site-packages/dnf
@@ -26094,6 +25590,8 @@ rpms:
             - /usr/lib/python3.9/site-packages/dnf/yum/misc.py
             - /usr/lib/python3.9/site-packages/dnf/yum/rpmtrans.py
     python3-dnf-plugins-core-4.1.0.noarch:
+        version: 4.1.0-3.el9
+        size: 924001
         provides:
             - config(python3-dnf-plugins-core)
             - python-dnf-plugins-core
@@ -26108,13 +25606,13 @@ rpms:
             - python(abi)
             - python3-dateutil
             - python3-dbus
-            - python3-dnf >= 4.11.0
-            - python3-hawkey >= 0.64.0
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - python3-dnf
+            - python3-hawkey
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /etc/dnf/plugins/copr.conf
             - /etc/dnf/plugins/copr.d
@@ -26206,6 +25704,8 @@ rpms:
             - /usr/share/locale/zh_TW/LC_MESSAGES/dnf-plugins-core.mo
             - /var/cache/dnf/packages.db
     python3-ethtool-0.15.x86_64:
+        version: 0.15-2.el9
+        size: 96646
         provides:
             - python-ethtool
             - python3-ethtool
@@ -26227,15 +25727,13 @@ rpms:
             - libnl-route-3.so.200()(64bit)
             - libnl-route-3.so.200(libnl_3)(64bit)
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/76
-            - /usr/lib/.build-id/76/7920bcd450b04326e7ec72f781f882e2b238a2
             - /usr/lib64/python3.9/site-packages/ethtool-0.15-py3.9.egg-info
             - /usr/lib64/python3.9/site-packages/ethtool-0.15-py3.9.egg-info/PKG-INFO
             - /usr/lib64/python3.9/site-packages/ethtool-0.15-py3.9.egg-info/SOURCES.txt
@@ -26252,6 +25750,8 @@ rpms:
             - /usr/share/man/man8/pethtool.8.gz
             - /usr/share/man/man8/pifconfig.8.gz
     python3-gobject-base-3.40.1.x86_64:
+        version: 3.40.1-6.el9
+        size: 546171
         provides:
             - python-gobject-base
             - python3-gobject-base
@@ -26260,7 +25760,7 @@ rpms:
             - python3.9dist(pygobject)
             - python3dist(pygobject)
         requires:
-            - gobject-introspection(x86-64) >= 1.56.0
+            - gobject-introspection(x86-64)
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.14)(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
@@ -26273,16 +25773,14 @@ rpms:
             - libgobject-2.0.so.0()(64bit)
             - python(abi)
             - python3-gobject-base-noarch
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/22
-            - /usr/lib/.build-id/22/834a0871810868e655a62b9dea9ec3522b1a2d
             - /usr/lib64/python3.9/site-packages/PyGObject-3.40.1.egg-info
             - /usr/lib64/python3.9/site-packages/gi
             - /usr/lib64/python3.9/site-packages/gi/__init__.py
@@ -26326,6 +25824,8 @@ rpms:
             - /usr/lib64/python3.9/site-packages/gi/pygtkcompat.py
             - /usr/lib64/python3.9/site-packages/gi/types.py
     python3-gobject-base-noarch-3.40.1.noarch:
+        version: 3.40.1-6.el9
+        size: 706541
         provides:
             - python-gobject-base-noarch
             - python3-gobject-base-noarch
@@ -26333,11 +25833,11 @@ rpms:
         requires:
             - python(abi)
             - python3-gobject-base
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/lib/python3.9/site-packages/gi
             - /usr/lib/python3.9/site-packages/gi/overrides
@@ -26393,6 +25893,8 @@ rpms:
             - /usr/share/licenses/python3-gobject-base-noarch
             - /usr/share/licenses/python3-gobject-base-noarch/COPYING
     python3-gpg-1.15.1.x86_64:
+        version: 1.15.1-6.el9
+        size: 1404173
         provides:
             - python-gpg
             - python3-gpg
@@ -26411,16 +25913,14 @@ rpms:
             - libgpgme.so.11(GPGME_1.0)(64bit)
             - libgpgme.so.11(GPGME_1.1)(64bit)
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/11
-            - /usr/lib/.build-id/11/ef45f4b2e0f91a59d84f3d2afdf10fb93dcfe9
             - /usr/lib64/python3.9/site-packages/gpg
             - /usr/lib64/python3.9/site-packages/gpg-1.15.1-py3.9.egg-info
             - /usr/lib64/python3.9/site-packages/gpg/__init__.py
@@ -26522,6 +26022,8 @@ rpms:
             - /usr/share/doc/python3-gpg
             - /usr/share/doc/python3-gpg/README
     python3-hawkey-0.67.0.x86_64:
+        version: 0.67.0-3.el9
+        size: 312187
         provides:
             - python-hawkey
             - python3-hawkey
@@ -26551,18 +26053,14 @@ rpms:
             - libstdc++.so.6(GLIBCXX_3.4.29)(64bit)
             - python(abi)
             - python3-libdnf
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/4f
-            - /usr/lib/.build-id/4f/a8348f9fe9b9567094a1543c5c8b503b5cb927
-            - /usr/lib/.build-id/99
-            - /usr/lib/.build-id/99/b697f166344df848a3a0e07279daeae77f79e8
             - /usr/lib64/python3.9/site-packages/hawkey
             - /usr/lib64/python3.9/site-packages/hawkey/__init__.py
             - /usr/lib64/python3.9/site-packages/hawkey/__pycache__
@@ -26576,6 +26074,8 @@ rpms:
             - /usr/lib64/python3.9/site-packages/hawkey/test/__pycache__/__init__.cpython-39.pyc
             - /usr/lib64/python3.9/site-packages/hawkey/test/_hawkey_test.so
     python3-idna-2.10.noarch:
+        version: 2.10-7.el9
+        size: 469965
         provides:
             - python-idna
             - python3-idna
@@ -26584,11 +26084,11 @@ rpms:
             - python3dist(idna)
         requires:
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/lib/python3.9/site-packages/idna
             - /usr/lib/python3.9/site-packages/idna-2.10-py3.9.egg-info
@@ -26627,6 +26127,8 @@ rpms:
             - /usr/share/licenses/python3-idna
             - /usr/share/licenses/python3-idna/LICENSE.rst
     python3-iniparse-0.4.noarch:
+        version: 0.4-45.el9
+        size: 108946
         provides:
             - python-iniparse
             - python3-iniparse
@@ -26636,11 +26138,11 @@ rpms:
         requires:
             - python(abi)
             - python3.9dist(six)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/lib/python3.9/site-packages/iniparse
             - /usr/lib/python3.9/site-packages/iniparse-0.4-py3.9.egg-info
@@ -26678,6 +26180,8 @@ rpms:
             - /usr/share/licenses/python-iniparse/LICENSE
             - /usr/share/licenses/python-iniparse/LICENSE-PSF
     python3-inotify-0.9.6.noarch:
+        version: 0.9.6-25.el9
+        size: 249451
         provides:
             - python-inotify
             - python3-inotify
@@ -26688,10 +26192,10 @@ rpms:
             - /usr/bin/python3
             - python(abi)
             - python3.9dist(setuptools)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/bin/pyinotify
             - /usr/lib/python3.9/site-packages/__pycache__/pyinotify.cpython-39.opt-1.pyc
@@ -26709,6 +26213,8 @@ rpms:
             - /usr/share/licenses/python3-inotify
             - /usr/share/licenses/python3-inotify/COPYING
     python3-libcomps-0.1.18.x86_64:
+        version: 0.1.18-1.el9
+        size: 147138
         provides:
             - python-libcomps
             - python3-libcomps
@@ -26727,16 +26233,14 @@ rpms:
             - libpython3.9.so.1.0()(64bit)
             - libz.so.1()(64bit)
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/5a
-            - /usr/lib/.build-id/5a/bcfa5ef03cb94a650fa72d656b21f4a622171b
             - /usr/lib64/python3.9/site-packages/libcomps
             - /usr/lib64/python3.9/site-packages/libcomps-0.1.18-py3.9.egg-info
             - /usr/lib64/python3.9/site-packages/libcomps-0.1.18-py3.9.egg-info/PKG-INFO
@@ -26749,6 +26253,8 @@ rpms:
             - /usr/lib64/python3.9/site-packages/libcomps/__pycache__/__init__.cpython-39.pyc
             - /usr/lib64/python3.9/site-packages/libcomps/_libpycomps.so
     python3-libdnf-0.67.0.x86_64:
+        version: 0.67.0-3.el9
+        size: 3792272
         provides:
             - python-libdnf
             - python3-libdnf
@@ -26781,30 +26287,14 @@ rpms:
             - libstdc++.so.6(GLIBCXX_3.4.29)(64bit)
             - libstdc++.so.6(GLIBCXX_3.4.9)(64bit)
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/1f
-            - /usr/lib/.build-id/1f/2f4c1188c8b0e575fe83c11d64cffe2b0ca33f
-            - /usr/lib/.build-id/4b
-            - /usr/lib/.build-id/4b/b77619f02fabe0e03c5d1b6dda904a1c888eda
-            - /usr/lib/.build-id/59
-            - /usr/lib/.build-id/59/7a1d45dfca2b32de1f7321b05a697e37ef503e
-            - /usr/lib/.build-id/68
-            - /usr/lib/.build-id/68/489fb900cc8095d40bb478412176f4013537e1
-            - /usr/lib/.build-id/6c
-            - /usr/lib/.build-id/6c/b02772cdb3002336aaa1fd870dfe36eec1a534
-            - /usr/lib/.build-id/6d
-            - /usr/lib/.build-id/6d/9e28f4d38a3cb0d1d773f5c25a88aeada37c99
-            - /usr/lib/.build-id/a5
-            - /usr/lib/.build-id/a5/f2dcf1244a44eac704cfdfde540e8495beed13
-            - /usr/lib/.build-id/b6
-            - /usr/lib/.build-id/b6/2ced38b80a07108fdcf20f066e9b43df35849e
             - /usr/lib64/python3.9/site-packages/libdnf
             - /usr/lib64/python3.9/site-packages/libdnf/__init__.py
             - /usr/lib64/python3.9/site-packages/libdnf/__pycache__
@@ -26843,6 +26333,8 @@ rpms:
             - /usr/lib64/python3.9/site-packages/libdnf/transaction.py
             - /usr/lib64/python3.9/site-packages/libdnf/utils.py
     python3-librepo-1.14.2.x86_64:
+        version: 1.14.2-3.el9
+        size: 187016
         provides:
             - python-librepo
             - python3-librepo
@@ -26861,16 +26353,14 @@ rpms:
             - librepo(x86-64)
             - librepo.so.0()(64bit)
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/1c
-            - /usr/lib/.build-id/1c/ab86d3e59e14a8251677c0dd1d38be1f25a368
             - /usr/lib64/python3.9/site-packages/librepo
             - /usr/lib64/python3.9/site-packages/librepo/__init__.py
             - /usr/lib64/python3.9/site-packages/librepo/__pycache__
@@ -26878,6 +26368,8 @@ rpms:
             - /usr/lib64/python3.9/site-packages/librepo/__pycache__/__init__.cpython-39.pyc
             - /usr/lib64/python3.9/site-packages/librepo/_librepo.so
     python3-libs-3.9.14.x86_64:
+        version: 3.9.14-1.el9_1.2
+        size: 32447819
         provides:
             - bundled(libmpdec)
             - bundled(mpdecimal)
@@ -26939,142 +26431,20 @@ rpms:
             - libuuid.so.1(UUID_2.20)(64bit)
             - libz.so.1()(64bit)
             - libz.so.1(ZLIB_1.2.0)(64bit)
-            - python3-pip-wheel >= 21.2.3-4
-            - python3-setuptools-wheel >= 53.0.0-7
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
-            - rpmlib(RichDependencies) <= 4.12.0-1
+            - python3-pip-wheel
+            - python3-setuptools-wheel
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
+            - rpmlib(RichDependencies)
             - rtld(GNU_HASH)
             - tzdata
         files:
             - /usr/include/python3.9
             - /usr/include/python3.9/pyconfig-64.h
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/05
-            - /usr/lib/.build-id/05/da901b81be4c695057d2b51916e3b4d639c240
-            - /usr/lib/.build-id/09
-            - /usr/lib/.build-id/09/368fbe0125d2c176d973fc04394f328560753a
-            - /usr/lib/.build-id/0a
-            - /usr/lib/.build-id/0a/3af5af133448008f706d2997fde01e128a9185
-            - /usr/lib/.build-id/0d
-            - /usr/lib/.build-id/0d/4045c22a2f411527551fcac29e92ab579ff648
-            - /usr/lib/.build-id/0f
-            - /usr/lib/.build-id/0f/dd370d49f586e4a5b381808f3a5183812c82b6
-            - /usr/lib/.build-id/13
-            - /usr/lib/.build-id/13/8003e1fa2b96dae84ddc9c22009a21b1d46a14
-            - /usr/lib/.build-id/15
-            - /usr/lib/.build-id/15/8bd2a95f13ca4937b4cbad8cb6228e2179a8d8
-            - /usr/lib/.build-id/1b
-            - /usr/lib/.build-id/1b/6ce7589aaf5f61a795ee3b1786776adf17b4d7
-            - /usr/lib/.build-id/1d
-            - /usr/lib/.build-id/1d/3c62876416c97240a93ccb89e06ec4724f6e31
-            - /usr/lib/.build-id/1e
-            - /usr/lib/.build-id/1e/54babae9fb324bf44e90e5618322dc9b7c1817
-            - /usr/lib/.build-id/1e/ff8d6025ad12f0dc4047035d1c6a6f43609606
-            - /usr/lib/.build-id/23
-            - /usr/lib/.build-id/23/212d8cba7b8751e91a5d114961b154a57774d3
-            - /usr/lib/.build-id/24
-            - /usr/lib/.build-id/24/7e379877a655016c3a1222a8b318ebf249d6f6
-            - /usr/lib/.build-id/29
-            - /usr/lib/.build-id/29/07506731e85a0faaee6529e2ce89e0203e3fbd
-            - /usr/lib/.build-id/2f
-            - /usr/lib/.build-id/2f/63cf128f786d25dd5dcef6aa88ce7a836e5419
-            - /usr/lib/.build-id/2f/910304fc48dcd225d9a1a702e363ebed462f75
-            - /usr/lib/.build-id/39
-            - /usr/lib/.build-id/39/e4aa68ded76ce0999ba714bc0f09d92de19219
-            - /usr/lib/.build-id/3c
-            - /usr/lib/.build-id/3c/395861329030917d22b319d1b9214ca5fc8895
-            - /usr/lib/.build-id/3e
-            - /usr/lib/.build-id/3e/987868c4b5d10246e07b204504c12bf60c21ea
-            - /usr/lib/.build-id/42
-            - /usr/lib/.build-id/42/d1a31678f308929a15d0098ebb7cba2fa192e7
-            - /usr/lib/.build-id/42/d90c13f8bf49bf9377168e4edd7b28d786959d
-            - /usr/lib/.build-id/48
-            - /usr/lib/.build-id/48/1898f4cc8ab4bd0f694701c9d4d250cfe5d283
-            - /usr/lib/.build-id/48/3cef6f4c98bfd4dfbe284f377d53c709874e41
-            - /usr/lib/.build-id/4e
-            - /usr/lib/.build-id/4e/9ce46ef6beb6319d1caead1f043e1c5fac13a7
-            - /usr/lib/.build-id/4f
-            - /usr/lib/.build-id/4f/e0b1214e158ef7e2f0acec042101be9a89802c
-            - /usr/lib/.build-id/5a
-            - /usr/lib/.build-id/5a/1ae04b1847d65f20b65ba459958d2563e02963
-            - /usr/lib/.build-id/5b
-            - /usr/lib/.build-id/5b/94c22d18f107c0a5fb1ec6f4a4feea9c75141d
-            - /usr/lib/.build-id/5f
-            - /usr/lib/.build-id/5f/d8c2f61d1e0f3098926895f731e2b226b2f09c
-            - /usr/lib/.build-id/61
-            - /usr/lib/.build-id/61/0d276279d683fdae5330f25f218e8b51af1184
-            - /usr/lib/.build-id/67
-            - /usr/lib/.build-id/67/4e4409cbe50103f655c6b2bd4b6250c71003ff
-            - /usr/lib/.build-id/6a
-            - /usr/lib/.build-id/6a/513a5acddc23abbc15947b6264621aa12ea946
-            - /usr/lib/.build-id/6c
-            - /usr/lib/.build-id/6c/10f5945cf3572bcdef9398ac3c05d59e1ad0f5
-            - /usr/lib/.build-id/7a
-            - /usr/lib/.build-id/7a/78249815446cbd04b93fd15a37484913ea878f
-            - /usr/lib/.build-id/7f
-            - /usr/lib/.build-id/7f/a67bd98f0ede12febe703358e5c01aab4c260d
-            - /usr/lib/.build-id/84
-            - /usr/lib/.build-id/84/44bfc339798e62a417e683e1a80008ecdb9d16
-            - /usr/lib/.build-id/8a
-            - /usr/lib/.build-id/8a/f9e2d89263cc8e0a485a794d20ec4bcafa5fa2
-            - /usr/lib/.build-id/8c
-            - /usr/lib/.build-id/8c/c47adb4b7c86bdb9f3c807c6c252bb15b3ffb5
-            - /usr/lib/.build-id/8d
-            - /usr/lib/.build-id/8d/6ae49bced7f40c9db3755416c4257fc03cb59b
-            - /usr/lib/.build-id/8e
-            - /usr/lib/.build-id/8e/7539afde7f1f8d9442270231b7c413afc791bf
-            - /usr/lib/.build-id/93
-            - /usr/lib/.build-id/93/5b542c8d48aab754e15e4f27cd341a40ba07a3
-            - /usr/lib/.build-id/93/d4c7f1da23ea79b51db3f3daabe0ae9d492df5
-            - /usr/lib/.build-id/98
-            - /usr/lib/.build-id/98/15fb91cea76ac0b4809095edd4e71c8abd11f4
-            - /usr/lib/.build-id/99
-            - /usr/lib/.build-id/99/5330787e575e736edb58c09c0d19e367e0f7d5
-            - /usr/lib/.build-id/99/d06d05041011441530903c341ec0e735ddf821
-            - /usr/lib/.build-id/9b
-            - /usr/lib/.build-id/9b/14528a13f68036232f58936fd5a244f09a3f00
-            - /usr/lib/.build-id/9d
-            - /usr/lib/.build-id/9d/5211b6274635e02078971f0a0dd25e14211992
-            - /usr/lib/.build-id/a1
-            - /usr/lib/.build-id/a1/623a0ef6850c633a8ac8dcc1de740eed75e60c
-            - /usr/lib/.build-id/ab
-            - /usr/lib/.build-id/ab/37db26c7372b00dc5939882d14c0907d1a9397
-            - /usr/lib/.build-id/ac
-            - /usr/lib/.build-id/ac/d2980d64957846937efe4d0f4cdc0fdd097fdc
-            - /usr/lib/.build-id/b2
-            - /usr/lib/.build-id/b2/41b1d6ffc5e2bdc5c1aa9c92ab37bae45cc950
-            - /usr/lib/.build-id/bf
-            - /usr/lib/.build-id/bf/a2ebaf474788b86e46a2c44c0c048eb88465bd
-            - /usr/lib/.build-id/c0
-            - /usr/lib/.build-id/c0/f3a511f8aa705e965d2992886614d0703e89c0
-            - /usr/lib/.build-id/c4
-            - /usr/lib/.build-id/c4/af9079e075e9ae9cda824d8462b7d9edafcdfe
-            - /usr/lib/.build-id/cc
-            - /usr/lib/.build-id/cc/9b21ae5697af69e07be837079284eeadf84929
-            - /usr/lib/.build-id/ce
-            - /usr/lib/.build-id/ce/c0484f6c495623113f959f3b91fff1962e7ba7
-            - /usr/lib/.build-id/cf
-            - /usr/lib/.build-id/cf/e95c6e41e609d6368c5734ebc98c76d02387e8
-            - /usr/lib/.build-id/d3
-            - /usr/lib/.build-id/d3/6e227297ea151634633262443fb7990c863306
-            - /usr/lib/.build-id/e5
-            - /usr/lib/.build-id/e5/03c5189e2a67ef73f3ac9a8601195ae3fbf645
-            - /usr/lib/.build-id/e8
-            - /usr/lib/.build-id/e8/d1ed6c75524cffda86859045a1a4e5af97d0a2
-            - /usr/lib/.build-id/e9
-            - /usr/lib/.build-id/e9/02fd11da181298a6a4d09a3aa2999d53ab7ff3
-            - /usr/lib/.build-id/f2
-            - /usr/lib/.build-id/f2/155c62cab17e91c5d6e9ae3a184661e88942c7
-            - /usr/lib/.build-id/f8
-            - /usr/lib/.build-id/f8/e3a4a011c941e393591f7b7620e91a7ed313fb
-            - /usr/lib/.build-id/fc
-            - /usr/lib/.build-id/fc/bf3179ef5cb11689e0a7e8b8df0aabeeaaca00
-            - /usr/lib/.build-id/fe
-            - /usr/lib/.build-id/fe/4523afd65b452ed72bdebc0f795996ee99657b
             - /usr/lib/python3.9
             - /usr/lib/python3.9/site-packages
             - /usr/lib/python3.9/site-packages/__pycache__
@@ -29507,6 +28877,8 @@ rpms:
             - /usr/share/doc/python3-libs
             - /usr/share/doc/python3-libs/README.rst
     python3-pip-wheel-21.2.3.noarch:
+        version: 21.2.3-6.el9
+        size: 1220550
         provides:
             - bundled(python3dist(appdirs))
             - bundled(python3dist(cachecontrol))
@@ -29536,17 +28908,19 @@ rpms:
             - python3.9-pip-wheel
         requires:
             - ca-certificates
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
-            - rpmlib(RichDependencies) <= 4.12.0-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
+            - rpmlib(RichDependencies)
         files:
             - /usr/share/licenses/python3-pip-wheel
             - /usr/share/licenses/python3-pip-wheel/LICENSE.txt
             - /usr/share/python3-wheels
             - /usr/share/python3-wheels/pip-21.2.3-py3-none-any.whl
     python3-pysocks-1.7.1.noarch:
+        version: 1.7.1-12.el9
+        size: 90512
         provides:
             - python-pysocks
             - python3-pysocks
@@ -29555,11 +28929,11 @@ rpms:
             - python3dist(pysocks)
         requires:
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/lib/python3.9/site-packages/PySocks-1.7.1-py3.9.egg-info
             - /usr/lib/python3.9/site-packages/PySocks-1.7.1-py3.9.egg-info/PKG-INFO
@@ -29577,6 +28951,8 @@ rpms:
             - /usr/share/licenses/python3-pysocks
             - /usr/share/licenses/python3-pysocks/LICENSE
     python3-requests-2.25.1.noarch:
+        version: 2.25.1-6.el9
+        size: 398764
         provides:
             - python-requests
             - python3-requests
@@ -29588,12 +28964,12 @@ rpms:
             - (python3.9dist(idna)
             - (python3.9dist(urllib3)
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
-            - rpmlib(RichDependencies) <= 4.12.0-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
+            - rpmlib(RichDependencies)
         files:
             - /usr/lib/python3.9/site-packages/requests
             - /usr/lib/python3.9/site-packages/requests-2.25.1.dist-info
@@ -29663,6 +29039,8 @@ rpms:
             - /usr/share/licenses/python3-requests
             - /usr/share/licenses/python3-requests/LICENSE
     python3-rpm-4.16.1.3.x86_64:
+        version: 4.16.1.3-19.el9_1
+        size: 377103
         provides:
             - python-rpm
             - python3-rpm
@@ -29699,18 +29077,14 @@ rpms:
             - libzstd.so.1()(64bit)
             - python(abi)
             - rpm-libs(x86-64)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/16
-            - /usr/lib/.build-id/16/28cc9ecd3c603f5b5e2df77e41e20d0a18c611
-            - /usr/lib/.build-id/36
-            - /usr/lib/.build-id/36/d5190ada4a80e6fc7543832a2794a58e31f608
             - /usr/lib64/python3.9/site-packages/rpm
             - /usr/lib64/python3.9/site-packages/rpm-4.16.1.3-py3.9.egg-info
             - /usr/lib64/python3.9/site-packages/rpm/__init__.py
@@ -29723,6 +29097,8 @@ rpms:
             - /usr/lib64/python3.9/site-packages/rpm/_rpm.so
             - /usr/lib64/python3.9/site-packages/rpm/transaction.py
     python3-setuptools-53.0.0.noarch:
+        version: 53.0.0-10.el9_1.1
+        size: 4351642
         provides:
             - bundled(python3dist(appdirs))
             - bundled(python3dist(ordered-set))
@@ -29742,11 +29118,11 @@ rpms:
             - python3dist(setuptools)
         requires:
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/lib/python3.9/site-packages/_distutils_hack
             - /usr/lib/python3.9/site-packages/_distutils_hack/__init__.py
@@ -30242,6 +29618,8 @@ rpms:
             - /usr/share/licenses/python3-setuptools
             - /usr/share/licenses/python3-setuptools/LICENSE
     python3-setuptools-wheel-53.0.0.noarch:
+        version: 53.0.0-10.el9_1.1
+        size: 562570
         provides:
             - bundled(python3dist(appdirs))
             - bundled(python3dist(ordered-set))
@@ -30252,16 +29630,18 @@ rpms:
             - python3-setuptools-wheel
             - python3.9-setuptools-wheel
         requires:
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/share/licenses/python3-setuptools-wheel
             - /usr/share/licenses/python3-setuptools-wheel/LICENSE
             - /usr/share/python3-wheels
             - /usr/share/python3-wheels/setuptools-53.0.0-py3-none-any.whl
     python3-six-1.15.0.noarch:
+        version: 1.15.0-9.el9
+        size: 106876
         provides:
             - python-six
             - python3-six
@@ -30270,11 +29650,11 @@ rpms:
             - python3dist(six)
         requires:
             - python(abi)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/lib/python3.9/site-packages/__pycache__/six.cpython-39.opt-1.pyc
             - /usr/lib/python3.9/site-packages/__pycache__/six.cpython-39.pyc
@@ -30293,6 +29673,8 @@ rpms:
             - /usr/share/licenses/python3-six
             - /usr/share/licenses/python3-six/LICENSE
     python3-subscription-manager-rhsm-1.29.30.1.x86_64:
+        version: 1.29.30.1-1.el9_1
+        size: 442533
         provides:
             - python-rhsm
             - python-subscription-manager-rhsm
@@ -30313,17 +29695,15 @@ rpms:
             - python3-dateutil
             - python3-iniparse
             - python3-rpm
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - subscription-manager-rhsm-certificates
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/04
-            - /usr/lib/.build-id/04/c106ffe1f94ebfaef94a1184f4b9aa487b6a09
             - /usr/lib64/python3.9/site-packages/rhsm
             - /usr/lib64/python3.9/site-packages/rhsm/__init__.py
             - /usr/lib64/python3.9/site-packages/rhsm/__pycache__
@@ -30367,6 +29747,8 @@ rpms:
             - /usr/lib64/python3.9/site-packages/rhsm/profile.py
             - /usr/lib64/python3.9/site-packages/rhsm/utils.py
     python3-urllib3-1.26.5.noarch:
+        version: 1.26.5-3.el9
+        size: 745408
         provides:
             - python-urllib3
             - python3-urllib3
@@ -30379,11 +29761,11 @@ rpms:
             - python3-idna
             - python3-pysocks
             - python3-six
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/lib/python3.9/site-packages/urllib3
             - /usr/lib/python3.9/site-packages/urllib3-1.26.5-py3.9.egg-info
@@ -30524,6 +29906,8 @@ rpms:
             - /usr/share/licenses/python3-urllib3
             - /usr/share/licenses/python3-urllib3/LICENSE.txt
     readline-8.1.x86_64:
+        version: 8.1-4.el9
+        size: 492844
         provides:
             - libhistory.so.8()(64bit)
             - libreadline.so.8()(64bit)
@@ -30540,17 +29924,13 @@ rpms:
             - libc.so.6(GLIBC_2.33)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libtinfo.so.6()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/74
-            - /usr/lib/.build-id/74/3e24d7e4d98b9a5b3ac5dbc431fa83abd4084c
-            - /usr/lib/.build-id/dc
-            - /usr/lib/.build-id/dc/1a424145905fb4f65a39f58b9b1a54cced2aa1
             - /usr/lib64/libhistory.so.8
             - /usr/lib64/libhistory.so.8.1
             - /usr/lib64/libreadline.so.8
@@ -30561,6 +29941,8 @@ rpms:
             - /usr/share/licenses/readline/COPYING
             - /usr/share/licenses/readline/USAGE
     redhat-release-9.1.x86_64:
+        version: 9.1-1.9.el9
+        size: 55565
         provides:
             - base-module(platform:el9)
             - config(redhat-release)
@@ -30574,10 +29956,10 @@ rpms:
             - system-release(releasever)
         requires:
             - config(redhat-release)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /etc/dnf/protected.d/redhat-release.conf
             - /etc/issue
@@ -30611,16 +29993,18 @@ rpms:
             - /usr/share/doc/redhat-release/GPL
             - /usr/share/doc/redhat-release/GPL-source-offer
     rootfiles-8.1.noarch:
+        version: 8.1-31.el9
+        size: 817
         provides:
             - config(rootfiles)
             - rootfiles
         requires:
             - /bin/sh
             - config(rootfiles)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /root/.bash_logout
             - /root/.bash_profile
@@ -30628,6 +30012,8 @@ rpms:
             - /root/.cshrc
             - /root/.tcshrc
     rpm-4.16.1.3.x86_64:
+        version: 4.16.1.3-19.el9_1
+        size: 2749694
         provides:
             - config(rpm)
             - rpm
@@ -30649,11 +30035,11 @@ rpms:
             - libpopt.so.0(LIBPOPT_0)(64bit)
             - librpm.so.9()(64bit)
             - librpmio.so.9()(64bit)
-            - popt(x86-64) >= 1.10.2.1
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - popt(x86-64)
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/rpm
@@ -30665,16 +30051,6 @@ rpms:
             - /usr/bin/rpmquery
             - /usr/bin/rpmverify
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/2b
-            - /usr/lib/.build-id/2b/e7676813305e59d3398047b86b448019c131ba
-            - /usr/lib/.build-id/2c
-            - /usr/lib/.build-id/2c/24b8012a0ac658c1471271a47f622d5d51622f
-            - /usr/lib/.build-id/4c
-            - /usr/lib/.build-id/4c/ed9ee09ba58e3ac537bc29186a9802659b9168
-            - /usr/lib/.build-id/a9
-            - /usr/lib/.build-id/a9/1664542498d33942cd777c8b387d2250a08c6d
-            - /usr/lib/.build-id/d9
-            - /usr/lib/.build-id/d9/2ccfccb28995d2400198741a10a224d2853c32
             - /usr/lib/rpm
             - /usr/lib/rpm/fileattrs
             - /usr/lib/rpm/lua
@@ -30907,6 +30283,8 @@ rpms:
             - /var/lib/rpm/rpmdb.sqlite-shm
             - /var/lib/rpm/rpmdb.sqlite-wal
     rpm-build-libs-4.16.1.3.x86_64:
+        version: 4.16.1.3-19.el9_1
+        size: 198430
         provides:
             - librpmbuild.so.9()(64bit)
             - rpm-build-libs
@@ -30952,18 +30330,18 @@ rpms:
             - libz.so.1()(64bit)
             - libzstd.so.1()(64bit)
             - rpm-libs(x86-64)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/0d
-            - /usr/lib/.build-id/0d/d9fd630e149c88de90d3bbb8af6e04220255a2
             - /usr/lib64/librpmbuild.so.9
             - /usr/lib64/librpmbuild.so.9.1.3
     rpm-libs-4.16.1.3.x86_64:
+        version: 4.16.1.3-19.el9_1
+        size: 764932
         provides:
             - librpm.so.9()(64bit)
             - librpmio.so.9()(64bit)
@@ -31005,23 +30383,21 @@ rpms:
             - libz.so.1()(64bit)
             - libzstd.so.1()(64bit)
             - rpm
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/12
-            - /usr/lib/.build-id/12/e4a5245dd2b3b876780080836f3f67bef4df26
-            - /usr/lib/.build-id/8c
-            - /usr/lib/.build-id/8c/b2ce1bb68e1299cdca6a07c642f6b06e250928
             - /usr/lib64/librpm.so.9
             - /usr/lib64/librpm.so.9.1.3
             - /usr/lib64/librpmio.so.9
             - /usr/lib64/librpmio.so.9.1.3
             - /usr/lib64/rpm-plugins
     rpm-sign-libs-4.16.1.3.x86_64:
+        version: 4.16.1.3-19.el9_1
+        size: 27636
         provides:
             - librpmsign.so.9()(64bit)
             - rpm-sign-libs
@@ -31052,18 +30428,18 @@ rpms:
             - libz.so.1()(64bit)
             - libzstd.so.1()(64bit)
             - rpm-libs(x86-64)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/31
-            - /usr/lib/.build-id/31/0b7f928057a613a64007998ebf4e41e88aa6a2
             - /usr/lib64/librpmsign.so.9
             - /usr/lib64/librpmsign.so.9.1.3
     sed-4.8.x86_64:
+        version: 4.8-9.el9
+        size: 813599
         provides:
             - /bin/sed
             - bundled(gnulib)
@@ -31083,16 +30459,14 @@ rpms:
             - libc.so.6(GLIBC_2.7)(64bit)
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/sed
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/1a
-            - /usr/lib/.build-id/1a/f80cb3e8e968f5ab7f0ea8dc1b2f9b814e29c2
             - /usr/share/doc/sed
             - /usr/share/doc/sed/AUTHORS
             - /usr/share/doc/sed/BUGS
@@ -31144,16 +30518,18 @@ rpms:
             - /usr/share/locale/zh_TW/LC_MESSAGES/sed.mo
             - /usr/share/man/man1/sed.1.gz
     setup-2.13.7.noarch:
+        version: 2.13.7-7.el9
+        size: 726385
         provides:
             - config(setup)
             - setup
         requires:
             - config(setup)
-            - rpmlib(BuiltinLuaScripts) <= 4.2.2-1
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(BuiltinLuaScripts)
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - system-release
         files:
             - /etc/aliases
@@ -31197,13 +30573,15 @@ rpms:
             - /usr/share/licenses/setup
             - /usr/share/licenses/setup/COPYING
     shadow-utils-4.9.x86_64:
+        version: 4.9-5.el9
+        size: 3812504
         provides:
             - config(shadow-utils)
             - shadow
             - shadow-utils
             - shadow-utils(x86-64)
         requires:
-            - audit-libs >= 1.6.5
+            - audit-libs
             - config(shadow-utils)
             - libacl.so.1()(64bit)
             - libacl.so.1(ACL_1.1)(64bit)
@@ -31223,16 +30601,16 @@ rpms:
             - libc.so.6(GLIBC_2.8)(64bit)
             - libcrypt.so.2()(64bit)
             - libcrypt.so.2(XCRYPT_2.0)(64bit)
-            - libselinux >= 1.25.2-1
+            - libselinux
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
             - libsemanage.so.2()(64bit)
             - libsemanage.so.2(LIBSEMANAGE_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileCaps) <= 4.6.1-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileCaps)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - setup
         files:
@@ -31246,52 +30624,6 @@ rpms:
             - /usr/bin/newuidmap
             - /usr/bin/sg
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/02
-            - /usr/lib/.build-id/02/64500edf412fb6abf618f5847d99eb95359412
-            - /usr/lib/.build-id/19
-            - /usr/lib/.build-id/19/88e0249f0684309651f6d5423c035030b7305f
-            - /usr/lib/.build-id/21
-            - /usr/lib/.build-id/21/a96eda85e49e4a1d1c82af7ed94e41b9eb0afb
-            - /usr/lib/.build-id/22
-            - /usr/lib/.build-id/22/f6c6f1f0e9a25827e0e61fb871b48f1b5d9bdd
-            - /usr/lib/.build-id/23
-            - /usr/lib/.build-id/23/22a12a91beabf996645a1407d4300474c5d106
-            - /usr/lib/.build-id/36
-            - /usr/lib/.build-id/36/c9a01241764e5958ab086cd89af1b2815e45e4
-            - /usr/lib/.build-id/40
-            - /usr/lib/.build-id/40/8c1186e6d43f8d31bee8c2d8b532b261924065
-            - /usr/lib/.build-id/42
-            - /usr/lib/.build-id/42/63ebe903f18b778fa87259ab697488328de991
-            - /usr/lib/.build-id/48
-            - /usr/lib/.build-id/48/157888ee0c179f32c04e836cd844b28f3ce47b
-            - /usr/lib/.build-id/56
-            - /usr/lib/.build-id/56/5e4e9189eb79f31e1d8b139485074c8700d064
-            - /usr/lib/.build-id/63
-            - /usr/lib/.build-id/63/800c90be52fee7f2b1d71c0f2a1fbbda33e3f2
-            - /usr/lib/.build-id/67
-            - /usr/lib/.build-id/67/45c2358297c3e15b52dd46b40bfd73ceef070a
-            - /usr/lib/.build-id/68
-            - /usr/lib/.build-id/68/0cbc239bf5d0f5f4ae5545cc93c0747e4b6a54
-            - /usr/lib/.build-id/74
-            - /usr/lib/.build-id/74/14d34bb8b765f48c274f5d80ac77943ffe60d3
-            - /usr/lib/.build-id/76
-            - /usr/lib/.build-id/76/f77074f4af86f8853abda2ae8260d505999e89
-            - /usr/lib/.build-id/77
-            - /usr/lib/.build-id/77/0a9c231a2cdfdacd7afc254b134a7b8fb9e5a9
-            - /usr/lib/.build-id/87
-            - /usr/lib/.build-id/87/7765f271b3d32e35b57ddf26bb0a8c1c1f97bd
-            - /usr/lib/.build-id/88
-            - /usr/lib/.build-id/88/c653f4aa6fb46ee44091fbd8c2a0fe19da6b6d
-            - /usr/lib/.build-id/96
-            - /usr/lib/.build-id/96/810c19e6304aa73801d20e2a211354c97b1b3e
-            - /usr/lib/.build-id/99
-            - /usr/lib/.build-id/99/297cab7d81c21e41ed5c79d9e918ea3cec21dc
-            - /usr/lib/.build-id/b3
-            - /usr/lib/.build-id/b3/90b430890edcbee7bbe9d8c0ac85a020c43f83
-            - /usr/lib/.build-id/d3
-            - /usr/lib/.build-id/d3/ed050f061d3c4600344461545b22bd1daf97b5
-            - /usr/lib/.build-id/d4
-            - /usr/lib/.build-id/d4/9472c4524934596a945fbd6c8107a8ae1d4d4f
             - /usr/sbin/adduser
             - /usr/sbin/chgpasswd
             - /usr/sbin/chpasswd
@@ -31632,6 +30964,8 @@ rpms:
             - /usr/share/man/zh_TW/man8/userdel.8.gz
             - /usr/share/man/zh_TW/man8/usermod.8.gz
     sqlite-libs-3.34.1.x86_64:
+        version: 3.34.1-6.el9_1
+        size: 1310968
         provides:
             - libsqlite3.so.0()(64bit)
             - sqlite-libs
@@ -31648,20 +30982,20 @@ rpms:
             - libm.so.6()(64bit)
             - libm.so.6(GLIBC_2.29)(64bit)
             - libz.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/83
-            - /usr/lib/.build-id/83/fb80694fe624609264c6fbec5a4e25b298067d
             - /usr/lib64/libsqlite3.so.0
             - /usr/lib64/libsqlite3.so.0.8.6
             - /usr/share/doc/sqlite-libs
             - /usr/share/doc/sqlite-libs/README.md
     subscription-manager-1.29.30.1.x86_64:
+        version: 1.29.30.1-1.el9_1
+        size: 3337823
         provides:
             - config(subscription-manager)
             - python3.9dist(subscription-manager)
@@ -31677,7 +31011,7 @@ rpms:
             - /usr/bin/python3
             - config(subscription-manager)
             - dmidecode
-            - dnf >= 1.0.0
+            - dnf
             - libc.so.6()(64bit)
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.3.4)(64bit)
@@ -31703,11 +31037,11 @@ rpms:
             - python3.9dist(iniparse)
             - python3.9dist(python-dateutil)
             - python3.9dist(setuptools)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - subscription-manager-rhsm-certificates
             - systemd
@@ -31737,8 +31071,6 @@ rpms:
             - /usr/bin/rhsmcertd
             - /usr/bin/subscription-manager
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/35
-            - /usr/lib/.build-id/35/ddb81ea260a80e045011783b27ea44ba87cb74
             - /usr/lib/python3.9/site-packages/dnf-plugins/__pycache__
             - /usr/lib/python3.9/site-packages/dnf-plugins/__pycache__/product-id.cpython-39.opt-1.pyc
             - /usr/lib/python3.9/site-packages/dnf-plugins/__pycache__/product-id.cpython-39.pyc
@@ -32329,13 +31661,15 @@ rpms:
             - /var/spool/rhsm
             - /var/spool/rhsm/debug
     subscription-manager-rhsm-certificates-20220623.noarch:
+        version: 20220623-1.el9
+        size: 27808
         provides:
             - subscription-manager-rhsm-certificates
         requires:
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /etc/rhsm
             - /etc/rhsm/ca
@@ -32344,6 +31678,8 @@ rpms:
             - /usr/share/licenses/subscription-manager-rhsm-certificates
             - /usr/share/licenses/subscription-manager-rhsm-certificates/COPYING
     systemd-250.x86_64:
+        version: 250-12.el9_1.3
+        size: 13768940
         provides:
             - /bin/systemctl
             - /sbin/shutdown
@@ -32398,7 +31734,7 @@ rpms:
             - config(systemd)
             - coreutils
             - coreutils
-            - dbus >= 1.9.18
+            - dbus
             - grep
             - ld-linux-x86-64.so.2()(64bit)
             - ld-linux-x86-64.so.2(GLIBC_2.3)(64bit)
@@ -32476,11 +31812,11 @@ rpms:
             - libzstd.so.1()(64bit)
             - openssl-libs
             - pcre2(x86-64)
-            - rpmlib(CaretInVersions) <= 4.15.0-1
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CaretInVersions)
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - sed
             - systemd-libs
@@ -32569,139 +31905,6 @@ rpms:
             - /usr/bin/systemd-umount
             - /usr/bin/timedatectl
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/01
-            - /usr/lib/.build-id/01/abe02704f4caf4feadbd9326dd44038b7ae739
-            - /usr/lib/.build-id/02
-            - /usr/lib/.build-id/02/b1ff9ec82df235b0a6ddd1ebf91d3f522157d1
-            - /usr/lib/.build-id/0b
-            - /usr/lib/.build-id/0b/b5207bcabb9a055ec445368bdb2ce11a872f4b
-            - /usr/lib/.build-id/11
-            - /usr/lib/.build-id/11/2b6f85a16027b53d0d44f1af9bc54435765408
-            - /usr/lib/.build-id/18
-            - /usr/lib/.build-id/18/a322c83ca3090c65b3f0ba19732546e0d4a663
-            - /usr/lib/.build-id/1b
-            - /usr/lib/.build-id/1b/25ce4c4ad12fa5836d26d38d9e5186d6be8690
-            - /usr/lib/.build-id/20
-            - /usr/lib/.build-id/20/887eda07081991ce049cd86ed1037689a9f9f6
-            - /usr/lib/.build-id/21
-            - /usr/lib/.build-id/21/0cc1aa1fbc92346d043748eba9a460ff73109f
-            - /usr/lib/.build-id/24
-            - /usr/lib/.build-id/24/c9826003ff0d09082397da9adcd5697b7ea341
-            - /usr/lib/.build-id/25
-            - /usr/lib/.build-id/25/a4d8ba7f45913dfdd767e636984dfb19de25f4
-            - /usr/lib/.build-id/29
-            - /usr/lib/.build-id/29/76c0296b6eb08a762932b4422b2b13c7bfdfdb
-            - /usr/lib/.build-id/2d
-            - /usr/lib/.build-id/2d/38fc28c406df65de18b766dca3d4f8fa3d9e54
-            - /usr/lib/.build-id/38
-            - /usr/lib/.build-id/38/1664f4ebe3b3ab9676b5a1007fc8eb1f93a6d3
-            - /usr/lib/.build-id/39
-            - /usr/lib/.build-id/39/f30f69a29bcc797ffea146180016ab856a7b1e
-            - /usr/lib/.build-id/3c
-            - /usr/lib/.build-id/3c/112eeff736de474c60fe7f21bf783347cb6da9
-            - /usr/lib/.build-id/3e
-            - /usr/lib/.build-id/3e/ab79329fa3a9a950af77d60a6be95f87b06ef7
-            - /usr/lib/.build-id/45
-            - /usr/lib/.build-id/45/add03cb1031fbfaf3e8b49aa1544e506f73d90
-            - /usr/lib/.build-id/4c
-            - /usr/lib/.build-id/4c/3fcf37ec6f48e47d511e819d9fd9e370a25724
-            - /usr/lib/.build-id/4c/c113d2db68148fbab81341551127f5f7174e8d
-            - /usr/lib/.build-id/4d
-            - /usr/lib/.build-id/4d/0a1ffaceb7bbe39570ddd600ca629fb7db3ebc
-            - /usr/lib/.build-id/4d/1a507bcdfbef72989b3c34a266a695437265f3
-            - /usr/lib/.build-id/4e
-            - /usr/lib/.build-id/4e/143f726c9812233738b87a758e9b2d21b50de8
-            - /usr/lib/.build-id/52
-            - /usr/lib/.build-id/52/7d6fc4372de2131af4a222055a550994cab5e1
-            - /usr/lib/.build-id/55
-            - /usr/lib/.build-id/55/a2a8aaa38b5f3360bbd8db084fe25d2a388909
-            - /usr/lib/.build-id/55/b02884ef6fc3ed36fb198c20dd551ebd4d4b49
-            - /usr/lib/.build-id/57
-            - /usr/lib/.build-id/57/28a6c50df439b486a4e81a4b6f96a92f1e8798
-            - /usr/lib/.build-id/5a
-            - /usr/lib/.build-id/5a/9db65944093db910e83adb197be7e4fd28d295
-            - /usr/lib/.build-id/5f
-            - /usr/lib/.build-id/5f/fd47a548ff656fdd51a263049aa473c71815b1
-            - /usr/lib/.build-id/61
-            - /usr/lib/.build-id/61/a90507ef9419dde9b0408e65ad905f152ea541
-            - /usr/lib/.build-id/65
-            - /usr/lib/.build-id/65/3f1dede6d70e758c4206c1bdfe920c42d37cc7
-            - /usr/lib/.build-id/65/cac1acbbaa7826677a2c3ad2d4274ad096a0d8
-            - /usr/lib/.build-id/67
-            - /usr/lib/.build-id/67/46860310b8989f89d34509e91e0e7fc8e79a7d
-            - /usr/lib/.build-id/69
-            - /usr/lib/.build-id/69/e62e80a2f445af5c0eb28fa720a431ed511a7e
-            - /usr/lib/.build-id/6a
-            - /usr/lib/.build-id/6a/4a08f74f218fb0a4e854df04958ec968c8ae33
-            - /usr/lib/.build-id/6a/dfb21481a6ba03ce77c6ee6768f150274fee39
-            - /usr/lib/.build-id/6f
-            - /usr/lib/.build-id/6f/a274c227755df8b989e7fa712928f2672956f3
-            - /usr/lib/.build-id/71
-            - /usr/lib/.build-id/71/246e16cdc8ffb4fc460d342bc4c9d6868be2d3
-            - /usr/lib/.build-id/71/73d202de481c195899161cecc15305ae3e7c3c
-            - /usr/lib/.build-id/74
-            - /usr/lib/.build-id/74/b01f496df2c7355025f8acc4f3ac384b034cef
-            - /usr/lib/.build-id/78
-            - /usr/lib/.build-id/78/d6836da22f0dea433532964efce51952c6b7f2
-            - /usr/lib/.build-id/7c
-            - /usr/lib/.build-id/7c/7a777d1f03f64e971e4527b2674ecb52dcfd06
-            - /usr/lib/.build-id/80
-            - /usr/lib/.build-id/80/83b27ceea1ff96b94271d180cae19980d8b2a2
-            - /usr/lib/.build-id/82
-            - /usr/lib/.build-id/82/e9dd72dbe6eba4976a7f92978a693cd2e33ee6
-            - /usr/lib/.build-id/94
-            - /usr/lib/.build-id/94/b7a1866f2ff77d1320af4ea7a3cf4062f21b80
-            - /usr/lib/.build-id/96
-            - /usr/lib/.build-id/96/50accfa9b3f81bd517114477332ea8eefbd314
-            - /usr/lib/.build-id/97
-            - /usr/lib/.build-id/97/842ce839dacdd209833f0162a46bef7ec7f936
-            - /usr/lib/.build-id/99
-            - /usr/lib/.build-id/99/e283e8495ea67b5f7f4e7c72aeb0c11a3a5dbb
-            - /usr/lib/.build-id/a1
-            - /usr/lib/.build-id/a1/305dd888e7ae602bbd9bc1eb410c850833292b
-            - /usr/lib/.build-id/a8
-            - /usr/lib/.build-id/a8/26a40720f02db46197fc6e2a9480911cf0a614
-            - /usr/lib/.build-id/b5
-            - /usr/lib/.build-id/b5/53b6736ed6c1bb52adfeab538373062a7f776b
-            - /usr/lib/.build-id/b6
-            - /usr/lib/.build-id/b6/08c5ea56f6d06b335af4472c9f43079c5a8598
-            - /usr/lib/.build-id/b6/1d00100fb9137c73361f98ec3fcab9be59ab46
-            - /usr/lib/.build-id/be
-            - /usr/lib/.build-id/be/766f4ef41417fd5641cdf4e5801ff49a174a01
-            - /usr/lib/.build-id/c0
-            - /usr/lib/.build-id/c0/639730995d6feaef4759e1d8bb2795b3fe448d
-            - /usr/lib/.build-id/c2
-            - /usr/lib/.build-id/c2/3ffa2cbb1d1cec47649fb066025116b2b62a4c
-            - /usr/lib/.build-id/c3
-            - /usr/lib/.build-id/c3/323aef5b2d2a7c8342575b11d5978654f0031c
-            - /usr/lib/.build-id/c5
-            - /usr/lib/.build-id/c5/c8129379357ebe28e1e2d078f04fc4e281746c
-            - /usr/lib/.build-id/ca
-            - /usr/lib/.build-id/ca/f938c6c67db258c9a2ee24b48da4b0b0e2844c
-            - /usr/lib/.build-id/d0
-            - /usr/lib/.build-id/d0/cdd70c96b24ff58f7c1c66a9df80fb9677fe90
-            - /usr/lib/.build-id/da
-            - /usr/lib/.build-id/da/49dc4848e85f860306668f67e5bd5b1ac6cdc7
-            - /usr/lib/.build-id/dc
-            - /usr/lib/.build-id/dc/50c452ff22ab08520934385deaa0848179bdc3
-            - /usr/lib/.build-id/de
-            - /usr/lib/.build-id/de/ac30e7396e849d1743eb2d13c87edd2fcbd67b
-            - /usr/lib/.build-id/e8
-            - /usr/lib/.build-id/e8/06f7868d8d6863d19194730ad056bf417357d2
-            - /usr/lib/.build-id/ea
-            - /usr/lib/.build-id/ea/871f9fe7a26275d3b95e0d3bcd6ad1f1fb4292
-            - /usr/lib/.build-id/f1
-            - /usr/lib/.build-id/f1/18cb09137b6268bfc876b457a7693a5622b736
-            - /usr/lib/.build-id/f5
-            - /usr/lib/.build-id/f5/af44de63743f3588cd9ec0b621761190457694
-            - /usr/lib/.build-id/f6
-            - /usr/lib/.build-id/f6/1cc9f53296bf9e150c421f3cfde82dc049f702
-            - /usr/lib/.build-id/fd
-            - /usr/lib/.build-id/fd/20d5f9fd9136be15f42c50c290d5e93ca6fb8f
-            - /usr/lib/.build-id/fe
-            - /usr/lib/.build-id/fe/6a8032c6d2152db443bb4f1ed415318e91a988
-            - /usr/lib/.build-id/ff
-            - /usr/lib/.build-id/ff/bda5481b27e669dc879f09805a02439596c02d
             - /usr/lib/binfmt.d
             - /usr/lib/environment.d
             - /usr/lib/environment.d/99-environment.conf
@@ -33373,6 +32576,8 @@ rpms:
             - /var/log/private
             - /var/log/wtmp
     systemd-libs-250.x86_64:
+        version: 250-12.el9_1.3
+        size: 1776696
         provides:
             - libnss_myhostname.so.2()(64bit)
             - libnss_resolve.so.2()(64bit)
@@ -33464,24 +32669,14 @@ rpms:
             - libp11-kit.so.0()(64bit)
             - libselinux.so.1()(64bit)
             - libzstd.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - sed
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/0c
-            - /usr/lib/.build-id/0c/ce699958c66324d0a1bb698c28da0911b749f4
-            - /usr/lib/.build-id/3a
-            - /usr/lib/.build-id/3a/ac39440369874effd504ca4e8856b70b653cdb
-            - /usr/lib/.build-id/40
-            - /usr/lib/.build-id/40/72cb43690e722db732351d647e83a6bb016209
-            - /usr/lib/.build-id/8c
-            - /usr/lib/.build-id/8c/ad247137370482a253ff793f13c366e1b3eb82
-            - /usr/lib/.build-id/cc
-            - /usr/lib/.build-id/cc/8cc595c33a711d9bf5ee304567144abb8efded
             - /usr/lib64/libnss_myhostname.so.2
             - /usr/lib64/libnss_resolve.so.2
             - /usr/lib64/libnss_systemd.so.2
@@ -33495,6 +32690,8 @@ rpms:
             - /usr/share/man/man8/libnss_resolve.so.2.8.gz
             - /usr/share/man/man8/libnss_systemd.so.2.8.gz
     systemd-pam-250.x86_64:
+        version: 250-12.el9_1.3
+        size: 526588
         provides:
             - systemd-pam
             - systemd-pam(x86-64)
@@ -33534,27 +32731,27 @@ rpms:
             - libpam_misc.so.0()(64bit)
             - libpam_misc.so.0(LIBPAM_MISC_1.0)(64bit)
             - libselinux.so.1()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - systemd
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/f7
-            - /usr/lib/.build-id/f7/bcd5fe75c34f12443aa35ab703d0dd446be6ff
             - /usr/lib64/security/pam_systemd.so
             - /usr/share/man/man8/pam_systemd.8.gz
     systemd-rpm-macros-250.noarch:
+        version: 250-12.el9_1.3
+        size: 9167
         provides:
             - systemd-rpm-macros
         requires:
             - /usr/bin/bash
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/lib/rpm/fileattrs
             - /usr/lib/rpm/fileattrs/sysusers.attr
@@ -33563,6 +32760,8 @@ rpms:
             - /usr/lib/rpm/sysusers.generate-pre.sh
             - /usr/lib/rpm/sysusers.prov
     tar-1.34.x86_64:
+        version: 1.34-6.el9_1
+        size: 3155243
         provides:
             - /bin/gtar
             - /bin/tar
@@ -33588,17 +32787,15 @@ rpms:
             - libc.so.6(GLIBC_2.8)(64bit)
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/bin/gtar
             - /usr/bin/tar
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/49
-            - /usr/lib/.build-id/49/662c3ec183cdf3274546380a1c3d12af9e8574
             - /usr/share/doc/tar
             - /usr/share/doc/tar/AUTHORS
             - /usr/share/doc/tar/ChangeLog
@@ -33651,6 +32848,8 @@ rpms:
             - /usr/share/man/man1/gtar.1.gz
             - /usr/share/man/man1/tar.1.gz
     tpm2-tss-3.0.3.x86_64:
+        version: 3.0.3-8.el9
+        size: 2132541
         provides:
             - group(tss)
             - libtss2-esys.so.0()(64bit)
@@ -33689,10 +32888,10 @@ rpms:
             - libtss2-mu.so.0()(64bit)
             - libtss2-sys.so.1()(64bit)
             - libtss2-tctildr.so.0()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - shadow-utils
         files:
@@ -33702,26 +32901,6 @@ rpms:
             - /etc/tpm2-tss/fapi-profiles/P_ECCP256SHA256.json
             - /etc/tpm2-tss/fapi-profiles/P_RSA2048SHA256.json
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/18
-            - /usr/lib/.build-id/18/92fd503b4e144d201709e1609f644cabebfae5
-            - /usr/lib/.build-id/4c
-            - /usr/lib/.build-id/4c/32d71096105bacc57ec8bc16e514b60af9c3db
-            - /usr/lib/.build-id/58
-            - /usr/lib/.build-id/58/dc3d9db0a5a0637f0238055885011e200838b3
-            - /usr/lib/.build-id/6f
-            - /usr/lib/.build-id/6f/e7a58c6156d030a8f97dfcd411e8de7a9696ee
-            - /usr/lib/.build-id/7b
-            - /usr/lib/.build-id/7b/8ebf56189e484a02dfc09213956e39b13d4bad
-            - /usr/lib/.build-id/86
-            - /usr/lib/.build-id/86/96daef371899aa1507dd9a256711ddfe9bde69
-            - /usr/lib/.build-id/9e
-            - /usr/lib/.build-id/9e/940f8957a70ca67aeabb3a5e4ae9b008065c1f
-            - /usr/lib/.build-id/c6
-            - /usr/lib/.build-id/c6/520bd3868eaee2a47a92c86d743f3b7ab5ae12
-            - /usr/lib/.build-id/c7
-            - /usr/lib/.build-id/c7/2a13a3d06524400d6adb9a3aad95edb245748e
-            - /usr/lib/.build-id/f0
-            - /usr/lib/.build-id/f0/62de6f88a2b795ca00ee7dc1493a018cce4165
             - /usr/lib/sysusers.d/tpm2-tss.conf
             - /usr/lib/tmpfiles.d/tpm2-tss-fapi.conf
             - /usr/lib/udev/rules.d/60-tpm-udev.rules
@@ -33751,14 +32930,16 @@ rpms:
             - /usr/share/licenses/tpm2-tss
             - /usr/share/licenses/tpm2-tss/LICENSE
     tzdata-2023c.noarch:
+        version: 2023c-1.el9
+        size: 1712614
         provides:
             - tzdata
         requires:
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PartialHardlinkSets) <= 4.0.4-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PartialHardlinkSets)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /usr/share/doc/tzdata
             - /usr/share/doc/tzdata/README
@@ -35629,6 +34810,8 @@ rpms:
             - /usr/share/zoneinfo/zone.tab
             - /usr/share/zoneinfo/zone1970.tab
     usermode-1.114.x86_64:
+        version: 1.114-4.el9
+        size: 855865
         provides:
             - config(usermode)
             - usermode
@@ -35652,20 +34835,16 @@ rpms:
             - libuser.so.1()(64bit)
             - pam
             - passwd
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - util-linux
         files:
             - /etc/security/console.apps/config-util
             - /usr/bin/consolehelper
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/39
-            - /usr/lib/.build-id/39/8a6a00035fad99fec7b000a3dc1d0e76bc01b3
-            - /usr/lib/.build-id/79
-            - /usr/lib/.build-id/79/fa5277e0d3bc855d7ab85de460b38c545550bb
             - /usr/sbin/userhelper
             - /usr/share/doc/usermode
             - /usr/share/doc/usermode/ChangeLog
@@ -35740,6 +34919,8 @@ rpms:
             - /usr/share/man/man8/consolehelper.8.gz
             - /usr/share/man/man8/userhelper.8.gz
     util-linux-2.37.4.x86_64:
+        version: 2.37.4-9.el9
+        size: 11138279
         provides:
             - /sbin/findfs
             - /sbin/nologin
@@ -35752,7 +34933,7 @@ rpms:
         requires:
             - /bin/sh
             - /etc/pam.d/system-auth
-            - audit-libs >= 1.0.6
+            - audit-libs
             - config(util-linux)
             - coreutils
             - ld-linux-x86-64.so.2()(64bit)
@@ -35838,11 +35019,11 @@ rpms:
             - libuuid.so.1(UUID_1.0)(64bit)
             - libuuid.so.1(UUID_2.31)(64bit)
             - libz.so.1()(64bit)
-            - pam >= 1.1.3-7
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - pam
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - util-linux-core
         files:
@@ -35906,146 +35087,6 @@ rpms:
             - /usr/bin/write
             - /usr/bin/x86_64
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/04
-            - /usr/lib/.build-id/04/79531f8fcded195d7b4b347f80353babc5e7c1
-            - /usr/lib/.build-id/04/eacc2d4db918a6a28ee206cd624ab392dc6acf
-            - /usr/lib/.build-id/13
-            - /usr/lib/.build-id/13/d1d7017415ecab1246f005774e5b6ca1c2311c
-            - /usr/lib/.build-id/15
-            - /usr/lib/.build-id/15/1740f231e8bd6cb531bf51b061680a2f89e8c4
-            - /usr/lib/.build-id/15/4d8fb05e2f9693966209aaef70a2f523fe3051
-            - /usr/lib/.build-id/16
-            - /usr/lib/.build-id/16/243e924dcad08909d5136e9808074fbb4ba5e4
-            - /usr/lib/.build-id/23
-            - /usr/lib/.build-id/23/37adb99c061e8a209a9c0d132349fe99d66a1c
-            - /usr/lib/.build-id/29
-            - /usr/lib/.build-id/29/a290be74a756c31c8b597d4358fad28e2ba876
-            - /usr/lib/.build-id/30
-            - /usr/lib/.build-id/30/49b7775c4bfd0adcfdd4df1f4a062e14cf70ad
-            - /usr/lib/.build-id/32
-            - /usr/lib/.build-id/32/17be5cf91fb07a3ce8bfd3daf066378430c72e
-            - /usr/lib/.build-id/35
-            - /usr/lib/.build-id/35/59be1c034301cf05b09efc2fa08df7a8bad087
-            - /usr/lib/.build-id/3c
-            - /usr/lib/.build-id/3c/4ab8fcc9c9129fbcbbf8a61dd0d562a05d7077
-            - /usr/lib/.build-id/3c/aa106ef1b6d2d5ddb244f07b0ee4482893ed19
-            - /usr/lib/.build-id/40
-            - /usr/lib/.build-id/40/a6b717d1ed208995934eb43b873d2fcf3ad756
-            - /usr/lib/.build-id/49
-            - /usr/lib/.build-id/49/5c4c0a434d39ec8a84595c592539dca6ad3796
-            - /usr/lib/.build-id/4c
-            - /usr/lib/.build-id/4c/63cf615c5a16306d2f4f6b35f09ffbd22c54bd
-            - /usr/lib/.build-id/53
-            - /usr/lib/.build-id/53/019ddd6757a12b00f577843ba695c9cb1db47a
-            - /usr/lib/.build-id/57
-            - /usr/lib/.build-id/57/60ade907befafe1fa7cbb86500c2cb751e4ca5
-            - /usr/lib/.build-id/5c
-            - /usr/lib/.build-id/5c/0aa8898e28d13c65700e654bcd1dbababdb397
-            - /usr/lib/.build-id/60
-            - /usr/lib/.build-id/60/7adb9dcf73961b9f02c3db6721eba8acd91959
-            - /usr/lib/.build-id/61
-            - /usr/lib/.build-id/61/08456ed3469f393e58dfbc739fbf9d42c4367b
-            - /usr/lib/.build-id/61/6cfef3ff687ac887b494f0ebedf9d113ec5a6c
-            - /usr/lib/.build-id/67
-            - /usr/lib/.build-id/67/bde29e174c55c67b1d97a74d86c6f8b9720260
-            - /usr/lib/.build-id/70
-            - /usr/lib/.build-id/70/4393cb1275a7f94d10f77f977eebb4943f6694
-            - /usr/lib/.build-id/70/b626ef497b5258cb53a041f610eafa15e9267b
-            - /usr/lib/.build-id/70/b9737bcd29c8c0e0ae00bc2d51c7fe5b0c17ad
-            - /usr/lib/.build-id/76
-            - /usr/lib/.build-id/76/cff28ec5cd4c3b8b1f3fa44485691c1c203814
-            - /usr/lib/.build-id/79
-            - /usr/lib/.build-id/79/9e19b8b1944eeabeb0bf560829655e05d44d55
-            - /usr/lib/.build-id/7a
-            - /usr/lib/.build-id/7a/08aab0dc6771d0d4ff35c0e6105657f7665c45
-            - /usr/lib/.build-id/7a/568a10b6f12529e95d3fabbc682a258d05ab7b
-            - /usr/lib/.build-id/7f
-            - /usr/lib/.build-id/7f/0c283dba8ded5d5dd2d08e08a59cb4dc1fd02a
-            - /usr/lib/.build-id/83
-            - /usr/lib/.build-id/83/a139ec32074acdf8bf5b8e3dab887c7a4f14db
-            - /usr/lib/.build-id/90
-            - /usr/lib/.build-id/90/60d7eae2a28f46644fbfa99032c94a2421839e
-            - /usr/lib/.build-id/98
-            - /usr/lib/.build-id/98/7f1aebd3f966d7ac3b488f4cc09ac43f227501
-            - /usr/lib/.build-id/98/f85011614ea6098b5539e5386c8a5f352480f8
-            - /usr/lib/.build-id/9a
-            - /usr/lib/.build-id/9a/036337a5bf2acc657bf02b7a63a603771007ea
-            - /usr/lib/.build-id/9c
-            - /usr/lib/.build-id/9c/6d9c47a6fdb49c1bbd6b62f4814cc3ae39c9ca
-            - /usr/lib/.build-id/9f
-            - /usr/lib/.build-id/9f/a085c36b2a548d04b258192aa5f9e292c8a815
-            - /usr/lib/.build-id/a3
-            - /usr/lib/.build-id/a3/ed96b6d0781576ad87831c018ffb4a6aa9d495
-            - /usr/lib/.build-id/a4
-            - /usr/lib/.build-id/a4/233a00a1842890d3606a8ee4f68ac36f39e1ee
-            - /usr/lib/.build-id/a5
-            - /usr/lib/.build-id/a5/55d364522d0b8da9f899b5f7752d9ab49304db
-            - /usr/lib/.build-id/ae
-            - /usr/lib/.build-id/ae/b60e279385de76caa346b01166406fb28e2e18
-            - /usr/lib/.build-id/b1
-            - /usr/lib/.build-id/b1/24c4ee8ffcde5037a4eb148aa18df1f6844f18
-            - /usr/lib/.build-id/b1/b31836385620b12f6811a1df4126c0ed28a2e6
-            - /usr/lib/.build-id/b4
-            - /usr/lib/.build-id/b4/cecc7a6ee6bce6b3bb82d6df889ce829ed89a3
-            - /usr/lib/.build-id/b8
-            - /usr/lib/.build-id/b8/293aa41a09180997c24f022d4fe7fb1063fa95
-            - /usr/lib/.build-id/b9
-            - /usr/lib/.build-id/b9/a4d4e4a6de331a186c12f877f2d860bb83028a
-            - /usr/lib/.build-id/b9/e54554af8304526bc2b48f1878296a773c092e
-            - /usr/lib/.build-id/bc
-            - /usr/lib/.build-id/bc/ba64b9c7fadac9748daac3e8886ab66acd908e
-            - /usr/lib/.build-id/bd
-            - /usr/lib/.build-id/bd/455f64f830006fcc08053fdcd144cfcee40019
-            - /usr/lib/.build-id/bd/4a2861adca824560e2f1622618259f730ce2f8
-            - /usr/lib/.build-id/be
-            - /usr/lib/.build-id/be/c405c22203c5de6b2ed82dee890b9a7239ff34
-            - /usr/lib/.build-id/c2
-            - /usr/lib/.build-id/c2/044426d92d8fb956fb99b41e7a562843aa2b4b
-            - /usr/lib/.build-id/c4
-            - /usr/lib/.build-id/c4/d91169745745f06011a9dab4a9f48d3c7fed01
-            - /usr/lib/.build-id/c6
-            - /usr/lib/.build-id/c6/230d25fd5d1227dbbaa95552cbb1c1210579d2
-            - /usr/lib/.build-id/c8
-            - /usr/lib/.build-id/c8/3dc4704d9ef18a95a75a1c841c427b5e1dca08
-            - /usr/lib/.build-id/c9
-            - /usr/lib/.build-id/c9/c735565ff23b4661f36761e6db8551790ac398
-            - /usr/lib/.build-id/cb
-            - /usr/lib/.build-id/cb/aa2c10ceb613040f84fc5c5b5100eb2a3b841d
-            - /usr/lib/.build-id/cb/ac8fa22f0d2d2ecb83703827f5ed06ac8aa12d
-            - /usr/lib/.build-id/cc
-            - /usr/lib/.build-id/cc/4adcc4da791a3348c5b3ff5565cbdf970636d6
-            - /usr/lib/.build-id/d0
-            - /usr/lib/.build-id/d0/13018f180d93f3d534f69ac8625587c157748b
-            - /usr/lib/.build-id/d1
-            - /usr/lib/.build-id/d1/8701f2456262f647eaaec5a1418fd855fe83b1
-            - /usr/lib/.build-id/d2
-            - /usr/lib/.build-id/d2/20e447153e406ff8e462352c88197d4ed464f0
-            - /usr/lib/.build-id/d5
-            - /usr/lib/.build-id/d5/97bee2351039718fc7b3c7bbcd2ba9be6c6fd1
-            - /usr/lib/.build-id/d5/f9782490d7c73a9fb867411c1e803307c3cacb
-            - /usr/lib/.build-id/d7
-            - /usr/lib/.build-id/d7/1c1656b0b7165dbc49e63a442be1ac5d15934f
-            - /usr/lib/.build-id/d8
-            - /usr/lib/.build-id/d8/f7fbf38e3acf2392f6ae669a99205cb35ee9f8
-            - /usr/lib/.build-id/e3
-            - /usr/lib/.build-id/e3/b0e101bc7545409301227f031fe127d0cca31e
-            - /usr/lib/.build-id/e5
-            - /usr/lib/.build-id/e5/017892c2a683f7e989b5f7fc25f1d5aab00f93
-            - /usr/lib/.build-id/e8
-            - /usr/lib/.build-id/e8/8a16a38a716c13ba5dad7af1ec108b9d1a2903
-            - /usr/lib/.build-id/eb
-            - /usr/lib/.build-id/eb/463b6439985ea9400da41b6152d9dd913730f1
-            - /usr/lib/.build-id/f1
-            - /usr/lib/.build-id/f1/3045155fe59c2131e40f5193c8637c599d66bb
-            - /usr/lib/.build-id/f1/455ed29035d7916035b1396beadac9f9850728
-            - /usr/lib/.build-id/f2
-            - /usr/lib/.build-id/f2/a7d4033bc474e09bac29b381db19fd5fa13f65
-            - /usr/lib/.build-id/fa
-            - /usr/lib/.build-id/fa/d9f65b5780eca724e133453eb4e621f2f69085
-            - /usr/lib/.build-id/fe
-            - /usr/lib/.build-id/fe/92917a63e04fac952855e4b6c7eac5198ce94e
-            - /usr/lib/.build-id/ff
-            - /usr/lib/.build-id/ff/8f696baca8ffcc65b4989436c00d665b13be3f
             - /usr/lib/systemd/system/fstrim.service
             - /usr/lib/systemd/system/fstrim.timer
             - /usr/sbin/addpart
@@ -36282,6 +35323,8 @@ rpms:
             - /usr/share/man/man8/x86_64.8.gz
             - /usr/share/man/man8/zramctl.8.gz
     util-linux-core-2.37.4.x86_64:
+        version: 2.37.4-9.el9
+        size: 1262687
         provides:
             - /bin/dmesg
             - /bin/kill
@@ -36359,10 +35402,10 @@ rpms:
             - libuuid
             - libuuid.so.1()(64bit)
             - libuuid.so.1(UUID_1.0)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/mtab
@@ -36387,61 +35430,6 @@ rpms:
             - /usr/bin/umount
             - /usr/bin/unshare
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/02
-            - /usr/lib/.build-id/02/fa3fe0cbb75124a6077054df4555587320018b
-            - /usr/lib/.build-id/03
-            - /usr/lib/.build-id/03/a9f862e94c30b22bba947622d33c90ee8d9277
-            - /usr/lib/.build-id/27
-            - /usr/lib/.build-id/27/00a29000d8868f13975d719b7c62834e6614ad
-            - /usr/lib/.build-id/28
-            - /usr/lib/.build-id/28/87318fe83f8f1d6e9cf3172d1cf54909fde125
-            - /usr/lib/.build-id/2b
-            - /usr/lib/.build-id/2b/7a6922351e54cf3cee473facaa3b02ca64c7aa
-            - /usr/lib/.build-id/40/4754071fb239adacffcfc7a4a7cffb7dace2ff
-            - /usr/lib/.build-id/41
-            - /usr/lib/.build-id/41/c30dd8c6ecb666b28efd4b8cc3807ade1de9be
-            - /usr/lib/.build-id/43
-            - /usr/lib/.build-id/43/cfa05d7792e69e710bb17b199f18093f8858af
-            - /usr/lib/.build-id/4f
-            - /usr/lib/.build-id/4f/a59bfcf013bc6703f0a688df78349c215879dc
-            - /usr/lib/.build-id/5b
-            - /usr/lib/.build-id/5b/6d01050eb8ece9f76da947a3c6314af381451b
-            - /usr/lib/.build-id/5c/50275477ee9fde5653a924af807dcdecd8a74c
-            - /usr/lib/.build-id/61/b6456fdd5b5f778ca51a9a12663b58debb4e34
-            - /usr/lib/.build-id/68
-            - /usr/lib/.build-id/68/6b109fd6dd7f62cd5fcf0cc0cfa68c82d4c673
-            - /usr/lib/.build-id/6e
-            - /usr/lib/.build-id/6e/1fea2f4381c0efbbf228529efafa0e3cca86a0
-            - /usr/lib/.build-id/76/421305598520d16db6f76eec76d78e559098be
-            - /usr/lib/.build-id/8d
-            - /usr/lib/.build-id/8d/75aac98572debd1d84e4e8ddcf4c8cfb0e49ff
-            - /usr/lib/.build-id/91
-            - /usr/lib/.build-id/91/2bb7ab7c0ec2f04a1f85c92f08fe72ac1af41a
-            - /usr/lib/.build-id/96
-            - /usr/lib/.build-id/96/870f379aadeb9e2b57b4f8b166299702c5a3cd
-            - /usr/lib/.build-id/b3
-            - /usr/lib/.build-id/b3/b1511d239a22c696423976453d3d6d8ec11944
-            - /usr/lib/.build-id/b7
-            - /usr/lib/.build-id/b7/c0e5b3ea990a66ec42e1b8daee642751034c7e
-            - /usr/lib/.build-id/bf
-            - /usr/lib/.build-id/bf/2ae23f4419f935695256fa4a65c99304b0c60e
-            - /usr/lib/.build-id/ca
-            - /usr/lib/.build-id/ca/acfbf8a6dff1ed479cc85eb2207ce8da79557d
-            - /usr/lib/.build-id/d3
-            - /usr/lib/.build-id/d3/10a0e697271e0f5e7b8b5f8897bdd40c95a46a
-            - /usr/lib/.build-id/de
-            - /usr/lib/.build-id/de/27a18bac029563f8947ff5b9f089e9b9d17e9c
-            - /usr/lib/.build-id/e0
-            - /usr/lib/.build-id/e0/acc375ea5363d2f218d6e95ff3590fe6575cd9
-            - /usr/lib/.build-id/e6
-            - /usr/lib/.build-id/e6/961b72fa94ad18e9b4a6542f7427969a1cf794
-            - /usr/lib/.build-id/e6/feb5ec996bfbea77f30755df1196f5b1b6cb3a
-            - /usr/lib/.build-id/ea
-            - /usr/lib/.build-id/ea/66c9d371efb71b5092de869bdbbdc8fcd5c213
-            - /usr/lib/.build-id/ee
-            - /usr/lib/.build-id/ee/500199ed89bc132a5a5cb028ee723f773bdc50
-            - /usr/lib/.build-id/ef
-            - /usr/lib/.build-id/ef/4ab63a26686066ae3ff42136e1bd2cd3e9b2c5
             - /usr/sbin/agetty
             - /usr/sbin/blkid
             - /usr/sbin/blockdev
@@ -36508,6 +35496,8 @@ rpms:
             - /usr/share/man/man8/switch_root.8.gz
             - /usr/share/man/man8/umount.8.gz
     vim-minimal-8.2.2637.x86_64:
+        version: 8.2.2637-20.el9_1
+        size: 1459913
         provides:
             - /usr/bin/vi
             - config(vim-minimal)
@@ -36532,10 +35522,10 @@ rpms:
             - libselinux.so.1()(64bit)
             - libselinux.so.1(LIBSELINUX_1.0)(64bit)
             - libtinfo.so.6()(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/virc
@@ -36545,8 +35535,6 @@ rpms:
             - /usr/bin/vi
             - /usr/bin/view
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/c6
-            - /usr/lib/.build-id/c6/aa3d8d79f09dd48e99475c332bed4df39d76e1
             - /usr/libexec/vi
             - /usr/share/man/man1/ex.1.gz
             - /usr/share/man/man1/rvi.1.gz
@@ -36555,6 +35543,8 @@ rpms:
             - /usr/share/man/man1/view.1.gz
             - /usr/share/man/man5/virc.5.gz
     virt-what-1.25.x86_64:
+        version: 1.25-1.el9
+        size: 56775
         provides:
             - virt-what
             - virt-what(x86-64)
@@ -36565,17 +35555,15 @@ rpms:
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
             - util-linux
             - which
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/5b
-            - /usr/lib/.build-id/5b/e1773ac47a378afcd2becc55b634ff800a3f50
             - /usr/libexec/virt-what-cpuid-helper
             - /usr/sbin/virt-what
             - /usr/share/doc/virt-what
@@ -36583,6 +35571,8 @@ rpms:
             - /usr/share/doc/virt-what/README
             - /usr/share/man/man1/virt-what.1.gz
     which-2.21.x86_64:
+        version: 2.21-28.el9
+        size: 82493
         provides:
             - which
             - which(x86-64)
@@ -36595,18 +35585,16 @@ rpms:
             - libc.so.6(GLIBC_2.33)(64bit)
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /etc/profile.d/which2.csh
             - /etc/profile.d/which2.sh
             - /usr/bin/which
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/11
-            - /usr/lib/.build-id/11/571097c1b3895dcf3299d488d55b3d97590250
             - /usr/share/doc/which
             - /usr/share/doc/which/AUTHORS
             - /usr/share/doc/which/EXAMPLES
@@ -36617,6 +35605,8 @@ rpms:
             - /usr/share/licenses/which/COPYING
             - /usr/share/man/man1/which.1.gz
     xz-libs-5.2.5.x86_64:
+        version: 5.2.5-8.el9_0
+        size: 181573
         provides:
             - liblzma.so.5()(64bit)
             - liblzma.so.5(XZ_5.0)(64bit)
@@ -36634,30 +35624,30 @@ rpms:
             - libc.so.6(GLIBC_2.34)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
             - libc.so.6(GLIBC_2.6)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/33
-            - /usr/lib/.build-id/33/0eb2fe0769e5466e2e0ac1b158e1e8452738c9
             - /usr/lib64/liblzma.so.5
             - /usr/lib64/liblzma.so.5.2.5
             - /usr/share/licenses/xz-libs
             - /usr/share/licenses/xz-libs/COPYING
     yum-4.12.0.noarch:
+        version: 4.12.0-4.el9
+        size: 77592
         provides:
             - config(yum)
             - yum
         requires:
             - config(yum)
             - dnf
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
         files:
             - /etc/dnf/protected.d/yum.conf
             - /etc/yum.conf
@@ -36670,6 +35660,8 @@ rpms:
             - /usr/share/man/man8/yum-shell.8.gz
             - /usr/share/man/man8/yum.8.gz
     zlib-1.2.11.x86_64:
+        version: 1.2.11-35.el9_1
+        size: 202937
         provides:
             - libz.so.1()(64bit)
             - libz.so.1(ZLIB_1.2.0)(64bit)
@@ -36693,15 +35685,13 @@ rpms:
             - libc.so.6(GLIBC_2.2.5)(64bit)
             - libc.so.6(GLIBC_2.3.4)(64bit)
             - libc.so.6(GLIBC_2.4)(64bit)
-            - rpmlib(CompressedFileNames) <= 3.0.4-1
-            - rpmlib(FileDigests) <= 4.6.0-1
-            - rpmlib(PayloadFilesHavePrefix) <= 4.0-1
-            - rpmlib(PayloadIsZstd) <= 5.4.18-1
+            - rpmlib(CompressedFileNames)
+            - rpmlib(FileDigests)
+            - rpmlib(PayloadFilesHavePrefix)
+            - rpmlib(PayloadIsZstd)
             - rtld(GNU_HASH)
         files:
             - /usr/lib/.build-id
-            - /usr/lib/.build-id/a3
-            - /usr/lib/.build-id/a3/9f7a92539115971debc39f2f9b66b74f8f7bb8
             - /usr/lib64/libz.so.1
             - /usr/lib64/libz.so.1.2.11
             - /usr/share/doc/zlib

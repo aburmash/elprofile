@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"io/ioutil"
 	"log"
+	"math"
 	"os"
 
 	"github.com/gmkurtzer/elprofile/internal/pkg/rpmdb"
@@ -18,6 +19,8 @@ type Packages struct {
 }
 
 type RpmInfo struct {
+	Version  string
+	Size     uint64
 	Provides []string
 	Requires []string
 	Files    []string
@@ -34,20 +37,30 @@ var (
 		SilenceErrors:         true,
 	}
 
-	ArgGenerate bool
-	ArgRequires bool
-	ArgProvides bool
-	ArgFiles    bool
-	ArgQuiet    bool
+	ArgGenerate     bool
+	ArgRequires     bool
+	ArgProvides     bool
+	ArgFiles        bool
+	ArgVersion      bool
+	ArgSize         bool
+	ArgAll          bool
+	ArgQuiet        bool
+	ArgsSizePercent float64
 )
 
 func init() {
 	rootCmd.PersistentFlags().BoolVarP(&ArgGenerate, "generate", "g", false, "Generate Profile")
-	rootCmd.PersistentFlags().BoolVarP(&ArgRequires, "requires", "r", false, "Only test requires")
-	rootCmd.PersistentFlags().BoolVarP(&ArgProvides, "provides", "p", false, "Only test provides")
-	rootCmd.PersistentFlags().BoolVarP(&ArgFiles, "files", "f", false, "Only test files")
-	rootCmd.PersistentFlags().BoolVarP(&ArgQuiet, "quiet", "q", false, "Only show issues")
+	rootCmd.PersistentFlags().BoolVarP(&ArgAll, "all", "a", false, "Run all comparasions")
 
+	rootCmd.PersistentFlags().BoolVarP(&ArgRequires, "requires", "r", false, "Only compare requires")
+	rootCmd.PersistentFlags().BoolVarP(&ArgProvides, "provides", "p", false, "Only compare provides")
+	rootCmd.PersistentFlags().BoolVarP(&ArgFiles, "files", "f", false, "Only compare files")
+	rootCmd.PersistentFlags().BoolVarP(&ArgVersion, "version", "v", false, "Only compare Versions")
+	rootCmd.PersistentFlags().BoolVarP(&ArgSize, "size", "s", false, "Only compare size")
+
+	rootCmd.PersistentFlags().Float64VarP(&ArgsSizePercent, "sizepercent", "S", 2.5, "Size percent difference to warn")
+
+	rootCmd.PersistentFlags().BoolVarP(&ArgQuiet, "quiet", "q", false, "Only show issues")
 }
 
 func main() {
@@ -67,10 +80,12 @@ func CobraRunE(cmd *cobra.Command, args []string) (err error) {
 		testfile = args[0]
 	}
 
-	if !ArgFiles && !ArgProvides && !ArgRequires {
+	if ArgAll {
 		ArgRequires = true
 		ArgProvides = true
 		ArgFiles = true
+		ArgVersion = true
+		ArgSize = true
 	}
 
 	if ArgGenerate {
@@ -89,17 +104,25 @@ func CobraRunE(cmd *cobra.Command, args []string) (err error) {
 			var rpmName = rpmlist[i]
 			var err error
 
-			rpmInfo.Provides, err = rpmdb.PkgInspect(rpmName, "-provides")
+			rpmInfo.Provides, err = rpmdb.PkgProvides(rpmName)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Could not obtain provides for: %s\n", rpmName)
 			}
-			rpmInfo.Requires, err = rpmdb.PkgInspect(rpmName, "-requires")
+			rpmInfo.Requires, err = rpmdb.PkgRequires(rpmName)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Could not obtain requires for: %s\n", rpmName)
 			}
-			rpmInfo.Files, err = rpmdb.PkgInspect(rpmName, "-l")
+			rpmInfo.Files, err = rpmdb.PkgFiles(rpmName)
 			if err != nil {
 				fmt.Fprintf(os.Stderr, "Could not obtain file list for: %s\n", rpmName)
+			}
+			rpmInfo.Version, err = rpmdb.PkgVersion(rpmName)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Could not obtain package version for: %s\n", rpmName)
+			}
+			rpmInfo.Size, err = rpmdb.PkgSize(rpmName)
+			if err != nil {
+				fmt.Fprintf(os.Stderr, "Could not obtain package size for: %s\n", rpmName)
 			}
 
 			packages.Rpms[rpmName] = &rpmInfo
@@ -135,23 +158,20 @@ func CobraRunE(cmd *cobra.Command, args []string) (err error) {
 			if ArgRequires {
 				var err error
 
-				requires, err := rpmdb.PkgInspect(rpmName, "--requires")
+				requires, err := rpmdb.PkgRequires(rpmName)
 				if err != nil {
 					if !ArgQuiet {
-						fmt.Fprintf(os.Stderr, "%-40s %s\n", rpmName, "NOT INSTALLED")
+						fmt.Fprintf(os.Stderr, "%-40.40s %s\n", rpmName, "NOT INSTALLED")
 					}
 					continue
 				}
 
 				requireMap := util.ArrayToMap(requires)
 
-				LookingFor := util.ArrayMatch(`.*`, packages.Rpms[rpmName].Requires)
-				LookingFor = util.ArrayNotMatch(`=`, LookingFor)
-
-				for _, req := range LookingFor {
+				for _, req := range packages.Rpms[rpmName].Requires {
 					if _, ok := requireMap[req]; !ok {
 						missingRequires[req] = true
-						//fmt.Printf("%-20s %-25s %s\n", "MISSING REQUIRES:", rpmName, req)
+						fmt.Printf("%-40.40s %-18s %s\n", rpmName, "MISSING REQUIRES:", req)
 					}
 				}
 			}
@@ -159,60 +179,78 @@ func CobraRunE(cmd *cobra.Command, args []string) (err error) {
 			if ArgProvides {
 				var err error
 
-				provides, err := rpmdb.PkgInspect(rpmName, "--provides")
+				provides, err := rpmdb.PkgProvides(rpmName)
 				if err != nil {
 					if !ArgQuiet {
-						fmt.Fprintf(os.Stderr, "%-40s %s\n", rpmName, "NOT INSTALLED")
+						fmt.Fprintf(os.Stderr, "%-40.40s %s\n", rpmName, "NOT INSTALLED")
 					}
 					continue
 				}
 
 				providesMap := util.ArrayToMap(provides)
 
-				LookingFor := util.ArrayMatch(`.*`, packages.Rpms[rpmName].Provides)
-				LookingFor = util.ArrayNotMatch(`=`, LookingFor)
-
-				for _, req := range LookingFor {
+				for _, req := range packages.Rpms[rpmName].Provides {
 					if _, ok := providesMap[req]; !ok {
 						missingProvides[req] = true
-						//fmt.Printf("%-20s %-25s %s\n", "MISSING PROVIDES:", rpmName, req)
+						fmt.Printf("%-40.40s %-18s %s\n", rpmName, "MISSING REQUIRES:", req)
 					}
-				}
-			}
-
-			for req := range missingRequires {
-				if _, ok := missingProvides[req]; !ok {
-					fmt.Printf("%-40s %-18s %s\n", rpmName, "MISSING REQUIRES:", req)
-				}
-			}
-
-			for req := range missingProvides {
-				if _, ok := missingRequires[req]; !ok {
-					fmt.Printf("%-40s %-18s %s\n", rpmName, "MISSING PROVIDES:", req)
 				}
 			}
 
 			if ArgFiles {
 				var err error
 
-				files, err := rpmdb.PkgInspect(rpmName, "-l")
+				files, err := rpmdb.PkgFiles(rpmName)
 				if err != nil {
 					if !ArgQuiet {
-						fmt.Fprintf(os.Stderr, "%-40s %s\n", rpmName, "NOT INSTALLED")
+						fmt.Fprintf(os.Stderr, "%-40.40s %s\n", rpmName, "NOT INSTALLED")
 					}
 					continue
 				}
 
 				filesMap := util.ArrayToMap(files)
 
-				LookingFor := util.ArrayMatch(`.*`, packages.Rpms[rpmName].Files)
-				LookingFor = util.ArrayNotMatch(`/.build-id/`, LookingFor)
-
-				for _, req := range LookingFor {
+				for _, req := range packages.Rpms[rpmName].Files {
 					if _, ok := filesMap[req]; !ok {
-						fmt.Printf("%-40s %-18s %s\n", rpmName, "MISSING FILES:", req)
+						fmt.Printf("%-40.40s %-18s %s\n", rpmName, "MISSING FILES:", req)
 					}
 				}
+			}
+
+			if ArgVersion {
+				var err error
+
+				version, err := rpmdb.PkgVersion(rpmName)
+				if err != nil {
+					if !ArgQuiet {
+						fmt.Fprintf(os.Stderr, "%-40.40s %s\n", rpmName, "NOT INSTALLED")
+					}
+					continue
+				}
+
+				if version != packages.Rpms[rpmName].Version {
+					fmt.Printf("%-40.40s %-18s local=%-25s  profile=%s\n", rpmName, "VERSION MISMATCH:", version, packages.Rpms[rpmName].Version)
+				}
+
+			}
+
+			if ArgSize {
+				var err error
+
+				size, err := rpmdb.PkgSize(rpmName)
+				if err != nil {
+					if !ArgQuiet {
+						fmt.Fprintf(os.Stderr, "%-40.40s %s\n", rpmName, "NOT INSTALLED")
+					}
+					continue
+				}
+
+				//fmt.Printf("size=%f\n", float64(size)-float64(packages.Rpms[rpmName].Size))
+
+				if math.Abs(float64(size)-float64(packages.Rpms[rpmName].Size)) > (float64(packages.Rpms[rpmName].Size) * (ArgsSizePercent / 100)) {
+					fmt.Printf("%-40.40s %-18s %+d bytes\n", rpmName, "SIZE MISMATCH:", int64(size-packages.Rpms[rpmName].Size))
+				}
+
 			}
 		}
 
