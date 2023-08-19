@@ -28,6 +28,13 @@ test-rocky92-container: ubi92.profile
 	apptainer exec docker://rockylinux:9.2 ./elprofile -qa ubi92.profile 
 
 
+test-oracle9-container: ubi92.profile
+	apptainer exec docker://oraclelinux:9 ./elprofile -qa ubi92.profile 
+
+test-oracle88-container: ubi88.profile
+	apptainer exec docker://oraclelinux:8.8 ./elprofile -qa ubi88.profile 
+
+
 test-alma88-container: ubi88.profile
 	apptainer exec docker://almalinux:8.8 ./elprofile -qa ubi88.profile 
 
