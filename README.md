@@ -38,7 +38,7 @@ To test another system you can copy the file `/tmp/local.profile` to another sys
 run the following command:
 
 ```
-$ ./elprofile -a /tmp/local.profile
+$ ./elprofile -aq /tmp/local.profile
 Comparing against template: /tmp/local.profile
 gnupg2-2.3.3.x86_64                      MISSING REQUIRES:  liblber-2.4.so.2()(64bit)
 gnupg2-2.3.3.x86_64                      MISSING REQUIRES:  libldap_r-2.4.so.2()(64bit)
